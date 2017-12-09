@@ -367,5 +367,8 @@
   <ItemGroup>
     <None Include="bin\Images\if_user_close_103746.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ca.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

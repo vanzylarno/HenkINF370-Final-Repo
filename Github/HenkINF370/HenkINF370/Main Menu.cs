@@ -27,5 +27,10 @@ namespace HenkINF370
             Manager_Features myform = new Manager_Features();
             myform.ShowDialog();
         }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
