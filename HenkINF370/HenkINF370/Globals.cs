@@ -12,5 +12,9 @@ namespace HenkINF370
         public static string UserName;
         public static int UserID;
         public static int UpdateUserID;
+        public static int UpdateShiftID;
+        public static string Start;
+        public static string Stop;
+        public static int CurrentShiftID;
     }
 }

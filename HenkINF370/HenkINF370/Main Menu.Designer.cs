@@ -28,9 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
+            // 
+            // metroTile2
+            // 
+            this.metroTile2.ActiveControl = null;
+            this.metroTile2.Location = new System.Drawing.Point(267, 81);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(208, 203);
+            this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTile2.TabIndex = 1;
+            this.metroTile2.Text = "Shifts";
+            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.Ca;
+            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile2.UseSelectable = true;
+            this.metroTile2.UseTileImage = true;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // metroTile1
             // 
@@ -47,21 +63,6 @@
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
-            // 
-            // metroTile2
-            // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(267, 81);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(208, 203);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile2.TabIndex = 1;
-            this.metroTile2.Text = "Shifts";
-            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.Ca;
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroTile2.UseSelectable = true;
-            this.metroTile2.UseTileImage = true;
             // 
             // Main_Menu
             // 

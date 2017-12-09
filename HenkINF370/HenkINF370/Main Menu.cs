@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HenkINF370
 {
@@ -19,12 +20,18 @@ namespace HenkINF370
 
         private void Main_Menu_Load(object sender, EventArgs e)
         {
-
+            MetroFramework.MetroMessageBox.Show(this, "If this is your first login, please Remember to Capture the Float Amount in the Till!",  "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
             Manager_Features myform = new Manager_Features();
+            myform.ShowDialog();
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            Shifts_Form myform = new Shifts_Form();
             myform.ShowDialog();
         }
     }
