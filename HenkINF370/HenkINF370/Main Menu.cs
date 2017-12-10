@@ -46,5 +46,10 @@ namespace HenkINF370
             Template myform = new Template();
             myform.ShowDialog();
         }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

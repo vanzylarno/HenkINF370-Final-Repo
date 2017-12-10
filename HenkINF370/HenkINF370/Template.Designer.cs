@@ -28,200 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
-            this.henkINF370DataSet = new HenkINF370.HenkINF370DataSet();
-            this.shiftsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shiftsTableAdapter = new HenkINF370.HenkINF370DataSetTableAdapters.ShiftsTableAdapter();
-            this.tableAdapterManager = new HenkINF370.HenkINF370DataSetTableAdapters.TableAdapterManager();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colTimeSlot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMonday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTuesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colWednesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colThursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFriday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSaturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSunday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.henkINF370DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shiftsBindingSource)).BeginInit();
+            this.colMonday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colTuesday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colWednesday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colThursday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colFriday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colSaturday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colSunday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dtpDate = new MetroFramework.Controls.MetroDateTime();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.txtAvailableSlots = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(23, 63);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(208, 50);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile1.TabIndex = 1;
-            this.metroTile1.Text = "Monday";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseTileImage = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
-            // 
-            // metroTile2
-            // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(23, 119);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(208, 50);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile2.TabIndex = 2;
-            this.metroTile2.Text = "Tuesday";
-            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile2.UseSelectable = true;
-            this.metroTile2.UseTileImage = true;
-            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
-            // 
-            // metroTile3
-            // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(23, 175);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(208, 50);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile3.TabIndex = 3;
-            this.metroTile3.Text = "Wednesday";
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.UseTileImage = true;
-            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
-            // 
-            // metroTile4
-            // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(23, 231);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(208, 50);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile4.TabIndex = 4;
-            this.metroTile4.Text = "Thursday";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile4.UseSelectable = true;
-            this.metroTile4.UseTileImage = true;
-            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
-            // 
-            // metroTile5
-            // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(23, 287);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(208, 50);
-            this.metroTile5.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile5.TabIndex = 5;
-            this.metroTile5.Text = "Friday";
-            this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile5.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile5.UseSelectable = true;
-            this.metroTile5.UseTileImage = true;
-            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
-            // 
-            // metroTile6
-            // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(23, 343);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(208, 50);
-            this.metroTile6.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile6.TabIndex = 6;
-            this.metroTile6.Text = "Saturday";
-            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile6.UseSelectable = true;
-            this.metroTile6.UseTileImage = true;
-            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
-            // 
-            // metroTile7
-            // 
-            this.metroTile7.ActiveControl = null;
-            this.metroTile7.Location = new System.Drawing.Point(23, 399);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(208, 50);
-            this.metroTile7.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile7.TabIndex = 7;
-            this.metroTile7.Text = "Sunday";
-            this.metroTile7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile7.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile7.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile7.UseSelectable = true;
-            this.metroTile7.UseTileImage = true;
-            this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
-            // 
-            // metroTile8
-            // 
-            this.metroTile8.ActiveControl = null;
-            this.metroTile8.Location = new System.Drawing.Point(1013, 455);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(222, 50);
-            this.metroTile8.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile8.TabIndex = 8;
-            this.metroTile8.Text = "Update Timetable";
-            this.metroTile8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile8.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile8.UseSelectable = true;
-            this.metroTile8.UseTileImage = true;
-            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
-            // 
-            // henkINF370DataSet
-            // 
-            this.henkINF370DataSet.DataSetName = "HenkINF370DataSet";
-            this.henkINF370DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // shiftsBindingSource
-            // 
-            this.shiftsBindingSource.DataMember = "Shifts";
-            this.shiftsBindingSource.DataSource = this.henkINF370DataSet;
-            // 
-            // shiftsTableAdapter
-            // 
-            this.shiftsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ComboLineTableAdapter = null;
-            this.tableAdapterManager.ComboRecordTableAdapter = null;
-            this.tableAdapterManager.ComboTableAdapter = null;
-            this.tableAdapterManager.CustomisationTableAdapter = null;
-            this.tableAdapterManager.DrinkSizeTableAdapter = null;
-            this.tableAdapterManager.GenderTableAdapter = null;
-            this.tableAdapterManager.MenuItemTypeTableAdapter = null;
-            this.tableAdapterManager.MenuTableAdapter = null;
-            this.tableAdapterManager.PizzaBaseTableAdapter = null;
-            this.tableAdapterManager.PizzaSizeTableAdapter = null;
-            this.tableAdapterManager.PrivilegeTableAdapter = null;
-            this.tableAdapterManager.ShiftLineTableAdapter = null;
-            this.tableAdapterManager.ShiftsTableAdapter = this.shiftsTableAdapter;
-            this.tableAdapterManager.TitleTableAdapter = null;
-            this.tableAdapterManager.ToppingRecordTableAdapter = null;
-            this.tableAdapterManager.ToppingsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HenkINF370.HenkINF370DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsersTableAdapter = null;
-            this.tableAdapterManager.UserTypeTableAdapter = null;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTimeSlot,
@@ -232,10 +58,10 @@
             this.colFriday,
             this.colSaturday,
             this.colSunday});
-            this.dataGridView1.Location = new System.Drawing.Point(238, 63);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 133);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(997, 386);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.Size = new System.Drawing.Size(1212, 334);
+            this.dataGridView1.TabIndex = 2;
             // 
             // colTimeSlot
             // 
@@ -246,84 +72,162 @@
             // 
             this.colMonday.HeaderText = "Monday";
             this.colMonday.Name = "colMonday";
+            this.colMonday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colMonday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colTuesday
             // 
             this.colTuesday.HeaderText = "Tuesday";
             this.colTuesday.Name = "colTuesday";
+            this.colTuesday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colTuesday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colWednesday
             // 
             this.colWednesday.HeaderText = "Wednesday";
             this.colWednesday.Name = "colWednesday";
+            this.colWednesday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colWednesday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colThursday
             // 
             this.colThursday.HeaderText = "Thursday";
             this.colThursday.Name = "colThursday";
+            this.colThursday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colThursday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colFriday
             // 
             this.colFriday.HeaderText = "Friday";
             this.colFriday.Name = "colFriday";
+            this.colFriday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colFriday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colSaturday
             // 
             this.colSaturday.HeaderText = "Saturday";
             this.colSaturday.Name = "colSaturday";
+            this.colSaturday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSaturday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colSunday
             // 
             this.colSunday.HeaderText = "Sunday";
             this.colSunday.Name = "colSunday";
+            this.colSunday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSunday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(23, 79);
+            this.dtpDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(281, 29);
+            this.dtpDate.Style = MetroFramework.MetroColorStyle.Lime;
+            this.dtpDate.TabIndex = 3;
+            this.dtpDate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 57);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(145, 19);
+            this.metroLabel1.TabIndex = 4;
+            this.metroLabel1.Text = "Select Week Start Date:";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(1004, 482);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(231, 68);
+            this.metroButton1.TabIndex = 5;
+            this.metroButton1.Text = "Create Weekly Schedule";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // txtAvailableSlots
+            // 
+            // 
+            // 
+            // 
+            this.txtAvailableSlots.CustomButton.Image = null;
+            this.txtAvailableSlots.CustomButton.Location = new System.Drawing.Point(225, 1);
+            this.txtAvailableSlots.CustomButton.Name = "";
+            this.txtAvailableSlots.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAvailableSlots.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAvailableSlots.CustomButton.TabIndex = 1;
+            this.txtAvailableSlots.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAvailableSlots.CustomButton.UseSelectable = true;
+            this.txtAvailableSlots.CustomButton.Visible = false;
+            this.txtAvailableSlots.Lines = new string[0];
+            this.txtAvailableSlots.Location = new System.Drawing.Point(336, 85);
+            this.txtAvailableSlots.MaxLength = 32767;
+            this.txtAvailableSlots.Name = "txtAvailableSlots";
+            this.txtAvailableSlots.PasswordChar = '\0';
+            this.txtAvailableSlots.PromptText = "Please Enter the Amount of Available Slots";
+            this.txtAvailableSlots.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAvailableSlots.SelectedText = "";
+            this.txtAvailableSlots.SelectionLength = 0;
+            this.txtAvailableSlots.SelectionStart = 0;
+            this.txtAvailableSlots.ShortcutsEnabled = true;
+            this.txtAvailableSlots.Size = new System.Drawing.Size(247, 23);
+            this.txtAvailableSlots.TabIndex = 6;
+            this.txtAvailableSlots.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtAvailableSlots.UseSelectable = true;
+            this.txtAvailableSlots.WaterMark = "Please Enter the Amount of Available Slots";
+            this.txtAvailableSlots.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAvailableSlots.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(336, 63);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(152, 19);
+            this.metroLabel2.TabIndex = 7;
+            this.metroLabel2.Text = "Enter the Available Slots:";
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Template
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 525);
+            this.ClientSize = new System.Drawing.Size(1258, 568);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.txtAvailableSlots);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.metroTile8);
-            this.Controls.Add(this.metroTile7);
-            this.Controls.Add(this.metroTile6);
-            this.Controls.Add(this.metroTile5);
-            this.Controls.Add(this.metroTile4);
-            this.Controls.Add(this.metroTile3);
-            this.Controls.Add(this.metroTile2);
-            this.Controls.Add(this.metroTile1);
             this.Name = "Template";
             this.Style = MetroFramework.MetroColorStyle.Lime;
             this.Text = "Template";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Template_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.henkINF370DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shiftsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile5;
-        private MetroFramework.Controls.MetroTile metroTile6;
-        private MetroFramework.Controls.MetroTile metroTile7;
-        private MetroFramework.Controls.MetroTile metroTile8;
-        private HenkINF370DataSet henkINF370DataSet;
-        private System.Windows.Forms.BindingSource shiftsBindingSource;
-        private HenkINF370DataSetTableAdapters.ShiftsTableAdapter shiftsTableAdapter;
-        private HenkINF370DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTimeSlot;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMonday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTuesday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colWednesday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colThursday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFriday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSaturday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSunday;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colMonday;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colTuesday;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colWednesday;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colThursday;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colFriday;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colSaturday;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colSunday;
+        private MetroFramework.Controls.MetroDateTime dtpDate;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroTextBox txtAvailableSlots;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }
