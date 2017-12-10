@@ -81,11 +81,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Drink Size.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Drink Size.Designer.cs">
+      <DependentUpon>Add Drink Size.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add Gender.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Add Gender.Designer.cs">
       <DependentUpon>Add Gender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Menu Item Type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Menu Item Type.Designer.cs">
+      <DependentUpon>Add Menu Item Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Menu Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Menu Item.Designer.cs">
+      <DependentUpon>Add Menu Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Pizza Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Pizza Base.Designer.cs">
+      <DependentUpon>Add Pizza Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Pizza Size.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Pizza Size.Designer.cs">
+      <DependentUpon>Add Pizza Size.cs</DependentUpon>
     </Compile>
     <Compile Include="Add Privilege.cs">
       <SubType>Form</SubType>
@@ -141,6 +171,12 @@
     <Compile Include="Delete Gender.Designer.cs">
       <DependentUpon>Delete Gender.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delete Menu Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete Menu Item.Designer.cs">
+      <DependentUpon>Delete Menu Item.cs</DependentUpon>
+    </Compile>
     <Compile Include="Delete Privilege.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +207,12 @@
     <Compile Include="Delete User.Designer.cs">
       <DependentUpon>Delete User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Drinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drinks.Designer.cs">
+      <DependentUpon>Drinks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit Booked Shifts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +224,12 @@
     </Compile>
     <Compile Include="Edit Booking2.Designer.cs">
       <DependentUpon>Edit Booking2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Find a Menu Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Find a Menu Item.Designer.cs">
+      <DependentUpon>Find a Menu Item.cs</DependentUpon>
     </Compile>
     <Compile Include="Find Forgotten Password.cs">
       <SubType>Form</SubType>
@@ -231,6 +279,36 @@
     <Compile Include="Manager Features.Designer.cs">
       <DependentUpon>Manager Features.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Form.Designer.cs">
+      <DependentUpon>Menu Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Item Help Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Item Help Page.Designer.cs">
+      <DependentUpon>Menu Item Help Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Item Types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Item Types.Designer.cs">
+      <DependentUpon>Menu Item Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pizza Bases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pizza Bases.Designer.cs">
+      <DependentUpon>Pizza Bases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pizza Sizes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pizza Sizes.Designer.cs">
+      <DependentUpon>Pizza Sizes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Privileges.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +317,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remove a Pizza Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remove a Pizza Base.Designer.cs">
+      <DependentUpon>Remove a Pizza Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Remove a Pizza Size.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remove a Pizza Size.Designer.cs">
+      <DependentUpon>Remove a Pizza Size.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Remove Drink Size.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remove Drink Size.Designer.cs">
+      <DependentUpon>Remove Drink Size.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Remove Menu Item Type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remove Menu Item Type.Designer.cs">
+      <DependentUpon>Remove Menu Item Type.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search Shifts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,11 +353,29 @@
     <Compile Include="Shifts Form.Designer.cs">
       <DependentUpon>Shifts Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template.Designer.cs">
+      <DependentUpon>Template.cs</DependentUpon>
+    </Compile>
     <Compile Include="Titles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Titles.Designer.cs">
       <DependentUpon>Titles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update a Menu Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update a Menu Item.Designer.cs">
+      <DependentUpon>Update a Menu Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Menu Item2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Menu Item2.Designer.cs">
+      <DependentUpon>Update Menu Item2.cs</DependentUpon>
     </Compile>
     <Compile Include="Update Shift.cs">
       <SubType>Form</SubType>
@@ -293,14 +413,35 @@
     <Compile Include="Users Help.Designer.cs">
       <DependentUpon>Users Help.cs</DependentUpon>
     </Compile>
+    <Compile Include="View All Menu Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View All Menu Items.Designer.cs">
+      <DependentUpon>View All Menu Items.cs</DependentUpon>
+    </Compile>
     <Compile Include="View Available Shifts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View Available Shifts.Designer.cs">
       <DependentUpon>View Available Shifts.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add Drink Size.resx">
+      <DependentUpon>Add Drink Size.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add Gender.resx">
       <DependentUpon>Add Gender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Menu Item Type.resx">
+      <DependentUpon>Add Menu Item Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Menu Item.resx">
+      <DependentUpon>Add Menu Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Pizza Base.resx">
+      <DependentUpon>Add Pizza Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Pizza Size.resx">
+      <DependentUpon>Add Pizza Size.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Add Privilege.resx">
       <DependentUpon>Add Privilege.cs</DependentUpon>
@@ -329,6 +470,9 @@
     <EmbeddedResource Include="Delete Gender.resx">
       <DependentUpon>Delete Gender.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Delete Menu Item.resx">
+      <DependentUpon>Delete Menu Item.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Delete Privilege.resx">
       <DependentUpon>Delete Privilege.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,11 +488,17 @@
     <EmbeddedResource Include="Delete User.resx">
       <DependentUpon>Delete User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Drinks.resx">
+      <DependentUpon>Drinks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit Booked Shifts.resx">
       <DependentUpon>Edit Booked Shifts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit Booking2.resx">
       <DependentUpon>Edit Booking2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Find a Menu Item.resx">
+      <DependentUpon>Find a Menu Item.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Find Forgotten Password.resx">
       <DependentUpon>Find Forgotten Password.cs</DependentUpon>
@@ -371,6 +521,21 @@
     <EmbeddedResource Include="Manager Features.resx">
       <DependentUpon>Manager Features.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu Form.resx">
+      <DependentUpon>Menu Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Item Help Page.resx">
+      <DependentUpon>Menu Item Help Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Item Types.resx">
+      <DependentUpon>Menu Item Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pizza Bases.resx">
+      <DependentUpon>Pizza Bases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pizza Sizes.resx">
+      <DependentUpon>Pizza Sizes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Privileges.resx">
       <DependentUpon>Privileges.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,14 +549,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Remove a Pizza Base.resx">
+      <DependentUpon>Remove a Pizza Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remove a Pizza Size.resx">
+      <DependentUpon>Remove a Pizza Size.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remove Drink Size.resx">
+      <DependentUpon>Remove Drink Size.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remove Menu Item Type.resx">
+      <DependentUpon>Remove Menu Item Type.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search Shifts.resx">
       <DependentUpon>Search Shifts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shifts Form.resx">
       <DependentUpon>Shifts Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx">
+      <DependentUpon>Template.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Titles.resx">
       <DependentUpon>Titles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update a Menu Item.resx">
+      <DependentUpon>Update a Menu Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Menu Item2.resx">
+      <DependentUpon>Update Menu Item2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update Shift.resx">
       <DependentUpon>Update Shift.cs</DependentUpon>
@@ -410,6 +596,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users Help.resx">
       <DependentUpon>Users Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View All Menu Items.resx">
+      <DependentUpon>View All Menu Items.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Available Shifts.resx">
       <DependentUpon>View Available Shifts.cs</DependentUpon>
@@ -474,6 +663,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Images\if_cash-money-coin-value_2203534.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_menu6_216511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_ic_local_pizza_48px_352511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_47_171473.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_5_1845728.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_ic_mode_comment_48px_352546.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_97_171456.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_imoticon_1_210817.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_food-drink-22_808996.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

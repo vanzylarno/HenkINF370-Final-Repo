@@ -235,7 +235,78 @@ SELECT ShiftID, Day, TimeSlot, Available, Date, AvailableSlots FROM Shifts WHERE
               <Mapping SourceColumn="Date" DataSetColumn="Date" />
               <Mapping SourceColumn="AvailableSlots" DataSetColumn="AvailableSlots" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Shifts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByFriday" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFriday" GeneratorSourceName="FillByFriday" GetMethodModifier="Public" GetMethodName="GetDataByFriday" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFriday" UserSourceName="FillByFriday">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TimeSlot, AvailableSlots
+FROM            Shifts
+WHERE        (Day = 'Friday')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Shifts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByMonday" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMonday" GeneratorSourceName="FillByMonday" GetMethodModifier="Public" GetMethodName="GetDataByMonday" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMonday" UserSourceName="FillByMonday">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TimeSlot, AvailableSlots
+FROM            Shifts
+WHERE        (Day = 'Monday')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Shifts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySaturday" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySaturday" GeneratorSourceName="FillBySaturday" GetMethodModifier="Public" GetMethodName="GetDataBySaturday" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySaturday" UserSourceName="FillBySaturday">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TimeSlot, AvailableSlots
+FROM            Shifts
+WHERE        (Day = 'Saturday')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Shifts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySunday" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySunday" GeneratorSourceName="FillBySunday" GetMethodModifier="Public" GetMethodName="GetDataBySunday" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySunday" UserSourceName="FillBySunday">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TimeSlot, AvailableSlots
+FROM            Shifts
+WHERE        (Day = 'Sunday')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Shifts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByThursday" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByThursday" GeneratorSourceName="FillByThursday" GetMethodModifier="Public" GetMethodName="GetDataByThursday" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByThursday" UserSourceName="FillByThursday">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TimeSlot, AvailableSlots
+FROM            Shifts
+WHERE        (Day = 'Thursday')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Shifts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTuesday" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTuesday" GeneratorSourceName="FillByTuesday" GetMethodModifier="Public" GetMethodName="GetDataByTuesday" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTuesday" UserSourceName="FillByTuesday">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TimeSlot, AvailableSlots
+FROM            Shifts
+WHERE        (Day = 'Tuesday')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Shifts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByWednesday" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByWednesday" GeneratorSourceName="FillByWednesday" GetMethodModifier="Public" GetMethodName="GetDataByWednesday" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByWednesday" UserSourceName="FillByWednesday">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TimeSlot, AvailableSlots
+FROM            Shifts
+WHERE        (Day = 'Wednesday')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TitleTableAdapter" GeneratorDataComponentClassName="TitleTableAdapter" Name="Title" UserDataComponentName="TitleTableAdapter">
             <MainSource>
@@ -447,6 +518,644 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DrinkSizeTableAdapter" GeneratorDataComponentClassName="DrinkSizeTableAdapter" Name="DrinkSize" UserDataComponentName="DrinkSizeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.DrinkSize" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[DrinkSize] WHERE (([DrinkSizeID] = @Original_DrinkSizeID) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrinkSizeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[DrinkSize] ([Description], [Price]) VALUES (@Description, @Price);
+SELECT DrinkSizeID, Description, Price FROM DrinkSize WHERE (DrinkSizeID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DrinkSizeID, Description, Price FROM dbo.DrinkSize</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[DrinkSize] SET [Description] = @Description, [Price] = @Price WHERE (([DrinkSizeID] = @Original_DrinkSizeID) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
+SELECT DrinkSizeID, Description, Price FROM DrinkSize WHERE (DrinkSizeID = @DrinkSizeID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrinkSizeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DrinkSizeID" ColumnName="DrinkSizeID" DataSourceName="HenkINF370.dbo.DrinkSize" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="DrinkSizeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DrinkSizeID" DataSetColumn="DrinkSizeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MenuTableAdapter" GeneratorDataComponentClassName="MenuTableAdapter" Name="Menu" UserDataComponentName="MenuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Menu" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Menu] WHERE (([MenuItemID] = @Original_MenuItemID) AND ((@IsNull_ItemName = 1 AND [ItemName] IS NULL) OR ([ItemName] = @Original_ItemName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_MenuItemTypeID = 1 AND [MenuItemTypeID] IS NULL) OR ([MenuItemTypeID] = @Original_MenuItemTypeID)) AND ((@IsNull_DrinkSizeID = 1 AND [DrinkSizeID] IS NULL) OR ([DrinkSizeID] = @Original_DrinkSizeID)) AND ((@IsNull_PizzaSizeID = 1 AND [PizzaSizeID] IS NULL) OR ([PizzaSizeID] = @Original_PizzaSizeID)) AND ((@IsNull_PizzaBaseID = 1 AND [PizzaBaseID] IS NULL) OR ([PizzaBaseID] = @Original_PizzaBaseID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrinkSizeID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrinkSizeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaSizeID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaSizeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaBaseID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaBaseID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Menu] ([ItemName], [Price], [Description], [Image], [MenuItemTypeID], [DrinkSizeID], [PizzaSizeID], [PizzaBaseID]) VALUES (@ItemName, @Price, @Description, @Image, @MenuItemTypeID, @DrinkSizeID, @PizzaSizeID, @PizzaBaseID);
+SELECT MenuItemID, ItemName, Price, Description, Image, MenuItemTypeID, DrinkSizeID, PizzaSizeID, PizzaBaseID FROM Menu WHERE (MenuItemID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Image" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Image" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrinkSizeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaSizeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaBaseID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MenuItemID, ItemName, Price, Description, Image, MenuItemTypeID, DrinkSizeID, PizzaSizeID, PizzaBaseID FROM dbo.Menu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Menu] SET [ItemName] = @ItemName, [Price] = @Price, [Description] = @Description, [Image] = @Image, [MenuItemTypeID] = @MenuItemTypeID, [DrinkSizeID] = @DrinkSizeID, [PizzaSizeID] = @PizzaSizeID, [PizzaBaseID] = @PizzaBaseID WHERE (([MenuItemID] = @Original_MenuItemID) AND ((@IsNull_ItemName = 1 AND [ItemName] IS NULL) OR ([ItemName] = @Original_ItemName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_MenuItemTypeID = 1 AND [MenuItemTypeID] IS NULL) OR ([MenuItemTypeID] = @Original_MenuItemTypeID)) AND ((@IsNull_DrinkSizeID = 1 AND [DrinkSizeID] IS NULL) OR ([DrinkSizeID] = @Original_DrinkSizeID)) AND ((@IsNull_PizzaSizeID = 1 AND [PizzaSizeID] IS NULL) OR ([PizzaSizeID] = @Original_PizzaSizeID)) AND ((@IsNull_PizzaBaseID = 1 AND [PizzaBaseID] IS NULL) OR ([PizzaBaseID] = @Original_PizzaBaseID)));
+SELECT MenuItemID, ItemName, Price, Description, Image, MenuItemTypeID, DrinkSizeID, PizzaSizeID, PizzaBaseID FROM Menu WHERE (MenuItemID = @MenuItemID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Image" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Image" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrinkSizeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaSizeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaBaseID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrinkSizeID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrinkSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrinkSizeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaSizeID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaSizeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaBaseID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaBaseID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="MenuItemID" ColumnName="MenuItemID" DataSourceName="HenkINF370.dbo.Menu" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MenuItemID" DataSetColumn="MenuItemID" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Image" DataSetColumn="Image" />
+              <Mapping SourceColumn="MenuItemTypeID" DataSetColumn="MenuItemTypeID" />
+              <Mapping SourceColumn="DrinkSizeID" DataSetColumn="DrinkSizeID" />
+              <Mapping SourceColumn="PizzaSizeID" DataSetColumn="PizzaSizeID" />
+              <Mapping SourceColumn="PizzaBaseID" DataSetColumn="PizzaBaseID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MenuItemTypeTableAdapter" GeneratorDataComponentClassName="MenuItemTypeTableAdapter" Name="MenuItemType" UserDataComponentName="MenuItemTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.MenuItemType" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[MenuItemType] WHERE (([MenuItemTypeID] = @Original_MenuItemTypeID) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[MenuItemType] ([Description]) VALUES (@Description);
+SELECT MenuItemTypeID, Description FROM MenuItemType WHERE (MenuItemTypeID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MenuItemTypeID, Description FROM dbo.MenuItemType</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[MenuItemType] SET [Description] = @Description WHERE (([MenuItemTypeID] = @Original_MenuItemTypeID) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)));
+SELECT MenuItemTypeID, Description FROM MenuItemType WHERE (MenuItemTypeID = @MenuItemTypeID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="MenuItemTypeID" ColumnName="MenuItemTypeID" DataSourceName="HenkINF370.dbo.MenuItemType" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MenuItemTypeID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="MenuItemTypeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MenuItemTypeID" DataSetColumn="MenuItemTypeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PizzaBaseTableAdapter" GeneratorDataComponentClassName="PizzaBaseTableAdapter" Name="PizzaBase" UserDataComponentName="PizzaBaseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.PizzaBase" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[PizzaBase] WHERE (([PizzaBaseID] = @Original_PizzaBaseID) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaBaseID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[PizzaBase] ([Description], [Price]) VALUES (@Description, @Price);
+SELECT PizzaBaseID, Description, Price FROM PizzaBase WHERE (PizzaBaseID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PizzaBaseID, Description, Price FROM dbo.PizzaBase</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[PizzaBase] SET [Description] = @Description, [Price] = @Price WHERE (([PizzaBaseID] = @Original_PizzaBaseID) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
+SELECT PizzaBaseID, Description, Price FROM PizzaBase WHERE (PizzaBaseID = @PizzaBaseID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaBaseID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PizzaBaseID" ColumnName="PizzaBaseID" DataSourceName="HenkINF370.dbo.PizzaBase" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@PizzaBaseID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="PizzaBaseID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PizzaBaseID" DataSetColumn="PizzaBaseID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PizzaSizeTableAdapter" GeneratorDataComponentClassName="PizzaSizeTableAdapter" Name="PizzaSize" UserDataComponentName="PizzaSizeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.PizzaSize" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[PizzaSize] WHERE (([PizzaSizeID] = @Original_PizzaSizeID) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaSizeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[PizzaSize] ([Description], [Price]) VALUES (@Description, @Price);
+SELECT PizzaSizeID, Description, Price FROM PizzaSize WHERE (PizzaSizeID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PizzaSizeID, Description, Price FROM dbo.PizzaSize</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[PizzaSize] SET [Description] = @Description, [Price] = @Price WHERE (([PizzaSizeID] = @Original_PizzaSizeID) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
+SELECT PizzaSizeID, Description, Price FROM PizzaSize WHERE (PizzaSizeID = @PizzaSizeID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PizzaSizeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PizzaSizeID" ColumnName="PizzaSizeID" DataSourceName="HenkINF370.dbo.PizzaSize" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@PizzaSizeID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="PizzaSizeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PizzaSizeID" DataSetColumn="PizzaSizeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ComboTableAdapter" GeneratorDataComponentClassName="ComboTableAdapter" Name="Combo" UserDataComponentName="ComboTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Combo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Combo] WHERE (([ComboID] = @Original_ComboID) AND ((@IsNull_Combodescription = 1 AND [Combodescription] IS NULL) OR ([Combodescription] = @Original_Combodescription)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ComboID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Combodescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Combodescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Combodescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Combodescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Combo] ([Combodescription], [Price]) VALUES (@Combodescription, @Price);
+SELECT ComboID, Combodescription, Price FROM Combo WHERE (ComboID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Combodescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Combodescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ComboID, Combodescription, Price FROM dbo.Combo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Combo] SET [Combodescription] = @Combodescription, [Price] = @Price WHERE (([ComboID] = @Original_ComboID) AND ((@IsNull_Combodescription = 1 AND [Combodescription] IS NULL) OR ([Combodescription] = @Original_Combodescription)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
+SELECT ComboID, Combodescription, Price FROM Combo WHERE (ComboID = @ComboID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Combodescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Combodescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ComboID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Combodescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Combodescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Combodescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Combodescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ComboID" ColumnName="ComboID" DataSourceName="HenkINF370.dbo.Combo" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ComboID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ComboID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ComboID" DataSetColumn="ComboID" />
+              <Mapping SourceColumn="Combodescription" DataSetColumn="Combodescription" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ComboLineTableAdapter" GeneratorDataComponentClassName="ComboLineTableAdapter" Name="ComboLine" UserDataComponentName="ComboLineTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.ComboLine" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[ComboLine] WHERE (([MenuItemID] = @Original_MenuItemID) AND ([ComboID] = @Original_ComboID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ComboID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[ComboLine] ([MenuItemID], [ComboID]) VALUES (@MenuItemID, @ComboID);
+SELECT MenuItemID, ComboID FROM ComboLine WHERE (ComboID = @ComboID) AND (MenuItemID = @MenuItemID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ComboID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MenuItemID, ComboID FROM dbo.ComboLine</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[ComboLine] SET [MenuItemID] = @MenuItemID, [ComboID] = @ComboID WHERE (([MenuItemID] = @Original_MenuItemID) AND ([ComboID] = @Original_ComboID));
+SELECT MenuItemID, ComboID FROM ComboLine WHERE (ComboID = @ComboID) AND (MenuItemID = @MenuItemID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ComboID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ComboID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MenuItemID" DataSetColumn="MenuItemID" />
+              <Mapping SourceColumn="ComboID" DataSetColumn="ComboID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ComboRecordTableAdapter" GeneratorDataComponentClassName="ComboRecordTableAdapter" Name="ComboRecord" UserDataComponentName="ComboRecordTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.ComboRecord" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[ComboRecord] WHERE (([ComboRecordID] = @Original_ComboRecordID) AND ((@IsNull_ComboDescription = 1 AND [ComboDescription] IS NULL) OR ([ComboDescription] = @Original_ComboDescription)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ComboRecordID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboRecordID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ComboDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ComboDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ComboDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[ComboRecord] ([ComboDescription], [Price]) VALUES (@ComboDescription, @Price);
+SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecordID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ComboDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ComboDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ComboRecordID, ComboDescription, Price FROM dbo.ComboRecord</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[ComboRecord] SET [ComboDescription] = @ComboDescription, [Price] = @Price WHERE (([ComboRecordID] = @Original_ComboRecordID) AND ((@IsNull_ComboDescription = 1 AND [ComboDescription] IS NULL) OR ([ComboDescription] = @Original_ComboDescription)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
+SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecordID = @ComboRecordID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ComboDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ComboDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ComboRecordID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboRecordID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ComboDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ComboDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ComboDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ComboDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ComboRecordID" ColumnName="ComboRecordID" DataSourceName="HenkINF370.dbo.ComboRecord" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ComboRecordID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ComboRecordID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ComboRecordID" DataSetColumn="ComboRecordID" />
+              <Mapping SourceColumn="ComboDescription" DataSetColumn="ComboDescription" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomisationTableAdapter" GeneratorDataComponentClassName="CustomisationTableAdapter" Name="Customisation" UserDataComponentName="CustomisationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Customisation" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Customisation] WHERE (([MenuItemID] = @Original_MenuItemID) AND ([ToppingID] = @Original_ToppingID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Customisation] ([MenuItemID], [ToppingID]) VALUES (@MenuItemID, @ToppingID);
+SELECT MenuItemID, ToppingID FROM Customisation WHERE (MenuItemID = @MenuItemID) AND (ToppingID = @ToppingID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MenuItemID, ToppingID FROM dbo.Customisation</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Customisation] SET [MenuItemID] = @MenuItemID, [ToppingID] = @ToppingID WHERE (([MenuItemID] = @Original_MenuItemID) AND ([ToppingID] = @Original_ToppingID));
+SELECT MenuItemID, ToppingID FROM Customisation WHERE (MenuItemID = @MenuItemID) AND (ToppingID = @ToppingID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MenuItemID" DataSetColumn="MenuItemID" />
+              <Mapping SourceColumn="ToppingID" DataSetColumn="ToppingID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ToppingRecordTableAdapter" GeneratorDataComponentClassName="ToppingRecordTableAdapter" Name="ToppingRecord" UserDataComponentName="ToppingRecordTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.ToppingRecord" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[ToppingRecord] WHERE (([ToppingRecordID] = @Original_ToppingRecordID) AND ((@IsNull_ToppingName = 1 AND [ToppingName] IS NULL) OR ([ToppingName] = @Original_ToppingName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ToppingID = 1 AND [ToppingID] IS NULL) OR ([ToppingID] = @Original_ToppingID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToppingRecordID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingRecordID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ToppingName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ToppingName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[ToppingRecord] ([ToppingName], [Price], [ToppingID]) VALUES (@ToppingName, @Price, @ToppingID);
+SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (ToppingRecordID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ToppingName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM dbo.ToppingRecord</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[ToppingRecord] SET [ToppingName] = @ToppingName, [Price] = @Price, [ToppingID] = @ToppingID WHERE (([ToppingRecordID] = @Original_ToppingRecordID) AND ((@IsNull_ToppingName = 1 AND [ToppingName] IS NULL) OR ([ToppingName] = @Original_ToppingName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ToppingID = 1 AND [ToppingID] IS NULL) OR ([ToppingID] = @Original_ToppingID)));
+SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (ToppingRecordID = @ToppingRecordID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ToppingName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToppingRecordID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingRecordID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ToppingName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ToppingName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ToppingRecordID" ColumnName="ToppingRecordID" DataSourceName="HenkINF370.dbo.ToppingRecord" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ToppingRecordID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ToppingRecordID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ToppingRecordID" DataSetColumn="ToppingRecordID" />
+              <Mapping SourceColumn="ToppingName" DataSetColumn="ToppingName" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="ToppingID" DataSetColumn="ToppingID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ToppingsTableAdapter" GeneratorDataComponentClassName="ToppingsTableAdapter" Name="Toppings" UserDataComponentName="ToppingsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HenkINF370ConnectionString (Settings)" DbObjectName="HenkINF370.dbo.Toppings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Toppings] WHERE (([ToppingID] = @Original_ToppingID) AND ((@IsNull_ToppingName = 1 AND [ToppingName] IS NULL) OR ([ToppingName] = @Original_ToppingName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ToppingName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ToppingName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Toppings] ([ToppingName], [Price]) VALUES (@ToppingName, @Price);
+SELECT ToppingID, ToppingName, Price FROM Toppings WHERE (ToppingID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ToppingName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ToppingID, ToppingName, Price FROM dbo.Toppings</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Toppings] SET [ToppingName] = @ToppingName, [Price] = @Price WHERE (([ToppingID] = @Original_ToppingID) AND ((@IsNull_ToppingName = 1 AND [ToppingName] IS NULL) OR ([ToppingName] = @Original_ToppingName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
+SELECT ToppingID, ToppingName, Price FROM Toppings WHERE (ToppingID = @ToppingID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ToppingName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ToppingName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ToppingName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ToppingName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ToppingID" ColumnName="ToppingID" DataSourceName="HenkINF370.dbo.Toppings" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ToppingID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ToppingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ToppingID" DataSetColumn="ToppingID" />
+              <Mapping SourceColumn="ToppingName" DataSetColumn="ToppingName" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -455,7 +1164,7 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
   <xs:element name="HenkINF370DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="HenkINF370DataSet" msprop:Generator_UserDSName="HenkINF370DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_UserTableName="Gender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_RowEvArgName="GenderRowChangeEvent" msprop:Generator_RowClassName="GenderRow">
+        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_RowClassName="GenderRow" msprop:Generator_UserTableName="Gender" msprop:Generator_RowEvArgName="GenderRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GenderID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnGenderID" msprop:Generator_ColumnPropNameInRow="GenderID" msprop:Generator_ColumnPropNameInTable="GenderIDColumn" msprop:Generator_UserColumnName="GenderID" type="xs:int" />
@@ -469,7 +1178,7 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Privilege" msprop:Generator_TableClassName="PrivilegeDataTable" msprop:Generator_TableVarName="tablePrivilege" msprop:Generator_TablePropName="Privilege" msprop:Generator_RowDeletingName="PrivilegeRowDeleting" msprop:Generator_RowChangingName="PrivilegeRowChanging" msprop:Generator_RowEvHandlerName="PrivilegeRowChangeEventHandler" msprop:Generator_RowDeletedName="PrivilegeRowDeleted" msprop:Generator_UserTableName="Privilege" msprop:Generator_RowChangedName="PrivilegeRowChanged" msprop:Generator_RowEvArgName="PrivilegeRowChangeEvent" msprop:Generator_RowClassName="PrivilegeRow">
+        <xs:element name="Privilege" msprop:Generator_TableClassName="PrivilegeDataTable" msprop:Generator_TableVarName="tablePrivilege" msprop:Generator_RowChangedName="PrivilegeRowChanged" msprop:Generator_TablePropName="Privilege" msprop:Generator_RowDeletingName="PrivilegeRowDeleting" msprop:Generator_RowChangingName="PrivilegeRowChanging" msprop:Generator_RowEvHandlerName="PrivilegeRowChangeEventHandler" msprop:Generator_RowDeletedName="PrivilegeRowDeleted" msprop:Generator_RowClassName="PrivilegeRow" msprop:Generator_UserTableName="Privilege" msprop:Generator_RowEvArgName="PrivilegeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PrivilegeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPrivilegeID" msprop:Generator_ColumnPropNameInRow="PrivilegeID" msprop:Generator_ColumnPropNameInTable="PrivilegeIDColumn" msprop:Generator_UserColumnName="PrivilegeID" type="xs:int" />
@@ -483,7 +1192,7 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ShiftLine" msprop:Generator_TableClassName="ShiftLineDataTable" msprop:Generator_TableVarName="tableShiftLine" msprop:Generator_TablePropName="ShiftLine" msprop:Generator_RowDeletingName="ShiftLineRowDeleting" msprop:Generator_RowChangingName="ShiftLineRowChanging" msprop:Generator_RowEvHandlerName="ShiftLineRowChangeEventHandler" msprop:Generator_RowDeletedName="ShiftLineRowDeleted" msprop:Generator_UserTableName="ShiftLine" msprop:Generator_RowChangedName="ShiftLineRowChanged" msprop:Generator_RowEvArgName="ShiftLineRowChangeEvent" msprop:Generator_RowClassName="ShiftLineRow">
+        <xs:element name="ShiftLine" msprop:Generator_TableClassName="ShiftLineDataTable" msprop:Generator_TableVarName="tableShiftLine" msprop:Generator_RowChangedName="ShiftLineRowChanged" msprop:Generator_TablePropName="ShiftLine" msprop:Generator_RowDeletingName="ShiftLineRowDeleting" msprop:Generator_RowChangingName="ShiftLineRowChanging" msprop:Generator_RowEvHandlerName="ShiftLineRowChangeEventHandler" msprop:Generator_RowDeletedName="ShiftLineRowDeleted" msprop:Generator_RowClassName="ShiftLineRow" msprop:Generator_UserTableName="ShiftLine" msprop:Generator_RowEvArgName="ShiftLineRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -492,7 +1201,7 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Shifts" msprop:Generator_TableClassName="ShiftsDataTable" msprop:Generator_TableVarName="tableShifts" msprop:Generator_TablePropName="Shifts" msprop:Generator_RowDeletingName="ShiftsRowDeleting" msprop:Generator_RowChangingName="ShiftsRowChanging" msprop:Generator_RowEvHandlerName="ShiftsRowChangeEventHandler" msprop:Generator_RowDeletedName="ShiftsRowDeleted" msprop:Generator_UserTableName="Shifts" msprop:Generator_RowChangedName="ShiftsRowChanged" msprop:Generator_RowEvArgName="ShiftsRowChangeEvent" msprop:Generator_RowClassName="ShiftsRow">
+        <xs:element name="Shifts" msprop:Generator_TableClassName="ShiftsDataTable" msprop:Generator_TableVarName="tableShifts" msprop:Generator_RowChangedName="ShiftsRowChanged" msprop:Generator_TablePropName="Shifts" msprop:Generator_RowDeletingName="ShiftsRowDeleting" msprop:Generator_RowChangingName="ShiftsRowChanging" msprop:Generator_RowEvHandlerName="ShiftsRowChangeEventHandler" msprop:Generator_RowDeletedName="ShiftsRowDeleted" msprop:Generator_RowClassName="ShiftsRow" msprop:Generator_UserTableName="Shifts" msprop:Generator_RowEvArgName="ShiftsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ShiftID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnShiftID" msprop:Generator_ColumnPropNameInRow="ShiftID" msprop:Generator_ColumnPropNameInTable="ShiftIDColumn" msprop:Generator_UserColumnName="ShiftID" type="xs:int" />
@@ -528,7 +1237,7 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Title" msprop:Generator_TableClassName="TitleDataTable" msprop:Generator_TableVarName="tableTitle" msprop:Generator_TablePropName="Title" msprop:Generator_RowDeletingName="TitleRowDeleting" msprop:Generator_RowChangingName="TitleRowChanging" msprop:Generator_RowEvHandlerName="TitleRowChangeEventHandler" msprop:Generator_RowDeletedName="TitleRowDeleted" msprop:Generator_UserTableName="Title" msprop:Generator_RowChangedName="TitleRowChanged" msprop:Generator_RowEvArgName="TitleRowChangeEvent" msprop:Generator_RowClassName="TitleRow">
+        <xs:element name="Title" msprop:Generator_TableClassName="TitleDataTable" msprop:Generator_TableVarName="tableTitle" msprop:Generator_RowChangedName="TitleRowChanged" msprop:Generator_TablePropName="Title" msprop:Generator_RowDeletingName="TitleRowDeleting" msprop:Generator_RowChangingName="TitleRowChanging" msprop:Generator_RowEvHandlerName="TitleRowChangeEventHandler" msprop:Generator_RowDeletedName="TitleRowDeleted" msprop:Generator_RowClassName="TitleRow" msprop:Generator_UserTableName="Title" msprop:Generator_RowEvArgName="TitleRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TitleID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTitleID" msprop:Generator_ColumnPropNameInRow="TitleID" msprop:Generator_ColumnPropNameInTable="TitleIDColumn" msprop:Generator_UserColumnName="TitleID" type="xs:int" />
@@ -542,7 +1251,7 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_UserTableName="Users" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_RowEvArgName="UsersRowChangeEvent" msprop:Generator_RowClassName="UsersRow">
+        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_RowClassName="UsersRow" msprop:Generator_UserTableName="Users" msprop:Generator_RowEvArgName="UsersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -595,7 +1304,7 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="UserType" msprop:Generator_TableClassName="UserTypeDataTable" msprop:Generator_TableVarName="tableUserType" msprop:Generator_TablePropName="UserType" msprop:Generator_RowDeletingName="UserTypeRowDeleting" msprop:Generator_RowChangingName="UserTypeRowChanging" msprop:Generator_RowEvHandlerName="UserTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="UserTypeRowDeleted" msprop:Generator_UserTableName="UserType" msprop:Generator_RowChangedName="UserTypeRowChanged" msprop:Generator_RowEvArgName="UserTypeRowChangeEvent" msprop:Generator_RowClassName="UserTypeRow">
+        <xs:element name="UserType" msprop:Generator_TableClassName="UserTypeDataTable" msprop:Generator_TableVarName="tableUserType" msprop:Generator_RowChangedName="UserTypeRowChanged" msprop:Generator_TablePropName="UserType" msprop:Generator_RowDeletingName="UserTypeRowDeleting" msprop:Generator_RowChangingName="UserTypeRowChanging" msprop:Generator_RowEvHandlerName="UserTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="UserTypeRowDeleted" msprop:Generator_RowClassName="UserTypeRow" msprop:Generator_UserTableName="UserType" msprop:Generator_RowEvArgName="UserTypeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserTypeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserTypeID" msprop:Generator_ColumnPropNameInRow="UserTypeID" msprop:Generator_ColumnPropNameInTable="UserTypeIDColumn" msprop:Generator_UserColumnName="UserTypeID" type="xs:int" />
@@ -606,6 +1315,169 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DrinkSize" msprop:Generator_TableClassName="DrinkSizeDataTable" msprop:Generator_TableVarName="tableDrinkSize" msprop:Generator_TablePropName="DrinkSize" msprop:Generator_RowDeletingName="DrinkSizeRowDeleting" msprop:Generator_RowChangingName="DrinkSizeRowChanging" msprop:Generator_RowEvHandlerName="DrinkSizeRowChangeEventHandler" msprop:Generator_RowDeletedName="DrinkSizeRowDeleted" msprop:Generator_UserTableName="DrinkSize" msprop:Generator_RowChangedName="DrinkSizeRowChanged" msprop:Generator_RowEvArgName="DrinkSizeRowChangeEvent" msprop:Generator_RowClassName="DrinkSizeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DrinkSizeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDrinkSizeID" msprop:Generator_ColumnPropNameInRow="DrinkSizeID" msprop:Generator_ColumnPropNameInTable="DrinkSizeIDColumn" msprop:Generator_UserColumnName="DrinkSizeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Menu" msprop:Generator_TableClassName="MenuDataTable" msprop:Generator_TableVarName="tableMenu" msprop:Generator_TablePropName="Menu" msprop:Generator_RowDeletingName="MenuRowDeleting" msprop:Generator_RowChangingName="MenuRowChanging" msprop:Generator_RowEvHandlerName="MenuRowChangeEventHandler" msprop:Generator_RowDeletedName="MenuRowDeleted" msprop:Generator_UserTableName="Menu" msprop:Generator_RowChangedName="MenuRowChanged" msprop:Generator_RowEvArgName="MenuRowChangeEvent" msprop:Generator_RowClassName="MenuRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MenuItemID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMenuItemID" msprop:Generator_ColumnPropNameInRow="MenuItemID" msprop:Generator_ColumnPropNameInTable="MenuItemIDColumn" msprop:Generator_UserColumnName="MenuItemID" type="xs:int" />
+              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Image" msprop:Generator_ColumnVarNameInTable="columnImage" msprop:Generator_ColumnPropNameInRow="Image" msprop:Generator_ColumnPropNameInTable="ImageColumn" msprop:Generator_UserColumnName="Image" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="MenuItemTypeID" msprop:Generator_ColumnVarNameInTable="columnMenuItemTypeID" msprop:Generator_ColumnPropNameInRow="MenuItemTypeID" msprop:Generator_ColumnPropNameInTable="MenuItemTypeIDColumn" msprop:Generator_UserColumnName="MenuItemTypeID" type="xs:int" minOccurs="0" />
+              <xs:element name="DrinkSizeID" msprop:Generator_ColumnVarNameInTable="columnDrinkSizeID" msprop:Generator_ColumnPropNameInRow="DrinkSizeID" msprop:Generator_ColumnPropNameInTable="DrinkSizeIDColumn" msprop:Generator_UserColumnName="DrinkSizeID" type="xs:int" minOccurs="0" />
+              <xs:element name="PizzaSizeID" msprop:Generator_ColumnVarNameInTable="columnPizzaSizeID" msprop:Generator_ColumnPropNameInRow="PizzaSizeID" msprop:Generator_ColumnPropNameInTable="PizzaSizeIDColumn" msprop:Generator_UserColumnName="PizzaSizeID" type="xs:int" minOccurs="0" />
+              <xs:element name="PizzaBaseID" msprop:Generator_ColumnVarNameInTable="columnPizzaBaseID" msprop:Generator_ColumnPropNameInRow="PizzaBaseID" msprop:Generator_ColumnPropNameInTable="PizzaBaseIDColumn" msprop:Generator_UserColumnName="PizzaBaseID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MenuItemType" msprop:Generator_TableClassName="MenuItemTypeDataTable" msprop:Generator_TableVarName="tableMenuItemType" msprop:Generator_TablePropName="MenuItemType" msprop:Generator_RowDeletingName="MenuItemTypeRowDeleting" msprop:Generator_RowChangingName="MenuItemTypeRowChanging" msprop:Generator_RowEvHandlerName="MenuItemTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="MenuItemTypeRowDeleted" msprop:Generator_UserTableName="MenuItemType" msprop:Generator_RowChangedName="MenuItemTypeRowChanged" msprop:Generator_RowEvArgName="MenuItemTypeRowChangeEvent" msprop:Generator_RowClassName="MenuItemTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MenuItemTypeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMenuItemTypeID" msprop:Generator_ColumnPropNameInRow="MenuItemTypeID" msprop:Generator_ColumnPropNameInTable="MenuItemTypeIDColumn" msprop:Generator_UserColumnName="MenuItemTypeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PizzaBase" msprop:Generator_TableClassName="PizzaBaseDataTable" msprop:Generator_TableVarName="tablePizzaBase" msprop:Generator_TablePropName="PizzaBase" msprop:Generator_RowDeletingName="PizzaBaseRowDeleting" msprop:Generator_RowChangingName="PizzaBaseRowChanging" msprop:Generator_RowEvHandlerName="PizzaBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="PizzaBaseRowDeleted" msprop:Generator_UserTableName="PizzaBase" msprop:Generator_RowChangedName="PizzaBaseRowChanged" msprop:Generator_RowEvArgName="PizzaBaseRowChangeEvent" msprop:Generator_RowClassName="PizzaBaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PizzaBaseID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPizzaBaseID" msprop:Generator_ColumnPropNameInRow="PizzaBaseID" msprop:Generator_ColumnPropNameInTable="PizzaBaseIDColumn" msprop:Generator_UserColumnName="PizzaBaseID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PizzaSize" msprop:Generator_TableClassName="PizzaSizeDataTable" msprop:Generator_TableVarName="tablePizzaSize" msprop:Generator_TablePropName="PizzaSize" msprop:Generator_RowDeletingName="PizzaSizeRowDeleting" msprop:Generator_RowChangingName="PizzaSizeRowChanging" msprop:Generator_RowEvHandlerName="PizzaSizeRowChangeEventHandler" msprop:Generator_RowDeletedName="PizzaSizeRowDeleted" msprop:Generator_UserTableName="PizzaSize" msprop:Generator_RowChangedName="PizzaSizeRowChanged" msprop:Generator_RowEvArgName="PizzaSizeRowChangeEvent" msprop:Generator_RowClassName="PizzaSizeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PizzaSizeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPizzaSizeID" msprop:Generator_ColumnPropNameInRow="PizzaSizeID" msprop:Generator_ColumnPropNameInTable="PizzaSizeIDColumn" msprop:Generator_UserColumnName="PizzaSizeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Combo" msprop:Generator_TableClassName="ComboDataTable" msprop:Generator_TableVarName="tableCombo" msprop:Generator_RowChangedName="ComboRowChanged" msprop:Generator_TablePropName="Combo" msprop:Generator_RowDeletingName="ComboRowDeleting" msprop:Generator_RowChangingName="ComboRowChanging" msprop:Generator_RowEvHandlerName="ComboRowChangeEventHandler" msprop:Generator_RowDeletedName="ComboRowDeleted" msprop:Generator_RowClassName="ComboRow" msprop:Generator_UserTableName="Combo" msprop:Generator_RowEvArgName="ComboRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ComboID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComboID" msprop:Generator_ColumnPropNameInRow="ComboID" msprop:Generator_ColumnPropNameInTable="ComboIDColumn" msprop:Generator_UserColumnName="ComboID" type="xs:int" />
+              <xs:element name="Combodescription" msprop:Generator_ColumnVarNameInTable="columnCombodescription" msprop:Generator_ColumnPropNameInRow="Combodescription" msprop:Generator_ColumnPropNameInTable="CombodescriptionColumn" msprop:Generator_UserColumnName="Combodescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ComboLine" msprop:Generator_TableClassName="ComboLineDataTable" msprop:Generator_TableVarName="tableComboLine" msprop:Generator_RowChangedName="ComboLineRowChanged" msprop:Generator_TablePropName="ComboLine" msprop:Generator_RowDeletingName="ComboLineRowDeleting" msprop:Generator_RowChangingName="ComboLineRowChanging" msprop:Generator_RowEvHandlerName="ComboLineRowChangeEventHandler" msprop:Generator_RowDeletedName="ComboLineRowDeleted" msprop:Generator_RowClassName="ComboLineRow" msprop:Generator_UserTableName="ComboLine" msprop:Generator_RowEvArgName="ComboLineRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MenuItemID" msprop:Generator_ColumnVarNameInTable="columnMenuItemID" msprop:Generator_ColumnPropNameInRow="MenuItemID" msprop:Generator_ColumnPropNameInTable="MenuItemIDColumn" msprop:Generator_UserColumnName="MenuItemID" type="xs:int" />
+              <xs:element name="ComboID" msprop:Generator_ColumnVarNameInTable="columnComboID" msprop:Generator_ColumnPropNameInRow="ComboID" msprop:Generator_ColumnPropNameInTable="ComboIDColumn" msprop:Generator_UserColumnName="ComboID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ComboRecord" msprop:Generator_TableClassName="ComboRecordDataTable" msprop:Generator_TableVarName="tableComboRecord" msprop:Generator_RowChangedName="ComboRecordRowChanged" msprop:Generator_TablePropName="ComboRecord" msprop:Generator_RowDeletingName="ComboRecordRowDeleting" msprop:Generator_RowChangingName="ComboRecordRowChanging" msprop:Generator_RowEvHandlerName="ComboRecordRowChangeEventHandler" msprop:Generator_RowDeletedName="ComboRecordRowDeleted" msprop:Generator_RowClassName="ComboRecordRow" msprop:Generator_UserTableName="ComboRecord" msprop:Generator_RowEvArgName="ComboRecordRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ComboRecordID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComboRecordID" msprop:Generator_ColumnPropNameInRow="ComboRecordID" msprop:Generator_ColumnPropNameInTable="ComboRecordIDColumn" msprop:Generator_UserColumnName="ComboRecordID" type="xs:int" />
+              <xs:element name="ComboDescription" msprop:Generator_ColumnVarNameInTable="columnComboDescription" msprop:Generator_ColumnPropNameInRow="ComboDescription" msprop:Generator_ColumnPropNameInTable="ComboDescriptionColumn" msprop:Generator_UserColumnName="ComboDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Customisation" msprop:Generator_TableClassName="CustomisationDataTable" msprop:Generator_TableVarName="tableCustomisation" msprop:Generator_RowChangedName="CustomisationRowChanged" msprop:Generator_TablePropName="Customisation" msprop:Generator_RowDeletingName="CustomisationRowDeleting" msprop:Generator_RowChangingName="CustomisationRowChanging" msprop:Generator_RowEvHandlerName="CustomisationRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomisationRowDeleted" msprop:Generator_RowClassName="CustomisationRow" msprop:Generator_UserTableName="Customisation" msprop:Generator_RowEvArgName="CustomisationRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MenuItemID" msprop:Generator_ColumnVarNameInTable="columnMenuItemID" msprop:Generator_ColumnPropNameInRow="MenuItemID" msprop:Generator_ColumnPropNameInTable="MenuItemIDColumn" msprop:Generator_UserColumnName="MenuItemID" type="xs:int" />
+              <xs:element name="ToppingID" msprop:Generator_ColumnVarNameInTable="columnToppingID" msprop:Generator_ColumnPropNameInRow="ToppingID" msprop:Generator_ColumnPropNameInTable="ToppingIDColumn" msprop:Generator_UserColumnName="ToppingID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ToppingRecord" msprop:Generator_TableClassName="ToppingRecordDataTable" msprop:Generator_TableVarName="tableToppingRecord" msprop:Generator_RowChangedName="ToppingRecordRowChanged" msprop:Generator_TablePropName="ToppingRecord" msprop:Generator_RowDeletingName="ToppingRecordRowDeleting" msprop:Generator_RowChangingName="ToppingRecordRowChanging" msprop:Generator_RowEvHandlerName="ToppingRecordRowChangeEventHandler" msprop:Generator_RowDeletedName="ToppingRecordRowDeleted" msprop:Generator_RowClassName="ToppingRecordRow" msprop:Generator_UserTableName="ToppingRecord" msprop:Generator_RowEvArgName="ToppingRecordRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ToppingRecordID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnToppingRecordID" msprop:Generator_ColumnPropNameInRow="ToppingRecordID" msprop:Generator_ColumnPropNameInTable="ToppingRecordIDColumn" msprop:Generator_UserColumnName="ToppingRecordID" type="xs:int" />
+              <xs:element name="ToppingName" msprop:Generator_ColumnVarNameInTable="columnToppingName" msprop:Generator_ColumnPropNameInRow="ToppingName" msprop:Generator_ColumnPropNameInTable="ToppingNameColumn" msprop:Generator_UserColumnName="ToppingName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ToppingID" msprop:Generator_ColumnVarNameInTable="columnToppingID" msprop:Generator_ColumnPropNameInRow="ToppingID" msprop:Generator_ColumnPropNameInTable="ToppingIDColumn" msprop:Generator_UserColumnName="ToppingID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Toppings" msprop:Generator_TableClassName="ToppingsDataTable" msprop:Generator_TableVarName="tableToppings" msprop:Generator_RowChangedName="ToppingsRowChanged" msprop:Generator_TablePropName="Toppings" msprop:Generator_RowDeletingName="ToppingsRowDeleting" msprop:Generator_RowChangingName="ToppingsRowChanging" msprop:Generator_RowEvHandlerName="ToppingsRowChangeEventHandler" msprop:Generator_RowDeletedName="ToppingsRowDeleted" msprop:Generator_RowClassName="ToppingsRow" msprop:Generator_UserTableName="Toppings" msprop:Generator_RowEvArgName="ToppingsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ToppingID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnToppingID" msprop:Generator_ColumnPropNameInRow="ToppingID" msprop:Generator_ColumnPropNameInTable="ToppingIDColumn" msprop:Generator_UserColumnName="ToppingID" type="xs:int" />
+              <xs:element name="ToppingName" msprop:Generator_ColumnVarNameInTable="columnToppingName" msprop:Generator_ColumnPropNameInRow="ToppingName" msprop:Generator_ColumnPropNameInTable="ToppingNameColumn" msprop:Generator_UserColumnName="ToppingName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -640,15 +1512,70 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
       <xs:selector xpath=".//mstns:UserType" />
       <xs:field xpath="mstns:UserTypeID" />
     </xs:unique>
+    <xs:unique name="DrinkSize_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DrinkSize" />
+      <xs:field xpath="mstns:DrinkSizeID" />
+    </xs:unique>
+    <xs:unique name="Menu_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Menu" />
+      <xs:field xpath="mstns:MenuItemID" />
+    </xs:unique>
+    <xs:unique name="MenuItemType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MenuItemType" />
+      <xs:field xpath="mstns:MenuItemTypeID" />
+    </xs:unique>
+    <xs:unique name="PizzaBase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PizzaBase" />
+      <xs:field xpath="mstns:PizzaBaseID" />
+    </xs:unique>
+    <xs:unique name="PizzaSize_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PizzaSize" />
+      <xs:field xpath="mstns:PizzaSizeID" />
+    </xs:unique>
+    <xs:unique name="Combo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Combo" />
+      <xs:field xpath="mstns:ComboID" />
+    </xs:unique>
+    <xs:unique name="ComboLine_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ComboLine" />
+      <xs:field xpath="mstns:MenuItemID" />
+      <xs:field xpath="mstns:ComboID" />
+    </xs:unique>
+    <xs:unique name="ComboRecord_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ComboRecord" />
+      <xs:field xpath="mstns:ComboRecordID" />
+    </xs:unique>
+    <xs:unique name="Customisation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Customisation" />
+      <xs:field xpath="mstns:MenuItemID" />
+      <xs:field xpath="mstns:ToppingID" />
+    </xs:unique>
+    <xs:unique name="ToppingRecord_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ToppingRecord" />
+      <xs:field xpath="mstns:ToppingRecordID" />
+    </xs:unique>
+    <xs:unique name="Toppings_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Toppings" />
+      <xs:field xpath="mstns:ToppingID" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__ShiftLine__Shift__571DF1D5" msdata:parent="Shifts" msdata:child="ShiftLine" msdata:parentkey="ShiftID" msdata:childkey="ShiftID" msprop:Generator_UserChildTable="ShiftLine" msprop:Generator_ChildPropName="GetShiftLineRows" msprop:Generator_UserRelationName="FK__ShiftLine__Shift__571DF1D5" msprop:Generator_RelationVarName="relationFK__ShiftLine__Shift__571DF1D5" msprop:Generator_UserParentTable="Shifts" msprop:Generator_ParentPropName="ShiftsRow" />
-      <msdata:Relationship name="FK__ShiftLine__UserI__5629CD9C" msdata:parent="Users" msdata:child="ShiftLine" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserChildTable="ShiftLine" msprop:Generator_ChildPropName="GetShiftLineRows" msprop:Generator_UserRelationName="FK__ShiftLine__UserI__5629CD9C" msprop:Generator_RelationVarName="relationFK__ShiftLine__UserI__5629CD9C" msprop:Generator_UserParentTable="Users" msprop:Generator_ParentPropName="UsersRow" />
-      <msdata:Relationship name="FK__Users__GenderID__34C8D9D1" msdata:parent="Gender" msdata:child="Users" msdata:parentkey="GenderID" msdata:childkey="GenderID" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK__Users__GenderID__34C8D9D1" msprop:Generator_ParentPropName="GenderRow" msprop:Generator_RelationVarName="relationFK__Users__GenderID__34C8D9D1" msprop:Generator_UserParentTable="Gender" />
-      <msdata:Relationship name="FK__Users__Privilege__33D4B598" msdata:parent="Privilege" msdata:child="Users" msdata:parentkey="PrivilegeID" msdata:childkey="PrivilegeID" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK__Users__Privilege__33D4B598" msprop:Generator_ParentPropName="PrivilegeRow" msprop:Generator_RelationVarName="relationFK__Users__Privilege__33D4B598" msprop:Generator_UserParentTable="Privilege" />
-      <msdata:Relationship name="FK__Users__TitleID__35BCFE0A" msdata:parent="Title" msdata:child="Users" msdata:parentkey="TitleID" msdata:childkey="TitleID" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK__Users__TitleID__35BCFE0A" msprop:Generator_ParentPropName="TitleRow" msprop:Generator_RelationVarName="relationFK__Users__TitleID__35BCFE0A" msprop:Generator_UserParentTable="Title" />
-      <msdata:Relationship name="FK__Users__UserTypeI__36B12243" msdata:parent="UserType" msdata:child="Users" msdata:parentkey="UserTypeID" msdata:childkey="UserTypeID" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK__Users__UserTypeI__36B12243" msprop:Generator_RelationVarName="relationFK__Users__UserTypeI__36B12243" msprop:Generator_UserParentTable="UserType" msprop:Generator_ParentPropName="UserTypeRow" />
+      <msdata:Relationship name="FK__ShiftLine__Shift__571DF1D5" msdata:parent="Shifts" msdata:child="ShiftLine" msdata:parentkey="ShiftID" msdata:childkey="ShiftID" msprop:Generator_UserChildTable="ShiftLine" msprop:Generator_ChildPropName="GetShiftLineRows" msprop:Generator_UserRelationName="FK__ShiftLine__Shift__571DF1D5" msprop:Generator_ParentPropName="ShiftsRow" msprop:Generator_RelationVarName="relationFK__ShiftLine__Shift__571DF1D5" msprop:Generator_UserParentTable="Shifts" />
+      <msdata:Relationship name="FK__ShiftLine__UserI__5629CD9C" msdata:parent="Users" msdata:child="ShiftLine" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserChildTable="ShiftLine" msprop:Generator_ChildPropName="GetShiftLineRows" msprop:Generator_UserRelationName="FK__ShiftLine__UserI__5629CD9C" msprop:Generator_ParentPropName="UsersRow" msprop:Generator_RelationVarName="relationFK__ShiftLine__UserI__5629CD9C" msprop:Generator_UserParentTable="Users" />
+      <msdata:Relationship name="FK__Users__GenderID__34C8D9D1" msdata:parent="Gender" msdata:child="Users" msdata:parentkey="GenderID" msdata:childkey="GenderID" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK__Users__GenderID__34C8D9D1" msprop:Generator_RelationVarName="relationFK__Users__GenderID__34C8D9D1" msprop:Generator_UserParentTable="Gender" msprop:Generator_ParentPropName="GenderRow" />
+      <msdata:Relationship name="FK__Users__Privilege__33D4B598" msdata:parent="Privilege" msdata:child="Users" msdata:parentkey="PrivilegeID" msdata:childkey="PrivilegeID" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK__Users__Privilege__33D4B598" msprop:Generator_RelationVarName="relationFK__Users__Privilege__33D4B598" msprop:Generator_UserParentTable="Privilege" msprop:Generator_ParentPropName="PrivilegeRow" />
+      <msdata:Relationship name="FK__Users__TitleID__35BCFE0A" msdata:parent="Title" msdata:child="Users" msdata:parentkey="TitleID" msdata:childkey="TitleID" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK__Users__TitleID__35BCFE0A" msprop:Generator_RelationVarName="relationFK__Users__TitleID__35BCFE0A" msprop:Generator_UserParentTable="Title" msprop:Generator_ParentPropName="TitleRow" />
+      <msdata:Relationship name="FK__Users__UserTypeI__36B12243" msdata:parent="UserType" msdata:child="Users" msdata:parentkey="UserTypeID" msdata:childkey="UserTypeID" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK__Users__UserTypeI__36B12243" msprop:Generator_ParentPropName="UserTypeRow" msprop:Generator_RelationVarName="relationFK__Users__UserTypeI__36B12243" msprop:Generator_UserParentTable="UserType" />
+      <msdata:Relationship name="FK__Menu__DrinkSizeI__628FA481" msdata:parent="DrinkSize" msdata:child="Menu" msdata:parentkey="DrinkSizeID" msdata:childkey="DrinkSizeID" msprop:Generator_UserChildTable="Menu" msprop:Generator_ChildPropName="GetMenuRows" msprop:Generator_UserRelationName="FK__Menu__DrinkSizeI__628FA481" msprop:Generator_ParentPropName="DrinkSizeRow" msprop:Generator_RelationVarName="relationFK__Menu__DrinkSizeI__628FA481" msprop:Generator_UserParentTable="DrinkSize" />
+      <msdata:Relationship name="FK__Menu__MenuItemTy__619B8048" msdata:parent="MenuItemType" msdata:child="Menu" msdata:parentkey="MenuItemTypeID" msdata:childkey="MenuItemTypeID" msprop:Generator_UserChildTable="Menu" msprop:Generator_ChildPropName="GetMenuRows" msprop:Generator_UserRelationName="FK__Menu__MenuItemTy__619B8048" msprop:Generator_RelationVarName="relationFK__Menu__MenuItemTy__619B8048" msprop:Generator_UserParentTable="MenuItemType" msprop:Generator_ParentPropName="MenuItemTypeRow" />
+      <msdata:Relationship name="FK__Menu__PizzaBaseI__6477ECF3" msdata:parent="PizzaBase" msdata:child="Menu" msdata:parentkey="PizzaBaseID" msdata:childkey="PizzaBaseID" msprop:Generator_UserChildTable="Menu" msprop:Generator_ChildPropName="GetMenuRows" msprop:Generator_UserRelationName="FK__Menu__PizzaBaseI__6477ECF3" msprop:Generator_RelationVarName="relationFK__Menu__PizzaBaseI__6477ECF3" msprop:Generator_UserParentTable="PizzaBase" msprop:Generator_ParentPropName="PizzaBaseRow" />
+      <msdata:Relationship name="FK__Menu__PizzaSizeI__6383C8BA" msdata:parent="PizzaSize" msdata:child="Menu" msdata:parentkey="PizzaSizeID" msdata:childkey="PizzaSizeID" msprop:Generator_UserChildTable="Menu" msprop:Generator_ChildPropName="GetMenuRows" msprop:Generator_UserRelationName="FK__Menu__PizzaSizeI__6383C8BA" msprop:Generator_RelationVarName="relationFK__Menu__PizzaSizeI__6383C8BA" msprop:Generator_UserParentTable="PizzaSize" msprop:Generator_ParentPropName="PizzaSizeRow" />
+      <msdata:Relationship name="FK__ComboLine__Combo__72C60C4A" msdata:parent="Combo" msdata:child="ComboLine" msdata:parentkey="ComboID" msdata:childkey="ComboID" msprop:Generator_UserChildTable="ComboLine" msprop:Generator_ChildPropName="GetComboLineRows" msprop:Generator_UserRelationName="FK__ComboLine__Combo__72C60C4A" msprop:Generator_RelationVarName="relationFK__ComboLine__Combo__72C60C4A" msprop:Generator_UserParentTable="Combo" msprop:Generator_ParentPropName="ComboRow" />
+      <msdata:Relationship name="FK__ComboLine__MenuI__71D1E811" msdata:parent="Menu" msdata:child="ComboLine" msdata:parentkey="MenuItemID" msdata:childkey="MenuItemID" msprop:Generator_UserChildTable="ComboLine" msprop:Generator_ChildPropName="GetComboLineRows" msprop:Generator_UserRelationName="FK__ComboLine__MenuI__71D1E811" msprop:Generator_RelationVarName="relationFK__ComboLine__MenuI__71D1E811" msprop:Generator_UserParentTable="Menu" msprop:Generator_ParentPropName="MenuRow" />
+      <msdata:Relationship name="FK__Customisa__MenuI__797309D9" msdata:parent="Menu" msdata:child="Customisation" msdata:parentkey="MenuItemID" msdata:childkey="MenuItemID" msprop:Generator_UserChildTable="Customisation" msprop:Generator_ChildPropName="GetCustomisationRows" msprop:Generator_UserRelationName="FK__Customisa__MenuI__797309D9" msprop:Generator_RelationVarName="relationFK__Customisa__MenuI__797309D9" msprop:Generator_UserParentTable="Menu" msprop:Generator_ParentPropName="MenuRow" />
+      <msdata:Relationship name="FK__Customisa__Toppi__7A672E12" msdata:parent="Toppings" msdata:child="Customisation" msdata:parentkey="ToppingID" msdata:childkey="ToppingID" msprop:Generator_UserChildTable="Customisation" msprop:Generator_ChildPropName="GetCustomisationRows" msprop:Generator_UserRelationName="FK__Customisa__Toppi__7A672E12" msprop:Generator_ParentPropName="ToppingsRow" msprop:Generator_RelationVarName="relationFK__Customisa__Toppi__7A672E12" msprop:Generator_UserParentTable="Toppings" />
+      <msdata:Relationship name="FK__ToppingRe__Toppi__7D439ABD" msdata:parent="Toppings" msdata:child="ToppingRecord" msdata:parentkey="ToppingID" msdata:childkey="ToppingID" msprop:Generator_UserChildTable="ToppingRecord" msprop:Generator_ChildPropName="GetToppingRecordRows" msprop:Generator_UserRelationName="FK__ToppingRe__Toppi__7D439ABD" msprop:Generator_ParentPropName="ToppingsRow" msprop:Generator_RelationVarName="relationFK__ToppingRe__Toppi__7D439ABD" msprop:Generator_UserParentTable="Toppings" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

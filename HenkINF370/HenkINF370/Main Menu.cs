@@ -34,5 +34,17 @@ namespace HenkINF370
             Shifts_Form myform = new Shifts_Form();
             myform.ShowDialog();
         }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            Menu_Form myform = new Menu_Form();
+            myform.ShowDialog();
+        }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            Template myform = new Template();
+            myform.ShowDialog();
+        }
     }
 }

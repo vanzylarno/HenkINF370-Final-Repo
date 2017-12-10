@@ -28,38 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblDetails = new MetroFramework.Controls.MetroLabel();
             this.lblFP = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
-            this.panel1.SuspendLayout();
+            this.lblDetails = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblDetails);
-            this.panel1.Location = new System.Drawing.Point(350, 54);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(363, 261);
-            this.panel1.TabIndex = 13;
-            // 
-            // lblDetails
-            // 
-            this.lblDetails.AutoSize = true;
-            this.lblDetails.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblDetails.Location = new System.Drawing.Point(43, 22);
-            this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(284, 95);
-            this.lblDetails.Style = MetroFramework.MetroColorStyle.Lime;
-            this.lblDetails.TabIndex = 6;
-            this.lblDetails.Text = "Welcome!\r\n\r\nPlease Provide your Username and Password\r\nto log into the System\r\n";
-            this.lblDetails.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lblDetails.UseCustomForeColor = true;
             // 
             // lblFP
             // 
@@ -176,12 +162,81 @@
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // lblDetails
+            // 
+            this.lblDetails.AutoSize = true;
+            this.lblDetails.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblDetails.Location = new System.Drawing.Point(438, 87);
+            this.lblDetails.Name = "lblDetails";
+            this.lblDetails.Size = new System.Drawing.Size(284, 95);
+            this.lblDetails.Style = MetroFramework.MetroColorStyle.Lime;
+            this.lblDetails.TabIndex = 6;
+            this.lblDetails.Text = "Welcome!\r\n\r\nPlease Provide your Username and Password\r\nto log into the System\r\n";
+            this.lblDetails.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lblDetails.UseCustomForeColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HenkINF370.Properties.Resources.if_food_drink_22_808996;
+            this.pictureBox3.Location = new System.Drawing.Point(418, 263);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 77);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HenkINF370.Properties.Resources.if_5_18457283;
+            this.pictureBox1.Location = new System.Drawing.Point(553, 263);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::HenkINF370.Properties.Resources.if_97_1714562;
+            this.pictureBox5.Location = new System.Drawing.Point(494, 263);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(65, 79);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::HenkINF370.Properties.Resources.if_imoticon_1_210817;
+            this.pictureBox4.Location = new System.Drawing.Point(515, 180);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 94);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::HenkINF370.Properties.Resources.if_47_1714732;
+            this.pictureBox2.Location = new System.Drawing.Point(615, 199);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(149, 143);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 338);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lblDetails);
             this.Controls.Add(this.lblFP);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel2);
@@ -197,23 +252,29 @@
             this.Text = "Login";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroLabel lblDetails;
         private MetroFramework.Controls.MetroLabel lblFP;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroTextBox txtUsername;
+        private MetroFramework.Controls.MetroLabel lblDetails;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 
