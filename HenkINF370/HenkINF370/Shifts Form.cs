@@ -24,37 +24,37 @@ namespace HenkINF370
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
-            View_Available_Shifts myform = new View_Available_Shifts();
+            View_Template myform = new View_Template();
             myform.ShowDialog();
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            Search_Shifts myform = new Search_Shifts();
+            Search_Template myform = new Search_Template();
             myform.ShowDialog();
         }
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-            Create_Shift myform = new Create_Shift();
+            Template myform = new Template();
             myform.ShowDialog();
         }
 
         private void metroTile4_Click(object sender, EventArgs e)
         {
-            Update_Shift myform = new Update_Shift();
+            Update_Template myform = new Update_Template();
             myform.ShowDialog();
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
         {
-            Delete_Shift myform = new Delete_Shift();
+            Delete_Template myform = new Delete_Template();
             myform.ShowDialog();
         }
 
         private void metroTile6_Click(object sender, EventArgs e)
         {
-            Book_Shift myform = new Book_Shift();
+            Book_Template myform = new Book_Template();
             myform.ShowDialog();
         }
 

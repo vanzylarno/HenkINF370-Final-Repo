@@ -205,3 +205,9 @@ F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Update_Toppings2.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.View_All_Toppings.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.InStoreOrder.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Orders_Form.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.View_Template.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Search_Template.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Delete_Template.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Update_Template_2.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Update_Template.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Book_Template.resources

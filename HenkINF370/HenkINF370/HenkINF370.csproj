@@ -153,6 +153,12 @@
     <Compile Include="Book Shift.Designer.cs">
       <DependentUpon>Book Shift.cs</DependentUpon>
     </Compile>
+    <Compile Include="Book Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Template.Designer.cs">
+      <DependentUpon>Book Template.cs</DependentUpon>
+    </Compile>
     <Compile Include="Capture Float Amount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,12 @@
     </Compile>
     <Compile Include="Delete Shift.Designer.cs">
       <DependentUpon>Delete Shift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete Template.Designer.cs">
+      <DependentUpon>Delete Template.cs</DependentUpon>
     </Compile>
     <Compile Include="Delete Title.cs">
       <SubType>Form</SubType>
@@ -401,6 +413,12 @@
     <Compile Include="Search Shifts.Designer.cs">
       <DependentUpon>Search Shifts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Search Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search Template.Designer.cs">
+      <DependentUpon>Search Template.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shifts Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -461,6 +479,18 @@
     <Compile Include="Update Shift2.Designer.cs">
       <DependentUpon>Update Shift2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update Template 2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Template 2.Designer.cs">
+      <DependentUpon>Update Template 2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Template.Designer.cs">
+      <DependentUpon>Update Template.cs</DependentUpon>
+    </Compile>
     <Compile Include="Update Toppings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -515,6 +545,12 @@
     <Compile Include="View Available Shifts.Designer.cs">
       <DependentUpon>View Available Shifts.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Template.Designer.cs">
+      <DependentUpon>View Template.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add Drink Size.resx">
       <DependentUpon>Add Drink Size.cs</DependentUpon>
     </EmbeddedResource>
@@ -551,6 +587,9 @@
     <EmbeddedResource Include="Book Shift.resx">
       <DependentUpon>Book Shift.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Book Template.resx">
+      <DependentUpon>Book Template.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Capture Float Amount.resx">
       <DependentUpon>Capture Float Amount.cs</DependentUpon>
     </EmbeddedResource>
@@ -583,6 +622,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Delete Shift.resx">
       <DependentUpon>Delete Shift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete Template.resx">
+      <DependentUpon>Delete Template.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Delete Title.resx">
       <DependentUpon>Delete Title.cs</DependentUpon>
@@ -681,6 +723,9 @@
     <EmbeddedResource Include="Search Shifts.resx">
       <DependentUpon>Search Shifts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search Template.resx">
+      <DependentUpon>Search Template.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shifts Form.resx">
       <DependentUpon>Shifts Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -711,6 +756,12 @@
     <EmbeddedResource Include="Update Shift2.resx">
       <DependentUpon>Update Shift2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Update Template 2.resx">
+      <DependentUpon>Update Template 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Template.resx">
+      <DependentUpon>Update Template.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Update Toppings.resx">
       <DependentUpon>Update Toppings.cs</DependentUpon>
     </EmbeddedResource>
@@ -737,6 +788,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View Available Shifts.resx">
       <DependentUpon>View Available Shifts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Template.resx">
+      <DependentUpon>View Template.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="HenkINF370DataSet.xsc">
       <DependentUpon>HenkINF370DataSet.xsd</DependentUpon>

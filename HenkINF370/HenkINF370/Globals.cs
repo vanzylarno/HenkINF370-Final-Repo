@@ -21,6 +21,7 @@ namespace HenkINF370
         public static string Start;
         public static string Stop;
         public static int CurrentShiftID;
+        public static int TemplateID;
 
         //MenuItem
         public static int SelectedMenuItemID;

@@ -72,9 +72,9 @@
             // metroTile5
             // 
             this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(451, 73);
+            this.metroTile5.Location = new System.Drawing.Point(237, 73);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(208, 412);
+            this.metroTile5.Size = new System.Drawing.Size(208, 203);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile5.TabIndex = 6;
             this.metroTile5.Text = "Delete a Shift";
@@ -104,7 +104,7 @@
             // metroTile3
             // 
             this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(23, 282);
+            this.metroTile3.Location = new System.Drawing.Point(23, 73);
             this.metroTile3.Name = "metroTile3";
             this.metroTile3.Size = new System.Drawing.Size(208, 203);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Lime;
@@ -120,12 +120,12 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(237, 73);
+            this.metroTile1.Location = new System.Drawing.Point(23, 282);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(208, 203);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile1.TabIndex = 3;
-            this.metroTile1.Text = "Search Shifts";
+            this.metroTile1.Text = "Search Available Shifts";
             this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.Search1;
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
@@ -136,9 +136,9 @@
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(23, 73);
+            this.metroTile2.Location = new System.Drawing.Point(451, 73);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(208, 203);
+            this.metroTile2.Size = new System.Drawing.Size(208, 412);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile2.TabIndex = 2;
             this.metroTile2.Text = "View Available Shifts";
@@ -162,7 +162,7 @@
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTile2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1335, 523);
+            this.MaximumSize = new System.Drawing.Size(1116, 523);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1116, 523);
             this.Name = "Shifts_Form";

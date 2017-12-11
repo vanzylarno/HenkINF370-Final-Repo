@@ -20,7 +20,7 @@ namespace HenkINF370
 
         private void Main_Menu_Load(object sender, EventArgs e)
         {
-            MetroFramework.MetroMessageBox.Show(this, "If this is your first login, please Remember to Capture the Float Amount in the Till!",  "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+          //  MetroFramework.MetroMessageBox.Show(this, "If this is your first login, please Remember to Capture the Float Amount in the Till!",  "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
@@ -43,8 +43,16 @@ namespace HenkINF370
 
         private void metroTile5_Click(object sender, EventArgs e)
         {
-            Template myform = new Template();
-            myform.ShowDialog();
+            try
+            {
+                Template myform = new Template();
+                myform.ShowDialog();
+            }
+            catch
+            {
+
+            }
+
         }
 
         private void metroTile4_Click(object sender, EventArgs e)

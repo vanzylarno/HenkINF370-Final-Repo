@@ -202,7 +202,12 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1258, 568);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1258, 568);
             this.Name = "Template";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Lime;
             this.Text = "Template";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
