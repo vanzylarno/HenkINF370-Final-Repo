@@ -28,17 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.metroTile7 = new MetroFramework.Controls.MetroTile();
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
+            this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
+            // 
+            // metroTile7
+            // 
+            this.metroTile7.ActiveControl = null;
+            this.metroTile7.Location = new System.Drawing.Point(481, 81);
+            this.metroTile7.Name = "metroTile7";
+            this.metroTile7.Size = new System.Drawing.Size(208, 830);
+            this.metroTile7.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTile7.TabIndex = 6;
+            this.metroTile7.Text = "Orders";
+            this.metroTile7.TileImage = global::HenkINF370.Properties.Resources.if_aiga_cashier_134157;
+            this.metroTile7.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile7.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile7.UseSelectable = true;
+            this.metroTile7.UseTileImage = true;
+            this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
+            // 
+            // metroTile6
+            // 
+            this.metroTile6.ActiveControl = null;
+            this.metroTile6.Location = new System.Drawing.Point(267, 499);
+            this.metroTile6.Name = "metroTile6";
+            this.metroTile6.Size = new System.Drawing.Size(208, 203);
+            this.metroTile6.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTile6.TabIndex = 5;
+            this.metroTile6.Text = "Toppings";
+            this.metroTile6.TileImage = global::HenkINF370.Properties.Resources.if_food_drink_12_809021;
+            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile6.UseSelectable = true;
+            this.metroTile6.UseTileImage = true;
+            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
+            // 
+            // metroTile5
+            // 
+            this.metroTile5.ActiveControl = null;
+            this.metroTile5.Location = new System.Drawing.Point(267, 290);
+            this.metroTile5.Name = "metroTile5";
+            this.metroTile5.Size = new System.Drawing.Size(208, 203);
+            this.metroTile5.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTile5.TabIndex = 4;
+            this.metroTile5.Text = "Schedule";
+            this.metroTile5.TileImage = global::HenkINF370.Properties.Resources.if_clock_103755;
+            this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile5.UseSelectable = true;
+            this.metroTile5.UseTileImage = true;
+            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(53, 290);
+            this.metroTile4.Location = new System.Drawing.Point(267, 708);
             this.metroTile4.Name = "metroTile4";
             this.metroTile4.Size = new System.Drawing.Size(208, 203);
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Lime;
@@ -54,13 +104,13 @@
             // metroTile3
             // 
             this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(481, 81);
+            this.metroTile3.Location = new System.Drawing.Point(53, 499);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(208, 203);
+            this.metroTile3.Size = new System.Drawing.Size(208, 412);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile3.TabIndex = 2;
             this.metroTile3.Text = "Menu";
-            this.metroTile3.TileImage = global::HenkINF370.Properties.Resources.if_menu6_216511;
+            this.metroTile3.TileImage = global::HenkINF370.Properties.Resources.if_97_1714563;
             this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile3.UseSelectable = true;
@@ -88,7 +138,7 @@
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Location = new System.Drawing.Point(53, 81);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(208, 203);
+            this.metroTile1.Size = new System.Drawing.Size(208, 412);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile1.TabIndex = 0;
             this.metroTile1.Text = "Manager Features";
@@ -99,27 +149,13 @@
             this.metroTile1.UseTileImage = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
-            // metroTile5
-            // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(267, 290);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(208, 203);
-            this.metroTile5.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile5.TabIndex = 4;
-            this.metroTile5.Text = "Schedule";
-            this.metroTile5.TileImage = global::HenkINF370.Properties.Resources.if_food_drink_22_8089961;
-            this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroTile5.UseSelectable = true;
-            this.metroTile5.UseTileImage = true;
-            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
-            // 
             // Main_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.Controls.Add(this.metroTile7);
+            this.Controls.Add(this.metroTile6);
             this.Controls.Add(this.metroTile5);
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile3);
@@ -145,5 +181,7 @@
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
         private MetroFramework.Controls.MetroTile metroTile5;
+        private MetroFramework.Controls.MetroTile metroTile6;
+        private MetroFramework.Controls.MetroTile metroTile7;
     }
 }

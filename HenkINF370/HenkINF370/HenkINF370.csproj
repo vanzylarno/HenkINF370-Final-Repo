@@ -129,6 +129,12 @@
     <Compile Include="Add Title.Designer.cs">
       <DependentUpon>Add Title.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add Topping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Topping.Designer.cs">
+      <DependentUpon>Add Topping.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add User Types.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,11 +165,35 @@
     <Compile Include="Change Password.Designer.cs">
       <DependentUpon>Change Password.cs</DependentUpon>
     </Compile>
+    <Compile Include="Combos Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Combos Form.Designer.cs">
+      <DependentUpon>Combos Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create a New Combo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create a New Combo.Designer.cs">
+      <DependentUpon>Create a New Combo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create Shift.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Create Shift.Designer.cs">
       <DependentUpon>Create Shift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete a Combo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete a Combo.Designer.cs">
+      <DependentUpon>Delete a Combo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete a Topping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete a Topping.Designer.cs">
+      <DependentUpon>Delete a Topping.cs</DependentUpon>
     </Compile>
     <Compile Include="Delete Gender.cs">
       <SubType>Form</SubType>
@@ -225,11 +255,23 @@
     <Compile Include="Edit Booking2.Designer.cs">
       <DependentUpon>Edit Booking2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Find a Combo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Find a Combo.Designer.cs">
+      <DependentUpon>Find a Combo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Find a Menu Item.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Find a Menu Item.Designer.cs">
       <DependentUpon>Find a Menu Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Find a Topping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Find a Topping.Designer.cs">
+      <DependentUpon>Find a Topping.cs</DependentUpon>
     </Compile>
     <Compile Include="Find Forgotten Password.cs">
       <SubType>Form</SubType>
@@ -260,6 +302,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HenkINF370DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InStoreOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InStoreOrder.Designer.cs">
+      <DependentUpon>InStoreOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Login Help.cs">
       <SubType>Form</SubType>
@@ -296,6 +344,12 @@
     </Compile>
     <Compile Include="Menu Item Types.Designer.cs">
       <DependentUpon>Menu Item Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders Form.Designer.cs">
+      <DependentUpon>Orders Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Pizza Bases.cs">
       <SubType>Form</SubType>
@@ -365,11 +419,29 @@
     <Compile Include="Titles.Designer.cs">
       <DependentUpon>Titles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Toppings Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toppings Form.Designer.cs">
+      <DependentUpon>Toppings Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update a Combo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update a Combo.Designer.cs">
+      <DependentUpon>Update a Combo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Update a Menu Item.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Update a Menu Item.Designer.cs">
       <DependentUpon>Update a Menu Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Combo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Combo2.Designer.cs">
+      <DependentUpon>Update Combo2.cs</DependentUpon>
     </Compile>
     <Compile Include="Update Menu Item2.cs">
       <SubType>Form</SubType>
@@ -388,6 +460,18 @@
     </Compile>
     <Compile Include="Update Shift2.Designer.cs">
       <DependentUpon>Update Shift2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Toppings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Toppings.Designer.cs">
+      <DependentUpon>Update Toppings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Toppings2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Toppings2.Designer.cs">
+      <DependentUpon>Update Toppings2.cs</DependentUpon>
     </Compile>
     <Compile Include="Update User.cs">
       <SubType>Form</SubType>
@@ -419,6 +503,12 @@
     <Compile Include="View All Menu Items.Designer.cs">
       <DependentUpon>View All Menu Items.cs</DependentUpon>
     </Compile>
+    <Compile Include="View All Toppings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View All Toppings.Designer.cs">
+      <DependentUpon>View All Toppings.cs</DependentUpon>
+    </Compile>
     <Compile Include="View Available Shifts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,6 +539,9 @@
     <EmbeddedResource Include="Add Title.resx">
       <DependentUpon>Add Title.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add Topping.resx">
+      <DependentUpon>Add Topping.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add User Types.resx">
       <DependentUpon>Add User Types.cs</DependentUpon>
     </EmbeddedResource>
@@ -464,8 +557,20 @@
     <EmbeddedResource Include="Change Password.resx">
       <DependentUpon>Change Password.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Combos Form.resx">
+      <DependentUpon>Combos Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create a New Combo.resx">
+      <DependentUpon>Create a New Combo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create Shift.resx">
       <DependentUpon>Create Shift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete a Combo.resx">
+      <DependentUpon>Delete a Combo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete a Topping.resx">
+      <DependentUpon>Delete a Topping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Delete Gender.resx">
       <DependentUpon>Delete Gender.cs</DependentUpon>
@@ -497,8 +602,14 @@
     <EmbeddedResource Include="Edit Booking2.resx">
       <DependentUpon>Edit Booking2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Find a Combo.resx">
+      <DependentUpon>Find a Combo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Find a Menu Item.resx">
       <DependentUpon>Find a Menu Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Find a Topping.resx">
+      <DependentUpon>Find a Topping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Find Forgotten Password.resx">
       <DependentUpon>Find Forgotten Password.cs</DependentUpon>
@@ -511,6 +622,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Genders.resx">
       <DependentUpon>Genders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InStoreOrder.resx">
+      <DependentUpon>InStoreOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login Help.resx">
       <DependentUpon>Login Help.cs</DependentUpon>
@@ -529,6 +643,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Item Types.resx">
       <DependentUpon>Menu Item Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders Form.resx">
+      <DependentUpon>Orders Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pizza Bases.resx">
       <DependentUpon>Pizza Bases.cs</DependentUpon>
@@ -573,8 +690,17 @@
     <EmbeddedResource Include="Titles.resx">
       <DependentUpon>Titles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Toppings Form.resx">
+      <DependentUpon>Toppings Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update a Combo.resx">
+      <DependentUpon>Update a Combo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Update a Menu Item.resx">
       <DependentUpon>Update a Menu Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Combo2.resx">
+      <DependentUpon>Update Combo2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update Menu Item2.resx">
       <DependentUpon>Update Menu Item2.cs</DependentUpon>
@@ -584,6 +710,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update Shift2.resx">
       <DependentUpon>Update Shift2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Toppings.resx">
+      <DependentUpon>Update Toppings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Toppings2.resx">
+      <DependentUpon>Update Toppings2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update User.resx">
       <DependentUpon>Update User.cs</DependentUpon>
@@ -599,6 +731,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View All Menu Items.resx">
       <DependentUpon>View All Menu Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View All Toppings.resx">
+      <DependentUpon>View All Toppings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Available Shifts.resx">
       <DependentUpon>View Available Shifts.cs</DependentUpon>
@@ -687,6 +822,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Images\if_food-drink-22_808996.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_food-drink-12_809021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_schedule_326689.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_clock_103755.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_aiga_cashier_134157.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_icons_user_1564534.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_10_111023.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

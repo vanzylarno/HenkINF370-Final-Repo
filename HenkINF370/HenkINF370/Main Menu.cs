@@ -49,7 +49,20 @@ namespace HenkINF370
 
         private void metroTile4_Click(object sender, EventArgs e)
         {
+            Combos_Form myform = new Combos_Form();
+            myform.ShowDialog();
+        }
 
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+            Toppings_Form myform = new Toppings_Form();
+            myform.ShowDialog();
+        }
+
+        private void metroTile7_Click(object sender, EventArgs e)
+        {
+            Orders_Form myform = new Orders_Form();
+            myform.ShowDialog();
         }
     }
 }

@@ -24,11 +24,9 @@ namespace HenkINF370 {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class HenkINF370DataSet : global::System.Data.DataSet {
         
-        private ComboDataTable tableCombo;
+        private ComboRecordsDataTable tableComboRecords;
         
-        private ComboLineDataTable tableComboLine;
-        
-        private ComboRecordDataTable tableComboRecord;
+        private CombosDataTable tableCombos;
         
         private CustomisationDataTable tableCustomisation;
         
@@ -60,9 +58,17 @@ namespace HenkINF370 {
         
         private UserTypeDataTable tableUserType;
         
-        private global::System.Data.DataRelation relationFK__ComboLine__Combo__72C60C4A;
+        private global::System.Data.DataRelation relationFK__ComboReco__Drink__2180FB33;
         
-        private global::System.Data.DataRelation relationFK__ComboLine__MenuI__71D1E811;
+        private global::System.Data.DataRelation relationFK__ComboReco__Pizza__1F98B2C1;
+        
+        private global::System.Data.DataRelation relationFK__ComboReco__Pizza__208CD6FA;
+        
+        private global::System.Data.DataRelation relationFK__Combos__DrinkSiz__1CBC4616;
+        
+        private global::System.Data.DataRelation relationFK__Combos__PizzaBas__1AD3FDA4;
+        
+        private global::System.Data.DataRelation relationFK__Combos__PizzaSiz__1BC821DD;
         
         private global::System.Data.DataRelation relationFK__Customisa__MenuI__797309D9;
         
@@ -79,8 +85,6 @@ namespace HenkINF370 {
         private global::System.Data.DataRelation relationFK__ShiftLine__Shift__05D8E0BE;
         
         private global::System.Data.DataRelation relationFK__ShiftLine__UserI__04E4BC85;
-        
-        private global::System.Data.DataRelation relationFK__ToppingRe__Toppi__7D439ABD;
         
         private global::System.Data.DataRelation relationFK__Users__GenderID__34C8D9D1;
         
@@ -118,14 +122,11 @@ namespace HenkINF370 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Combo"] != null)) {
-                    base.Tables.Add(new ComboDataTable(ds.Tables["Combo"]));
+                if ((ds.Tables["ComboRecords"] != null)) {
+                    base.Tables.Add(new ComboRecordsDataTable(ds.Tables["ComboRecords"]));
                 }
-                if ((ds.Tables["ComboLine"] != null)) {
-                    base.Tables.Add(new ComboLineDataTable(ds.Tables["ComboLine"]));
-                }
-                if ((ds.Tables["ComboRecord"] != null)) {
-                    base.Tables.Add(new ComboRecordDataTable(ds.Tables["ComboRecord"]));
+                if ((ds.Tables["Combos"] != null)) {
+                    base.Tables.Add(new CombosDataTable(ds.Tables["Combos"]));
                 }
                 if ((ds.Tables["Customisation"] != null)) {
                     base.Tables.Add(new CustomisationDataTable(ds.Tables["Customisation"]));
@@ -194,9 +195,9 @@ namespace HenkINF370 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ComboDataTable Combo {
+        public ComboRecordsDataTable ComboRecords {
             get {
-                return this.tableCombo;
+                return this.tableComboRecords;
             }
         }
         
@@ -204,19 +205,9 @@ namespace HenkINF370 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ComboLineDataTable ComboLine {
+        public CombosDataTable Combos {
             get {
-                return this.tableComboLine;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ComboRecordDataTable ComboRecord {
-            get {
-                return this.tableComboRecord;
+                return this.tableCombos;
             }
         }
         
@@ -437,14 +428,11 @@ namespace HenkINF370 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Combo"] != null)) {
-                    base.Tables.Add(new ComboDataTable(ds.Tables["Combo"]));
+                if ((ds.Tables["ComboRecords"] != null)) {
+                    base.Tables.Add(new ComboRecordsDataTable(ds.Tables["ComboRecords"]));
                 }
-                if ((ds.Tables["ComboLine"] != null)) {
-                    base.Tables.Add(new ComboLineDataTable(ds.Tables["ComboLine"]));
-                }
-                if ((ds.Tables["ComboRecord"] != null)) {
-                    base.Tables.Add(new ComboRecordDataTable(ds.Tables["ComboRecord"]));
+                if ((ds.Tables["Combos"] != null)) {
+                    base.Tables.Add(new CombosDataTable(ds.Tables["Combos"]));
                 }
                 if ((ds.Tables["Customisation"] != null)) {
                     base.Tables.Add(new CustomisationDataTable(ds.Tables["Customisation"]));
@@ -524,22 +512,16 @@ namespace HenkINF370 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCombo = ((ComboDataTable)(base.Tables["Combo"]));
+            this.tableComboRecords = ((ComboRecordsDataTable)(base.Tables["ComboRecords"]));
             if ((initTable == true)) {
-                if ((this.tableCombo != null)) {
-                    this.tableCombo.InitVars();
+                if ((this.tableComboRecords != null)) {
+                    this.tableComboRecords.InitVars();
                 }
             }
-            this.tableComboLine = ((ComboLineDataTable)(base.Tables["ComboLine"]));
+            this.tableCombos = ((CombosDataTable)(base.Tables["Combos"]));
             if ((initTable == true)) {
-                if ((this.tableComboLine != null)) {
-                    this.tableComboLine.InitVars();
-                }
-            }
-            this.tableComboRecord = ((ComboRecordDataTable)(base.Tables["ComboRecord"]));
-            if ((initTable == true)) {
-                if ((this.tableComboRecord != null)) {
-                    this.tableComboRecord.InitVars();
+                if ((this.tableCombos != null)) {
+                    this.tableCombos.InitVars();
                 }
             }
             this.tableCustomisation = ((CustomisationDataTable)(base.Tables["Customisation"]));
@@ -632,8 +614,12 @@ namespace HenkINF370 {
                     this.tableUserType.InitVars();
                 }
             }
-            this.relationFK__ComboLine__Combo__72C60C4A = this.Relations["FK__ComboLine__Combo__72C60C4A"];
-            this.relationFK__ComboLine__MenuI__71D1E811 = this.Relations["FK__ComboLine__MenuI__71D1E811"];
+            this.relationFK__ComboReco__Drink__2180FB33 = this.Relations["FK__ComboReco__Drink__2180FB33"];
+            this.relationFK__ComboReco__Pizza__1F98B2C1 = this.Relations["FK__ComboReco__Pizza__1F98B2C1"];
+            this.relationFK__ComboReco__Pizza__208CD6FA = this.Relations["FK__ComboReco__Pizza__208CD6FA"];
+            this.relationFK__Combos__DrinkSiz__1CBC4616 = this.Relations["FK__Combos__DrinkSiz__1CBC4616"];
+            this.relationFK__Combos__PizzaBas__1AD3FDA4 = this.Relations["FK__Combos__PizzaBas__1AD3FDA4"];
+            this.relationFK__Combos__PizzaSiz__1BC821DD = this.Relations["FK__Combos__PizzaSiz__1BC821DD"];
             this.relationFK__Customisa__MenuI__797309D9 = this.Relations["FK__Customisa__MenuI__797309D9"];
             this.relationFK__Customisa__Toppi__7A672E12 = this.Relations["FK__Customisa__Toppi__7A672E12"];
             this.relationFK__Menu__DrinkSizeI__628FA481 = this.Relations["FK__Menu__DrinkSizeI__628FA481"];
@@ -642,7 +628,6 @@ namespace HenkINF370 {
             this.relationFK__Menu__PizzaSizeI__6383C8BA = this.Relations["FK__Menu__PizzaSizeI__6383C8BA"];
             this.relationFK__ShiftLine__Shift__05D8E0BE = this.Relations["FK__ShiftLine__Shift__05D8E0BE"];
             this.relationFK__ShiftLine__UserI__04E4BC85 = this.Relations["FK__ShiftLine__UserI__04E4BC85"];
-            this.relationFK__ToppingRe__Toppi__7D439ABD = this.Relations["FK__ToppingRe__Toppi__7D439ABD"];
             this.relationFK__Users__GenderID__34C8D9D1 = this.Relations["FK__Users__GenderID__34C8D9D1"];
             this.relationFK__Users__Privilege__33D4B598 = this.Relations["FK__Users__Privilege__33D4B598"];
             this.relationFK__Users__TitleID__35BCFE0A = this.Relations["FK__Users__TitleID__35BCFE0A"];
@@ -657,12 +642,10 @@ namespace HenkINF370 {
             this.Namespace = "http://tempuri.org/HenkINF370DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCombo = new ComboDataTable();
-            base.Tables.Add(this.tableCombo);
-            this.tableComboLine = new ComboLineDataTable();
-            base.Tables.Add(this.tableComboLine);
-            this.tableComboRecord = new ComboRecordDataTable();
-            base.Tables.Add(this.tableComboRecord);
+            this.tableComboRecords = new ComboRecordsDataTable();
+            base.Tables.Add(this.tableComboRecords);
+            this.tableCombos = new CombosDataTable();
+            base.Tables.Add(this.tableCombos);
             this.tableCustomisation = new CustomisationDataTable();
             base.Tables.Add(this.tableCustomisation);
             this.tableDrinkSize = new DrinkSizeDataTable();
@@ -693,14 +676,30 @@ namespace HenkINF370 {
             base.Tables.Add(this.tableUsers);
             this.tableUserType = new UserTypeDataTable();
             base.Tables.Add(this.tableUserType);
-            this.relationFK__ComboLine__Combo__72C60C4A = new global::System.Data.DataRelation("FK__ComboLine__Combo__72C60C4A", new global::System.Data.DataColumn[] {
-                        this.tableCombo.ComboIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableComboLine.ComboIDColumn}, false);
-            this.Relations.Add(this.relationFK__ComboLine__Combo__72C60C4A);
-            this.relationFK__ComboLine__MenuI__71D1E811 = new global::System.Data.DataRelation("FK__ComboLine__MenuI__71D1E811", new global::System.Data.DataColumn[] {
-                        this.tableMenu.MenuItemIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableComboLine.MenuItemIDColumn}, false);
-            this.Relations.Add(this.relationFK__ComboLine__MenuI__71D1E811);
+            this.relationFK__ComboReco__Drink__2180FB33 = new global::System.Data.DataRelation("FK__ComboReco__Drink__2180FB33", new global::System.Data.DataColumn[] {
+                        this.tableDrinkSize.DrinkSizeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableComboRecords.DrinkSizeIDColumn}, false);
+            this.Relations.Add(this.relationFK__ComboReco__Drink__2180FB33);
+            this.relationFK__ComboReco__Pizza__1F98B2C1 = new global::System.Data.DataRelation("FK__ComboReco__Pizza__1F98B2C1", new global::System.Data.DataColumn[] {
+                        this.tablePizzaBase.PizzaBaseIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableComboRecords.PizzaBaseIDColumn}, false);
+            this.Relations.Add(this.relationFK__ComboReco__Pizza__1F98B2C1);
+            this.relationFK__ComboReco__Pizza__208CD6FA = new global::System.Data.DataRelation("FK__ComboReco__Pizza__208CD6FA", new global::System.Data.DataColumn[] {
+                        this.tablePizzaSize.PizzaSizeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableComboRecords.PizzaSizeIDColumn}, false);
+            this.Relations.Add(this.relationFK__ComboReco__Pizza__208CD6FA);
+            this.relationFK__Combos__DrinkSiz__1CBC4616 = new global::System.Data.DataRelation("FK__Combos__DrinkSiz__1CBC4616", new global::System.Data.DataColumn[] {
+                        this.tableDrinkSize.DrinkSizeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCombos.DrinkSizeIDColumn}, false);
+            this.Relations.Add(this.relationFK__Combos__DrinkSiz__1CBC4616);
+            this.relationFK__Combos__PizzaBas__1AD3FDA4 = new global::System.Data.DataRelation("FK__Combos__PizzaBas__1AD3FDA4", new global::System.Data.DataColumn[] {
+                        this.tablePizzaBase.PizzaBaseIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCombos.PizzaBaseIDColumn}, false);
+            this.Relations.Add(this.relationFK__Combos__PizzaBas__1AD3FDA4);
+            this.relationFK__Combos__PizzaSiz__1BC821DD = new global::System.Data.DataRelation("FK__Combos__PizzaSiz__1BC821DD", new global::System.Data.DataColumn[] {
+                        this.tablePizzaSize.PizzaSizeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCombos.PizzaSizeIDColumn}, false);
+            this.Relations.Add(this.relationFK__Combos__PizzaSiz__1BC821DD);
             this.relationFK__Customisa__MenuI__797309D9 = new global::System.Data.DataRelation("FK__Customisa__MenuI__797309D9", new global::System.Data.DataColumn[] {
                         this.tableMenu.MenuItemIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCustomisation.MenuItemIDColumn}, false);
@@ -733,10 +732,6 @@ namespace HenkINF370 {
                         this.tableUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableShiftLine.UserIDColumn}, false);
             this.Relations.Add(this.relationFK__ShiftLine__UserI__04E4BC85);
-            this.relationFK__ToppingRe__Toppi__7D439ABD = new global::System.Data.DataRelation("FK__ToppingRe__Toppi__7D439ABD", new global::System.Data.DataColumn[] {
-                        this.tableToppings.ToppingIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableToppingRecord.ToppingIDColumn}, false);
-            this.Relations.Add(this.relationFK__ToppingRe__Toppi__7D439ABD);
             this.relationFK__Users__GenderID__34C8D9D1 = new global::System.Data.DataRelation("FK__Users__GenderID__34C8D9D1", new global::System.Data.DataColumn[] {
                         this.tableGender.GenderIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableUsers.GenderIDColumn}, false);
@@ -757,19 +752,13 @@ namespace HenkINF370 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeCombo() {
+        private bool ShouldSerializeComboRecords() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeComboLine() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeComboRecord() {
+        private bool ShouldSerializeCombos() {
             return false;
         }
         
@@ -919,13 +908,10 @@ namespace HenkINF370 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ComboRowChangeEventHandler(object sender, ComboRowChangeEvent e);
+        public delegate void ComboRecordsRowChangeEventHandler(object sender, ComboRecordsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ComboLineRowChangeEventHandler(object sender, ComboLineRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ComboRecordRowChangeEventHandler(object sender, ComboRecordRowChangeEvent e);
+        public delegate void CombosRowChangeEventHandler(object sender, CombosRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void CustomisationRowChangeEventHandler(object sender, CustomisationRowChangeEvent e);
@@ -977,589 +963,28 @@ namespace HenkINF370 {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ComboDataTable : global::System.Data.TypedTableBase<ComboRow> {
-            
-            private global::System.Data.DataColumn columnComboID;
-            
-            private global::System.Data.DataColumn columnCombodescription;
-            
-            private global::System.Data.DataColumn columnPrice;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboDataTable() {
-                this.TableName = "Combo";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ComboDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ComboDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ComboIDColumn {
-                get {
-                    return this.columnComboID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CombodescriptionColumn {
-                get {
-                    return this.columnCombodescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PriceColumn {
-                get {
-                    return this.columnPrice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRow this[int index] {
-                get {
-                    return ((ComboRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboRowChangeEventHandler ComboRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboRowChangeEventHandler ComboRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboRowChangeEventHandler ComboRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboRowChangeEventHandler ComboRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddComboRow(ComboRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRow AddComboRow(string Combodescription, decimal Price) {
-                ComboRow rowComboRow = ((ComboRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        Combodescription,
-                        Price};
-                rowComboRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowComboRow);
-                return rowComboRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRow FindByComboID(int ComboID) {
-                return ((ComboRow)(this.Rows.Find(new object[] {
-                            ComboID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                ComboDataTable cln = ((ComboDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new ComboDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnComboID = base.Columns["ComboID"];
-                this.columnCombodescription = base.Columns["Combodescription"];
-                this.columnPrice = base.Columns["Price"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnComboID = new global::System.Data.DataColumn("ComboID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnComboID);
-                this.columnCombodescription = new global::System.Data.DataColumn("Combodescription", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCombodescription);
-                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrice);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnComboID}, true));
-                this.columnComboID.AutoIncrement = true;
-                this.columnComboID.AutoIncrementSeed = -1;
-                this.columnComboID.AutoIncrementStep = -1;
-                this.columnComboID.AllowDBNull = false;
-                this.columnComboID.ReadOnly = true;
-                this.columnComboID.Unique = true;
-                this.columnCombodescription.MaxLength = 500;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRow NewComboRow() {
-                return ((ComboRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ComboRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(ComboRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.ComboRowChanged != null)) {
-                    this.ComboRowChanged(this, new ComboRowChangeEvent(((ComboRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.ComboRowChanging != null)) {
-                    this.ComboRowChanging(this, new ComboRowChangeEvent(((ComboRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.ComboRowDeleted != null)) {
-                    this.ComboRowDeleted(this, new ComboRowChangeEvent(((ComboRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.ComboRowDeleting != null)) {
-                    this.ComboRowDeleting(this, new ComboRowChangeEvent(((ComboRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveComboRow(ComboRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HenkINF370DataSet ds = new HenkINF370DataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ComboDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ComboLineDataTable : global::System.Data.TypedTableBase<ComboLineRow> {
-            
-            private global::System.Data.DataColumn columnMenuItemID;
-            
-            private global::System.Data.DataColumn columnComboID;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineDataTable() {
-                this.TableName = "ComboLine";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ComboLineDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ComboLineDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn MenuItemIDColumn {
-                get {
-                    return this.columnMenuItemID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ComboIDColumn {
-                get {
-                    return this.columnComboID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineRow this[int index] {
-                get {
-                    return ((ComboLineRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboLineRowChangeEventHandler ComboLineRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboLineRowChangeEventHandler ComboLineRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboLineRowChangeEventHandler ComboLineRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboLineRowChangeEventHandler ComboLineRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddComboLineRow(ComboLineRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineRow AddComboLineRow(MenuRow parentMenuRowByFK__ComboLine__MenuI__71D1E811, ComboRow parentComboRowByFK__ComboLine__Combo__72C60C4A) {
-                ComboLineRow rowComboLineRow = ((ComboLineRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        null};
-                if ((parentMenuRowByFK__ComboLine__MenuI__71D1E811 != null)) {
-                    columnValuesArray[0] = parentMenuRowByFK__ComboLine__MenuI__71D1E811[0];
-                }
-                if ((parentComboRowByFK__ComboLine__Combo__72C60C4A != null)) {
-                    columnValuesArray[1] = parentComboRowByFK__ComboLine__Combo__72C60C4A[0];
-                }
-                rowComboLineRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowComboLineRow);
-                return rowComboLineRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineRow FindByMenuItemIDComboID(int MenuItemID, int ComboID) {
-                return ((ComboLineRow)(this.Rows.Find(new object[] {
-                            MenuItemID,
-                            ComboID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                ComboLineDataTable cln = ((ComboLineDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new ComboLineDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnMenuItemID = base.Columns["MenuItemID"];
-                this.columnComboID = base.Columns["ComboID"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnMenuItemID = new global::System.Data.DataColumn("MenuItemID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMenuItemID);
-                this.columnComboID = new global::System.Data.DataColumn("ComboID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnComboID);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMenuItemID,
-                                this.columnComboID}, true));
-                this.columnMenuItemID.AllowDBNull = false;
-                this.columnComboID.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineRow NewComboLineRow() {
-                return ((ComboLineRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ComboLineRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(ComboLineRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.ComboLineRowChanged != null)) {
-                    this.ComboLineRowChanged(this, new ComboLineRowChangeEvent(((ComboLineRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.ComboLineRowChanging != null)) {
-                    this.ComboLineRowChanging(this, new ComboLineRowChangeEvent(((ComboLineRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.ComboLineRowDeleted != null)) {
-                    this.ComboLineRowDeleted(this, new ComboLineRowChangeEvent(((ComboLineRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.ComboLineRowDeleting != null)) {
-                    this.ComboLineRowDeleting(this, new ComboLineRowChangeEvent(((ComboLineRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveComboLineRow(ComboLineRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HenkINF370DataSet ds = new HenkINF370DataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ComboLineDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ComboRecordDataTable : global::System.Data.TypedTableBase<ComboRecordRow> {
+        public partial class ComboRecordsDataTable : global::System.Data.TypedTableBase<ComboRecordsRow> {
             
             private global::System.Data.DataColumn columnComboRecordID;
             
+            private global::System.Data.DataColumn columnItemName;
+            
             private global::System.Data.DataColumn columnComboDescription;
+            
+            private global::System.Data.DataColumn columnPizzaBaseID;
+            
+            private global::System.Data.DataColumn columnDrinkSizeID;
+            
+            private global::System.Data.DataColumn columnPizzaSizeID;
             
             private global::System.Data.DataColumn columnPrice;
             
+            private global::System.Data.DataColumn columnExpireDate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRecordDataTable() {
-                this.TableName = "ComboRecord";
+            public ComboRecordsDataTable() {
+                this.TableName = "ComboRecords";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1567,7 +992,7 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ComboRecordDataTable(global::System.Data.DataTable table) {
+            internal ComboRecordsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1584,7 +1009,7 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ComboRecordDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ComboRecordsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1599,6 +1024,14 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ItemNameColumn {
+                get {
+                    return this.columnItemName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ComboDescriptionColumn {
                 get {
                     return this.columnComboDescription;
@@ -1607,9 +1040,41 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PizzaBaseIDColumn {
+                get {
+                    return this.columnPizzaBaseID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DrinkSizeIDColumn {
+                get {
+                    return this.columnDrinkSizeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PizzaSizeIDColumn {
+                get {
+                    return this.columnPizzaSizeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PriceColumn {
                 get {
                     return this.columnPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ExpireDateColumn {
+                get {
+                    return this.columnExpireDate;
                 }
             }
             
@@ -1624,54 +1089,68 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRecordRow this[int index] {
+            public ComboRecordsRow this[int index] {
                 get {
-                    return ((ComboRecordRow)(this.Rows[index]));
+                    return ((ComboRecordsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboRecordRowChangeEventHandler ComboRecordRowChanging;
+            public event ComboRecordsRowChangeEventHandler ComboRecordsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboRecordRowChangeEventHandler ComboRecordRowChanged;
+            public event ComboRecordsRowChangeEventHandler ComboRecordsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboRecordRowChangeEventHandler ComboRecordRowDeleting;
+            public event ComboRecordsRowChangeEventHandler ComboRecordsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ComboRecordRowChangeEventHandler ComboRecordRowDeleted;
+            public event ComboRecordsRowChangeEventHandler ComboRecordsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddComboRecordRow(ComboRecordRow row) {
+            public void AddComboRecordsRow(ComboRecordsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRecordRow AddComboRecordRow(string ComboDescription, decimal Price) {
-                ComboRecordRow rowComboRecordRow = ((ComboRecordRow)(this.NewRow()));
+            public ComboRecordsRow AddComboRecordsRow(string ItemName, string ComboDescription, PizzaBaseRow parentPizzaBaseRowByFK__ComboReco__Pizza__1F98B2C1, DrinkSizeRow parentDrinkSizeRowByFK__ComboReco__Drink__2180FB33, PizzaSizeRow parentPizzaSizeRowByFK__ComboReco__Pizza__208CD6FA, decimal Price, string ExpireDate) {
+                ComboRecordsRow rowComboRecordsRow = ((ComboRecordsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        ItemName,
                         ComboDescription,
-                        Price};
-                rowComboRecordRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowComboRecordRow);
-                return rowComboRecordRow;
+                        null,
+                        null,
+                        null,
+                        Price,
+                        ExpireDate};
+                if ((parentPizzaBaseRowByFK__ComboReco__Pizza__1F98B2C1 != null)) {
+                    columnValuesArray[3] = parentPizzaBaseRowByFK__ComboReco__Pizza__1F98B2C1[0];
+                }
+                if ((parentDrinkSizeRowByFK__ComboReco__Drink__2180FB33 != null)) {
+                    columnValuesArray[4] = parentDrinkSizeRowByFK__ComboReco__Drink__2180FB33[0];
+                }
+                if ((parentPizzaSizeRowByFK__ComboReco__Pizza__208CD6FA != null)) {
+                    columnValuesArray[5] = parentPizzaSizeRowByFK__ComboReco__Pizza__208CD6FA[0];
+                }
+                rowComboRecordsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowComboRecordsRow);
+                return rowComboRecordsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRecordRow FindByComboRecordID(int ComboRecordID) {
-                return ((ComboRecordRow)(this.Rows.Find(new object[] {
+            public ComboRecordsRow FindByComboRecordID(int ComboRecordID) {
+                return ((ComboRecordsRow)(this.Rows.Find(new object[] {
                             ComboRecordID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ComboRecordDataTable cln = ((ComboRecordDataTable)(base.Clone()));
+                ComboRecordsDataTable cln = ((ComboRecordsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1679,15 +1158,20 @@ namespace HenkINF370 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ComboRecordDataTable();
+                return new ComboRecordsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnComboRecordID = base.Columns["ComboRecordID"];
+                this.columnItemName = base.Columns["ItemName"];
                 this.columnComboDescription = base.Columns["ComboDescription"];
+                this.columnPizzaBaseID = base.Columns["PizzaBaseID"];
+                this.columnDrinkSizeID = base.Columns["DrinkSizeID"];
+                this.columnPizzaSizeID = base.Columns["PizzaSizeID"];
                 this.columnPrice = base.Columns["Price"];
+                this.columnExpireDate = base.Columns["ExpireDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1695,10 +1179,20 @@ namespace HenkINF370 {
             private void InitClass() {
                 this.columnComboRecordID = new global::System.Data.DataColumn("ComboRecordID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComboRecordID);
+                this.columnItemName = new global::System.Data.DataColumn("ItemName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemName);
                 this.columnComboDescription = new global::System.Data.DataColumn("ComboDescription", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComboDescription);
+                this.columnPizzaBaseID = new global::System.Data.DataColumn("PizzaBaseID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPizzaBaseID);
+                this.columnDrinkSizeID = new global::System.Data.DataColumn("DrinkSizeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDrinkSizeID);
+                this.columnPizzaSizeID = new global::System.Data.DataColumn("PizzaSizeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPizzaSizeID);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
+                this.columnExpireDate = new global::System.Data.DataColumn("ExpireDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpireDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnComboRecordID}, true));
                 this.columnComboRecordID.AutoIncrement = true;
@@ -1707,33 +1201,35 @@ namespace HenkINF370 {
                 this.columnComboRecordID.AllowDBNull = false;
                 this.columnComboRecordID.ReadOnly = true;
                 this.columnComboRecordID.Unique = true;
+                this.columnItemName.MaxLength = 500;
                 this.columnComboDescription.MaxLength = 500;
+                this.columnExpireDate.MaxLength = 500;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRecordRow NewComboRecordRow() {
-                return ((ComboRecordRow)(this.NewRow()));
+            public ComboRecordsRow NewComboRecordsRow() {
+                return ((ComboRecordsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ComboRecordRow(builder);
+                return new ComboRecordsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ComboRecordRow);
+                return typeof(ComboRecordsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ComboRecordRowChanged != null)) {
-                    this.ComboRecordRowChanged(this, new ComboRecordRowChangeEvent(((ComboRecordRow)(e.Row)), e.Action));
+                if ((this.ComboRecordsRowChanged != null)) {
+                    this.ComboRecordsRowChanged(this, new ComboRecordsRowChangeEvent(((ComboRecordsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1741,8 +1237,8 @@ namespace HenkINF370 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ComboRecordRowChanging != null)) {
-                    this.ComboRecordRowChanging(this, new ComboRecordRowChangeEvent(((ComboRecordRow)(e.Row)), e.Action));
+                if ((this.ComboRecordsRowChanging != null)) {
+                    this.ComboRecordsRowChanging(this, new ComboRecordsRowChangeEvent(((ComboRecordsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1750,8 +1246,8 @@ namespace HenkINF370 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ComboRecordRowDeleted != null)) {
-                    this.ComboRecordRowDeleted(this, new ComboRecordRowChangeEvent(((ComboRecordRow)(e.Row)), e.Action));
+                if ((this.ComboRecordsRowDeleted != null)) {
+                    this.ComboRecordsRowDeleted(this, new ComboRecordsRowChangeEvent(((ComboRecordsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1759,14 +1255,14 @@ namespace HenkINF370 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ComboRecordRowDeleting != null)) {
-                    this.ComboRecordRowDeleting(this, new ComboRecordRowChangeEvent(((ComboRecordRow)(e.Row)), e.Action));
+                if ((this.ComboRecordsRowDeleting != null)) {
+                    this.ComboRecordsRowDeleting(this, new ComboRecordsRowChangeEvent(((ComboRecordsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveComboRecordRow(ComboRecordRow row) {
+            public void RemoveComboRecordsRow(ComboRecordsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1793,7 +1289,379 @@ namespace HenkINF370 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ComboRecordDataTable";
+                attribute2.FixedValue = "ComboRecordsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CombosDataTable : global::System.Data.TypedTableBase<CombosRow> {
+            
+            private global::System.Data.DataColumn columnComboID;
+            
+            private global::System.Data.DataColumn columnItemName;
+            
+            private global::System.Data.DataColumn columnComboDescription;
+            
+            private global::System.Data.DataColumn columnPizzaBaseID;
+            
+            private global::System.Data.DataColumn columnDrinkSizeID;
+            
+            private global::System.Data.DataColumn columnPizzaSizeID;
+            
+            private global::System.Data.DataColumn columnPrice;
+            
+            private global::System.Data.DataColumn columnExpireDate;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CombosDataTable() {
+                this.TableName = "Combos";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal CombosDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected CombosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ComboIDColumn {
+                get {
+                    return this.columnComboID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ItemNameColumn {
+                get {
+                    return this.columnItemName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ComboDescriptionColumn {
+                get {
+                    return this.columnComboDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PizzaBaseIDColumn {
+                get {
+                    return this.columnPizzaBaseID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DrinkSizeIDColumn {
+                get {
+                    return this.columnDrinkSizeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PizzaSizeIDColumn {
+                get {
+                    return this.columnPizzaSizeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PriceColumn {
+                get {
+                    return this.columnPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ExpireDateColumn {
+                get {
+                    return this.columnExpireDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CombosRow this[int index] {
+                get {
+                    return ((CombosRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CombosRowChangeEventHandler CombosRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CombosRowChangeEventHandler CombosRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CombosRowChangeEventHandler CombosRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CombosRowChangeEventHandler CombosRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddCombosRow(CombosRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CombosRow AddCombosRow(string ItemName, string ComboDescription, PizzaBaseRow parentPizzaBaseRowByFK__Combos__PizzaBas__1AD3FDA4, DrinkSizeRow parentDrinkSizeRowByFK__Combos__DrinkSiz__1CBC4616, PizzaSizeRow parentPizzaSizeRowByFK__Combos__PizzaSiz__1BC821DD, decimal Price, string ExpireDate) {
+                CombosRow rowCombosRow = ((CombosRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        ItemName,
+                        ComboDescription,
+                        null,
+                        null,
+                        null,
+                        Price,
+                        ExpireDate};
+                if ((parentPizzaBaseRowByFK__Combos__PizzaBas__1AD3FDA4 != null)) {
+                    columnValuesArray[3] = parentPizzaBaseRowByFK__Combos__PizzaBas__1AD3FDA4[0];
+                }
+                if ((parentDrinkSizeRowByFK__Combos__DrinkSiz__1CBC4616 != null)) {
+                    columnValuesArray[4] = parentDrinkSizeRowByFK__Combos__DrinkSiz__1CBC4616[0];
+                }
+                if ((parentPizzaSizeRowByFK__Combos__PizzaSiz__1BC821DD != null)) {
+                    columnValuesArray[5] = parentPizzaSizeRowByFK__Combos__PizzaSiz__1BC821DD[0];
+                }
+                rowCombosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCombosRow);
+                return rowCombosRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CombosRow FindByComboID(int ComboID) {
+                return ((CombosRow)(this.Rows.Find(new object[] {
+                            ComboID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CombosDataTable cln = ((CombosDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CombosDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnComboID = base.Columns["ComboID"];
+                this.columnItemName = base.Columns["ItemName"];
+                this.columnComboDescription = base.Columns["ComboDescription"];
+                this.columnPizzaBaseID = base.Columns["PizzaBaseID"];
+                this.columnDrinkSizeID = base.Columns["DrinkSizeID"];
+                this.columnPizzaSizeID = base.Columns["PizzaSizeID"];
+                this.columnPrice = base.Columns["Price"];
+                this.columnExpireDate = base.Columns["ExpireDate"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnComboID = new global::System.Data.DataColumn("ComboID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComboID);
+                this.columnItemName = new global::System.Data.DataColumn("ItemName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemName);
+                this.columnComboDescription = new global::System.Data.DataColumn("ComboDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComboDescription);
+                this.columnPizzaBaseID = new global::System.Data.DataColumn("PizzaBaseID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPizzaBaseID);
+                this.columnDrinkSizeID = new global::System.Data.DataColumn("DrinkSizeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDrinkSizeID);
+                this.columnPizzaSizeID = new global::System.Data.DataColumn("PizzaSizeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPizzaSizeID);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrice);
+                this.columnExpireDate = new global::System.Data.DataColumn("ExpireDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpireDate);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnComboID}, true));
+                this.columnComboID.AutoIncrement = true;
+                this.columnComboID.AutoIncrementSeed = -1;
+                this.columnComboID.AutoIncrementStep = -1;
+                this.columnComboID.AllowDBNull = false;
+                this.columnComboID.ReadOnly = true;
+                this.columnComboID.Unique = true;
+                this.columnItemName.MaxLength = 500;
+                this.columnComboDescription.MaxLength = 500;
+                this.columnExpireDate.MaxLength = 500;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CombosRow NewCombosRow() {
+                return ((CombosRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CombosRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CombosRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CombosRowChanged != null)) {
+                    this.CombosRowChanged(this, new CombosRowChangeEvent(((CombosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CombosRowChanging != null)) {
+                    this.CombosRowChanging(this, new CombosRowChangeEvent(((CombosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CombosRowDeleted != null)) {
+                    this.CombosRowDeleted(this, new CombosRowChangeEvent(((CombosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CombosRowDeleting != null)) {
+                    this.CombosRowDeleting(this, new CombosRowChangeEvent(((CombosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveCombosRow(CombosRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HenkINF370DataSet ds = new HenkINF370DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CombosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -5126,8 +4994,6 @@ namespace HenkINF370 {
             
             private global::System.Data.DataColumn columnPrice;
             
-            private global::System.Data.DataColumn columnToppingID;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ToppingRecordDataTable() {
@@ -5187,14 +5053,6 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ToppingIDColumn {
-                get {
-                    return this.columnToppingID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5230,16 +5088,12 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ToppingRecordRow AddToppingRecordRow(string ToppingName, decimal Price, ToppingsRow parentToppingsRowByFK__ToppingRe__Toppi__7D439ABD) {
+            public ToppingRecordRow AddToppingRecordRow(string ToppingName, decimal Price) {
                 ToppingRecordRow rowToppingRecordRow = ((ToppingRecordRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         ToppingName,
-                        Price,
-                        null};
-                if ((parentToppingsRowByFK__ToppingRe__Toppi__7D439ABD != null)) {
-                    columnValuesArray[3] = parentToppingsRowByFK__ToppingRe__Toppi__7D439ABD[0];
-                }
+                        Price};
                 rowToppingRecordRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowToppingRecordRow);
                 return rowToppingRecordRow;
@@ -5272,7 +5126,6 @@ namespace HenkINF370 {
                 this.columnToppingRecordID = base.Columns["ToppingRecordID"];
                 this.columnToppingName = base.Columns["ToppingName"];
                 this.columnPrice = base.Columns["Price"];
-                this.columnToppingID = base.Columns["ToppingID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5284,8 +5137,6 @@ namespace HenkINF370 {
                 base.Columns.Add(this.columnToppingName);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
-                this.columnToppingID = new global::System.Data.DataColumn("ToppingID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnToppingID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnToppingRecordID}, true));
                 this.columnToppingRecordID.AutoIncrement = true;
@@ -6412,177 +6263,41 @@ namespace HenkINF370 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ComboRow : global::System.Data.DataRow {
+        public partial class ComboRecordsRow : global::System.Data.DataRow {
             
-            private ComboDataTable tableCombo;
+            private ComboRecordsDataTable tableComboRecords;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ComboRow(global::System.Data.DataRowBuilder rb) : 
+            internal ComboRecordsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCombo = ((ComboDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ComboID {
-                get {
-                    return ((int)(this[this.tableCombo.ComboIDColumn]));
-                }
-                set {
-                    this[this.tableCombo.ComboIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Combodescription {
-                get {
-                    try {
-                        return ((string)(this[this.tableCombo.CombodescriptionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Combodescription\' in table \'Combo\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCombo.CombodescriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Price {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableCombo.PriceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'Combo\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCombo.PriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCombodescriptionNull() {
-                return this.IsNull(this.tableCombo.CombodescriptionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCombodescriptionNull() {
-                this[this.tableCombo.CombodescriptionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPriceNull() {
-                return this.IsNull(this.tableCombo.PriceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPriceNull() {
-                this[this.tableCombo.PriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineRow[] GetComboLineRows() {
-                if ((this.Table.ChildRelations["FK__ComboLine__Combo__72C60C4A"] == null)) {
-                    return new ComboLineRow[0];
-                }
-                else {
-                    return ((ComboLineRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ComboLine__Combo__72C60C4A"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class ComboLineRow : global::System.Data.DataRow {
-            
-            private ComboLineDataTable tableComboLine;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ComboLineRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableComboLine = ((ComboLineDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int MenuItemID {
-                get {
-                    return ((int)(this[this.tableComboLine.MenuItemIDColumn]));
-                }
-                set {
-                    this[this.tableComboLine.MenuItemIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ComboID {
-                get {
-                    return ((int)(this[this.tableComboLine.ComboIDColumn]));
-                }
-                set {
-                    this[this.tableComboLine.ComboIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRow ComboRow {
-                get {
-                    return ((ComboRow)(this.GetParentRow(this.Table.ParentRelations["FK__ComboLine__Combo__72C60C4A"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__ComboLine__Combo__72C60C4A"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MenuRow MenuRow {
-                get {
-                    return ((MenuRow)(this.GetParentRow(this.Table.ParentRelations["FK__ComboLine__MenuI__71D1E811"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__ComboLine__MenuI__71D1E811"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class ComboRecordRow : global::System.Data.DataRow {
-            
-            private ComboRecordDataTable tableComboRecord;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ComboRecordRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableComboRecord = ((ComboRecordDataTable)(this.Table));
+                this.tableComboRecords = ((ComboRecordsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ComboRecordID {
                 get {
-                    return ((int)(this[this.tableComboRecord.ComboRecordIDColumn]));
+                    return ((int)(this[this.tableComboRecords.ComboRecordIDColumn]));
                 }
                 set {
-                    this[this.tableComboRecord.ComboRecordIDColumn] = value;
+                    this[this.tableComboRecords.ComboRecordIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ItemName {
+                get {
+                    try {
+                        return ((string)(this[this.tableComboRecords.ItemNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ItemName\' in table \'ComboRecords\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComboRecords.ItemNameColumn] = value;
                 }
             }
             
@@ -6591,14 +6306,62 @@ namespace HenkINF370 {
             public string ComboDescription {
                 get {
                     try {
-                        return ((string)(this[this.tableComboRecord.ComboDescriptionColumn]));
+                        return ((string)(this[this.tableComboRecords.ComboDescriptionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ComboDescription\' in table \'ComboRecord\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ComboDescription\' in table \'ComboRecords\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableComboRecord.ComboDescriptionColumn] = value;
+                    this[this.tableComboRecords.ComboDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int PizzaBaseID {
+                get {
+                    try {
+                        return ((int)(this[this.tableComboRecords.PizzaBaseIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PizzaBaseID\' in table \'ComboRecords\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComboRecords.PizzaBaseIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int DrinkSizeID {
+                get {
+                    try {
+                        return ((int)(this[this.tableComboRecords.DrinkSizeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DrinkSizeID\' in table \'ComboRecords\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComboRecords.DrinkSizeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int PizzaSizeID {
+                get {
+                    try {
+                        return ((int)(this[this.tableComboRecords.PizzaSizeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PizzaSizeID\' in table \'ComboRecords\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComboRecords.PizzaSizeIDColumn] = value;
                 }
             }
             
@@ -6607,39 +6370,403 @@ namespace HenkINF370 {
             public decimal Price {
                 get {
                     try {
-                        return ((decimal)(this[this.tableComboRecord.PriceColumn]));
+                        return ((decimal)(this[this.tableComboRecords.PriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'ComboRecord\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'ComboRecords\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableComboRecord.PriceColumn] = value;
+                    this[this.tableComboRecords.PriceColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ExpireDate {
+                get {
+                    try {
+                        return ((string)(this[this.tableComboRecords.ExpireDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ExpireDate\' in table \'ComboRecords\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComboRecords.ExpireDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public DrinkSizeRow DrinkSizeRow {
+                get {
+                    return ((DrinkSizeRow)(this.GetParentRow(this.Table.ParentRelations["FK__ComboReco__Drink__2180FB33"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ComboReco__Drink__2180FB33"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PizzaBaseRow PizzaBaseRow {
+                get {
+                    return ((PizzaBaseRow)(this.GetParentRow(this.Table.ParentRelations["FK__ComboReco__Pizza__1F98B2C1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ComboReco__Pizza__1F98B2C1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PizzaSizeRow PizzaSizeRow {
+                get {
+                    return ((PizzaSizeRow)(this.GetParentRow(this.Table.ParentRelations["FK__ComboReco__Pizza__208CD6FA"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ComboReco__Pizza__208CD6FA"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsItemNameNull() {
+                return this.IsNull(this.tableComboRecords.ItemNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetItemNameNull() {
+                this[this.tableComboRecords.ItemNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsComboDescriptionNull() {
-                return this.IsNull(this.tableComboRecord.ComboDescriptionColumn);
+                return this.IsNull(this.tableComboRecords.ComboDescriptionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetComboDescriptionNull() {
-                this[this.tableComboRecord.ComboDescriptionColumn] = global::System.Convert.DBNull;
+                this[this.tableComboRecords.ComboDescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPizzaBaseIDNull() {
+                return this.IsNull(this.tableComboRecords.PizzaBaseIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPizzaBaseIDNull() {
+                this[this.tableComboRecords.PizzaBaseIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDrinkSizeIDNull() {
+                return this.IsNull(this.tableComboRecords.DrinkSizeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDrinkSizeIDNull() {
+                this[this.tableComboRecords.DrinkSizeIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPizzaSizeIDNull() {
+                return this.IsNull(this.tableComboRecords.PizzaSizeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPizzaSizeIDNull() {
+                this[this.tableComboRecords.PizzaSizeIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPriceNull() {
-                return this.IsNull(this.tableComboRecord.PriceColumn);
+                return this.IsNull(this.tableComboRecords.PriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPriceNull() {
-                this[this.tableComboRecord.PriceColumn] = global::System.Convert.DBNull;
+                this[this.tableComboRecords.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsExpireDateNull() {
+                return this.IsNull(this.tableComboRecords.ExpireDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetExpireDateNull() {
+                this[this.tableComboRecords.ExpireDateColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CombosRow : global::System.Data.DataRow {
+            
+            private CombosDataTable tableCombos;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal CombosRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCombos = ((CombosDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int ComboID {
+                get {
+                    return ((int)(this[this.tableCombos.ComboIDColumn]));
+                }
+                set {
+                    this[this.tableCombos.ComboIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ItemName {
+                get {
+                    try {
+                        return ((string)(this[this.tableCombos.ItemNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ItemName\' in table \'Combos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCombos.ItemNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ComboDescription {
+                get {
+                    try {
+                        return ((string)(this[this.tableCombos.ComboDescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ComboDescription\' in table \'Combos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCombos.ComboDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int PizzaBaseID {
+                get {
+                    try {
+                        return ((int)(this[this.tableCombos.PizzaBaseIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PizzaBaseID\' in table \'Combos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCombos.PizzaBaseIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int DrinkSizeID {
+                get {
+                    try {
+                        return ((int)(this[this.tableCombos.DrinkSizeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DrinkSizeID\' in table \'Combos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCombos.DrinkSizeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int PizzaSizeID {
+                get {
+                    try {
+                        return ((int)(this[this.tableCombos.PizzaSizeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PizzaSizeID\' in table \'Combos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCombos.PizzaSizeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableCombos.PriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'Combos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCombos.PriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ExpireDate {
+                get {
+                    try {
+                        return ((string)(this[this.tableCombos.ExpireDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ExpireDate\' in table \'Combos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCombos.ExpireDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public DrinkSizeRow DrinkSizeRow {
+                get {
+                    return ((DrinkSizeRow)(this.GetParentRow(this.Table.ParentRelations["FK__Combos__DrinkSiz__1CBC4616"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Combos__DrinkSiz__1CBC4616"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PizzaBaseRow PizzaBaseRow {
+                get {
+                    return ((PizzaBaseRow)(this.GetParentRow(this.Table.ParentRelations["FK__Combos__PizzaBas__1AD3FDA4"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Combos__PizzaBas__1AD3FDA4"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PizzaSizeRow PizzaSizeRow {
+                get {
+                    return ((PizzaSizeRow)(this.GetParentRow(this.Table.ParentRelations["FK__Combos__PizzaSiz__1BC821DD"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Combos__PizzaSiz__1BC821DD"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsItemNameNull() {
+                return this.IsNull(this.tableCombos.ItemNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetItemNameNull() {
+                this[this.tableCombos.ItemNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsComboDescriptionNull() {
+                return this.IsNull(this.tableCombos.ComboDescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetComboDescriptionNull() {
+                this[this.tableCombos.ComboDescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPizzaBaseIDNull() {
+                return this.IsNull(this.tableCombos.PizzaBaseIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPizzaBaseIDNull() {
+                this[this.tableCombos.PizzaBaseIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDrinkSizeIDNull() {
+                return this.IsNull(this.tableCombos.DrinkSizeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDrinkSizeIDNull() {
+                this[this.tableCombos.DrinkSizeIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPizzaSizeIDNull() {
+                return this.IsNull(this.tableCombos.PizzaSizeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPizzaSizeIDNull() {
+                this[this.tableCombos.PizzaSizeIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPriceNull() {
+                return this.IsNull(this.tableCombos.PriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPriceNull() {
+                this[this.tableCombos.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsExpireDateNull() {
+                return this.IsNull(this.tableCombos.ExpireDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetExpireDateNull() {
+                this[this.tableCombos.ExpireDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6781,6 +6908,28 @@ namespace HenkINF370 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPriceNull() {
                 this[this.tableDrinkSize.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public ComboRecordsRow[] GetComboRecordsRows() {
+                if ((this.Table.ChildRelations["FK__ComboReco__Drink__2180FB33"] == null)) {
+                    return new ComboRecordsRow[0];
+                }
+                else {
+                    return ((ComboRecordsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ComboReco__Drink__2180FB33"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CombosRow[] GetCombosRows() {
+                if ((this.Table.ChildRelations["FK__Combos__DrinkSiz__1CBC4616"] == null)) {
+                    return new CombosRow[0];
+                }
+                else {
+                    return ((CombosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Combos__DrinkSiz__1CBC4616"])));
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7155,17 +7304,6 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineRow[] GetComboLineRows() {
-                if ((this.Table.ChildRelations["FK__ComboLine__MenuI__71D1E811"] == null)) {
-                    return new ComboLineRow[0];
-                }
-                else {
-                    return ((ComboLineRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ComboLine__MenuI__71D1E811"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CustomisationRow[] GetCustomisationRows() {
                 if ((this.Table.ChildRelations["FK__Customisa__MenuI__797309D9"] == null)) {
                     return new CustomisationRow[0];
@@ -7324,6 +7462,28 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public ComboRecordsRow[] GetComboRecordsRows() {
+                if ((this.Table.ChildRelations["FK__ComboReco__Pizza__1F98B2C1"] == null)) {
+                    return new ComboRecordsRow[0];
+                }
+                else {
+                    return ((ComboRecordsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ComboReco__Pizza__1F98B2C1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CombosRow[] GetCombosRows() {
+                if ((this.Table.ChildRelations["FK__Combos__PizzaBas__1AD3FDA4"] == null)) {
+                    return new CombosRow[0];
+                }
+                else {
+                    return ((CombosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Combos__PizzaBas__1AD3FDA4"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public MenuRow[] GetMenuRows() {
                 if ((this.Table.ChildRelations["FK__Menu__PizzaBaseI__6477ECF3"] == null)) {
                     return new MenuRow[0];
@@ -7413,6 +7573,28 @@ namespace HenkINF370 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPriceNull() {
                 this[this.tablePizzaSize.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public ComboRecordsRow[] GetComboRecordsRows() {
+                if ((this.Table.ChildRelations["FK__ComboReco__Pizza__208CD6FA"] == null)) {
+                    return new ComboRecordsRow[0];
+                }
+                else {
+                    return ((ComboRecordsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ComboReco__Pizza__208CD6FA"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CombosRow[] GetCombosRows() {
+                if ((this.Table.ChildRelations["FK__Combos__PizzaSiz__1BC821DD"] == null)) {
+                    return new CombosRow[0];
+                }
+                else {
+                    return ((CombosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Combos__PizzaSiz__1BC821DD"])));
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7880,33 +8062,6 @@ namespace HenkINF370 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ToppingID {
-                get {
-                    try {
-                        return ((int)(this[this.tableToppingRecord.ToppingIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ToppingID\' in table \'ToppingRecord\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableToppingRecord.ToppingIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ToppingsRow ToppingsRow {
-                get {
-                    return ((ToppingsRow)(this.GetParentRow(this.Table.ParentRelations["FK__ToppingRe__Toppi__7D439ABD"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__ToppingRe__Toppi__7D439ABD"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsToppingNameNull() {
                 return this.IsNull(this.tableToppingRecord.ToppingNameColumn);
             }
@@ -7927,18 +8082,6 @@ namespace HenkINF370 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPriceNull() {
                 this[this.tableToppingRecord.PriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsToppingIDNull() {
-                return this.IsNull(this.tableToppingRecord.ToppingIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetToppingIDNull() {
-                this[this.tableToppingRecord.ToppingIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8031,17 +8174,6 @@ namespace HenkINF370 {
                 }
                 else {
                     return ((CustomisationRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Customisa__Toppi__7A672E12"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ToppingRecordRow[] GetToppingRecordRows() {
-                if ((this.Table.ChildRelations["FK__ToppingRe__Toppi__7D439ABD"] == null)) {
-                    return new ToppingRecordRow[0];
-                }
-                else {
-                    return ((ToppingRecordRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ToppingRe__Toppi__7D439ABD"])));
                 }
             }
         }
@@ -8476,22 +8608,22 @@ namespace HenkINF370 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ComboRowChangeEvent : global::System.EventArgs {
+        public class ComboRecordsRowChangeEvent : global::System.EventArgs {
             
-            private ComboRow eventRow;
+            private ComboRecordsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRowChangeEvent(ComboRow row, global::System.Data.DataRowAction action) {
+            public ComboRecordsRowChangeEvent(ComboRecordsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRow Row {
+            public ComboRecordsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -8510,56 +8642,22 @@ namespace HenkINF370 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ComboLineRowChangeEvent : global::System.EventArgs {
+        public class CombosRowChangeEvent : global::System.EventArgs {
             
-            private ComboLineRow eventRow;
+            private CombosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineRowChangeEvent(ComboLineRow row, global::System.Data.DataRowAction action) {
+            public CombosRowChangeEvent(CombosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboLineRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ComboRecordRowChangeEvent : global::System.EventArgs {
-            
-            private ComboRecordRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRecordRowChangeEvent(ComboRecordRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ComboRecordRow Row {
+            public CombosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -9097,7 +9195,7 @@ namespace HenkINF370.HenkINF370DataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ComboTableAdapter : global::System.ComponentModel.Component {
+    public partial class ComboRecordsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -9111,7 +9209,7 @@ namespace HenkINF370.HenkINF370DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ComboTableAdapter() {
+        public ComboRecordsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -9208,698 +9306,74 @@ namespace HenkINF370.HenkINF370DataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Combo";
-            tableMapping.ColumnMappings.Add("ComboID", "ComboID");
-            tableMapping.ColumnMappings.Add("Combodescription", "Combodescription");
-            tableMapping.ColumnMappings.Add("Price", "Price");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Combo] WHERE (([ComboID] = @Original_ComboID) AND ((@IsNull_Combodescription = 1 AND [Combodescription] IS NULL) OR ([Combodescription] = @Original_Combodescription)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Combodescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Combodescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Combodescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Combodescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Combo] ([Combodescription], [Price]) VALUES (@Combodescription" +
-                ", @Price);\r\nSELECT ComboID, Combodescription, Price FROM Combo WHERE (ComboID = " +
-                "SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Combodescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Combodescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Combo] SET [Combodescription] = @Combodescription, [Price] = @Price WHERE (([ComboID] = @Original_ComboID) AND ((@IsNull_Combodescription = 1 AND [Combodescription] IS NULL) OR ([Combodescription] = @Original_Combodescription)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
-SELECT ComboID, Combodescription, Price FROM Combo WHERE (ComboID = @ComboID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Combodescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Combodescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Combodescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Combodescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Combodescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Combodescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::HenkINF370.Properties.Settings.Default.HenkINF370ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ComboID, Combodescription, Price FROM dbo.Combo";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HenkINF370DataSet.ComboDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HenkINF370DataSet.ComboDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            HenkINF370DataSet.ComboDataTable dataTable = new HenkINF370DataSet.ComboDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HenkINF370DataSet.ComboDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HenkINF370DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Combo");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ComboID, string Original_Combodescription, global::System.Nullable<decimal> Original_Price) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ComboID));
-            if ((Original_Combodescription == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Combodescription));
-            }
-            if ((Original_Price.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_Price.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Combodescription, global::System.Nullable<decimal> Price) {
-            if ((Combodescription == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Combodescription));
-            }
-            if ((Price.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(Price.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Combodescription, global::System.Nullable<decimal> Price, int Original_ComboID, string Original_Combodescription, global::System.Nullable<decimal> Original_Price, int ComboID) {
-            if ((Combodescription == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Combodescription));
-            }
-            if ((Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(Price.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ComboID));
-            if ((Original_Combodescription == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Combodescription));
-            }
-            if ((Original_Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_Price.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ComboID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Combodescription, global::System.Nullable<decimal> Price, int Original_ComboID, string Original_Combodescription, global::System.Nullable<decimal> Original_Price) {
-            return this.Update(Combodescription, Price, Original_ComboID, Original_Combodescription, Original_Price, Original_ComboID);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ComboLineTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ComboLineTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "ComboLine";
-            tableMapping.ColumnMappings.Add("MenuItemID", "MenuItemID");
-            tableMapping.ColumnMappings.Add("ComboID", "ComboID");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[ComboLine] WHERE (([MenuItemID] = @Original_MenuItemID) AND ([" +
-                "ComboID] = @Original_ComboID))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MenuItemID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ComboLine] ([MenuItemID], [ComboID]) VALUES (@MenuItemID, @Com" +
-                "boID);\r\nSELECT MenuItemID, ComboID FROM ComboLine WHERE (ComboID = @ComboID) AND" +
-                " (MenuItemID = @MenuItemID)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MenuItemID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ComboLine] SET [MenuItemID] = @MenuItemID, [ComboID] = @ComboID WHERE (([MenuItemID] = @Original_MenuItemID) AND ([ComboID] = @Original_ComboID));
-SELECT MenuItemID, ComboID FROM ComboLine WHERE (ComboID = @ComboID) AND (MenuItemID = @MenuItemID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MenuItemID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MenuItemID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::HenkINF370.Properties.Settings.Default.HenkINF370ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MenuItemID, ComboID FROM dbo.ComboLine";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HenkINF370DataSet.ComboLineDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HenkINF370DataSet.ComboLineDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            HenkINF370DataSet.ComboLineDataTable dataTable = new HenkINF370DataSet.ComboLineDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HenkINF370DataSet.ComboLineDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HenkINF370DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "ComboLine");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_MenuItemID, int Original_ComboID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_MenuItemID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ComboID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int MenuItemID, int ComboID) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(MenuItemID));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ComboID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int MenuItemID, int ComboID, int Original_MenuItemID, int Original_ComboID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(MenuItemID));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ComboID));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_MenuItemID));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ComboID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_MenuItemID, int Original_ComboID) {
-            return this.Update(Original_MenuItemID, Original_ComboID, Original_MenuItemID, Original_ComboID);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ComboRecordTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ComboRecordTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "ComboRecord";
+            tableMapping.DataSetTable = "ComboRecords";
             tableMapping.ColumnMappings.Add("ComboRecordID", "ComboRecordID");
+            tableMapping.ColumnMappings.Add("ItemName", "ItemName");
             tableMapping.ColumnMappings.Add("ComboDescription", "ComboDescription");
+            tableMapping.ColumnMappings.Add("PizzaBaseID", "PizzaBaseID");
+            tableMapping.ColumnMappings.Add("DrinkSizeID", "DrinkSizeID");
+            tableMapping.ColumnMappings.Add("PizzaSizeID", "PizzaSizeID");
             tableMapping.ColumnMappings.Add("Price", "Price");
+            tableMapping.ColumnMappings.Add("ExpireDate", "ExpireDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ComboRecord] WHERE (([ComboRecordID] = @Original_ComboRecordID) AND ((@IsNull_ComboDescription = 1 AND [ComboDescription] IS NULL) OR ([ComboDescription] = @Original_ComboDescription)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ComboRecords] WHERE (([ComboRecordID] = @Original_ComboRecordID) AND ((@IsNull_ItemName = 1 AND [ItemName] IS NULL) OR ([ItemName] = @Original_ItemName)) AND ((@IsNull_ComboDescription = 1 AND [ComboDescription] IS NULL) OR ([ComboDescription] = @Original_ComboDescription)) AND ((@IsNull_PizzaBaseID = 1 AND [PizzaBaseID] IS NULL) OR ([PizzaBaseID] = @Original_PizzaBaseID)) AND ((@IsNull_DrinkSizeID = 1 AND [DrinkSizeID] IS NULL) OR ([DrinkSizeID] = @Original_DrinkSizeID)) AND ((@IsNull_PizzaSizeID = 1 AND [PizzaSizeID] IS NULL) OR ([PizzaSizeID] = @Original_PizzaSizeID)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ExpireDate = 1 AND [ExpireDate] IS NULL) OR ([ExpireDate] = @Original_ExpireDate)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboRecordID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboRecordID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ComboDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ExpireDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ExpireDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ComboRecord] ([ComboDescription], [Price]) VALUES (@ComboDescr" +
-                "iption, @Price);\r\nSELECT ComboRecordID, ComboDescription, Price FROM ComboRecord" +
-                " WHERE (ComboRecordID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ComboRecords] ([ItemName], [ComboDescription], [PizzaBaseID], [DrinkSizeID], [PizzaSizeID], [Price], [ExpireDate]) VALUES (@ItemName, @ComboDescription, @PizzaBaseID, @DrinkSizeID, @PizzaSizeID, @Price, @ExpireDate);
+SELECT ComboRecordID, ItemName, ComboDescription, PizzaBaseID, DrinkSizeID, PizzaSizeID, Price, ExpireDate FROM ComboRecords WHERE (ComboRecordID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpireDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ComboRecord] SET [ComboDescription] = @ComboDescription, [Price] = @Price WHERE (([ComboRecordID] = @Original_ComboRecordID) AND ((@IsNull_ComboDescription = 1 AND [ComboDescription] IS NULL) OR ([ComboDescription] = @Original_ComboDescription)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
-SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecordID = @ComboRecordID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ComboRecords] SET [ItemName] = @ItemName, [ComboDescription] = @ComboDescription, [PizzaBaseID] = @PizzaBaseID, [DrinkSizeID] = @DrinkSizeID, [PizzaSizeID] = @PizzaSizeID, [Price] = @Price, [ExpireDate] = @ExpireDate WHERE (([ComboRecordID] = @Original_ComboRecordID) AND ((@IsNull_ItemName = 1 AND [ItemName] IS NULL) OR ([ItemName] = @Original_ItemName)) AND ((@IsNull_ComboDescription = 1 AND [ComboDescription] IS NULL) OR ([ComboDescription] = @Original_ComboDescription)) AND ((@IsNull_PizzaBaseID = 1 AND [PizzaBaseID] IS NULL) OR ([PizzaBaseID] = @Original_PizzaBaseID)) AND ((@IsNull_DrinkSizeID = 1 AND [DrinkSizeID] IS NULL) OR ([DrinkSizeID] = @Original_DrinkSizeID)) AND ((@IsNull_PizzaSizeID = 1 AND [PizzaSizeID] IS NULL) OR ([PizzaSizeID] = @Original_PizzaSizeID)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ExpireDate = 1 AND [ExpireDate] IS NULL) OR ([ExpireDate] = @Original_ExpireDate)));
+SELECT ComboRecordID, ItemName, ComboDescription, PizzaBaseID, DrinkSizeID, PizzaSizeID, Price, ExpireDate FROM ComboRecords WHERE (ComboRecordID = @ComboRecordID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpireDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboRecordID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboRecordID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ComboDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ExpireDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ExpireDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboRecordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ComboRecordID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -9916,7 +9390,8 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ComboRecordID, ComboDescription, Price FROM dbo.ComboRecord";
+            this._commandCollection[0].CommandText = "SELECT ComboRecordID, ItemName, ComboDescription, PizzaBaseID, DrinkSizeID, Pizza" +
+                "SizeID, Price, ExpireDate FROM dbo.ComboRecords";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9924,7 +9399,7 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HenkINF370DataSet.ComboRecordDataTable dataTable) {
+        public virtual int Fill(HenkINF370DataSet.ComboRecordsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9937,9 +9412,9 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HenkINF370DataSet.ComboRecordDataTable GetData() {
+        public virtual HenkINF370DataSet.ComboRecordsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HenkINF370DataSet.ComboRecordDataTable dataTable = new HenkINF370DataSet.ComboRecordDataTable();
+            HenkINF370DataSet.ComboRecordsDataTable dataTable = new HenkINF370DataSet.ComboRecordsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9947,7 +9422,7 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HenkINF370DataSet.ComboRecordDataTable dataTable) {
+        public virtual int Update(HenkINF370DataSet.ComboRecordsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -9955,7 +9430,7 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(HenkINF370DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "ComboRecord");
+            return this.Adapter.Update(dataSet, "ComboRecords");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9977,23 +9452,63 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ComboRecordID, string Original_ComboDescription, global::System.Nullable<decimal> Original_Price) {
+        public virtual int Delete(int Original_ComboRecordID, string Original_ItemName, string Original_ComboDescription, global::System.Nullable<int> Original_PizzaBaseID, global::System.Nullable<int> Original_DrinkSizeID, global::System.Nullable<int> Original_PizzaSizeID, global::System.Nullable<decimal> Original_Price, string Original_ExpireDate) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ComboRecordID));
-            if ((Original_ComboDescription == null)) {
+            if ((Original_ItemName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ComboDescription));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ItemName));
             }
-            if ((Original_Price.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_Price.Value));
-            }
-            else {
+            if ((Original_ComboDescription == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_ComboDescription));
+            }
+            if ((Original_PizzaBaseID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_PizzaBaseID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DrinkSizeID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_DrinkSizeID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PizzaSizeID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_PizzaSizeID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Price.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_Price.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ExpireDate == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_ExpireDate));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10015,18 +9530,48 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ComboDescription, global::System.Nullable<decimal> Price) {
-            if ((ComboDescription == null)) {
+        public virtual int Insert(string ItemName, string ComboDescription, global::System.Nullable<int> PizzaBaseID, global::System.Nullable<int> DrinkSizeID, global::System.Nullable<int> PizzaSizeID, global::System.Nullable<decimal> Price, string ExpireDate) {
+            if ((ItemName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ComboDescription));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ItemName));
             }
-            if ((Price.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(Price.Value));
+            if ((ComboDescription == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ComboDescription));
+            }
+            if ((PizzaBaseID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PizzaBaseID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DrinkSizeID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(DrinkSizeID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((PizzaSizeID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(PizzaSizeID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(Price.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ExpireDate == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ExpireDate));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10048,37 +9593,123 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ComboDescription, global::System.Nullable<decimal> Price, int Original_ComboRecordID, string Original_ComboDescription, global::System.Nullable<decimal> Original_Price, int ComboRecordID) {
-            if ((ComboDescription == null)) {
+        public virtual int Update(
+                    string ItemName, 
+                    string ComboDescription, 
+                    global::System.Nullable<int> PizzaBaseID, 
+                    global::System.Nullable<int> DrinkSizeID, 
+                    global::System.Nullable<int> PizzaSizeID, 
+                    global::System.Nullable<decimal> Price, 
+                    string ExpireDate, 
+                    int Original_ComboRecordID, 
+                    string Original_ItemName, 
+                    string Original_ComboDescription, 
+                    global::System.Nullable<int> Original_PizzaBaseID, 
+                    global::System.Nullable<int> Original_DrinkSizeID, 
+                    global::System.Nullable<int> Original_PizzaSizeID, 
+                    global::System.Nullable<decimal> Original_Price, 
+                    string Original_ExpireDate, 
+                    int ComboRecordID) {
+            if ((ItemName == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ComboDescription));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ItemName));
             }
-            if ((Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(Price.Value));
-            }
-            else {
+            if ((ComboDescription == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ComboRecordID));
-            if ((Original_ComboDescription == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ComboDescription));
+            }
+            if ((PizzaBaseID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(PizzaBaseID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DrinkSizeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(DrinkSizeID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((PizzaSizeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(PizzaSizeID.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_ComboDescription));
-            }
-            if ((Original_Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_Price.Value));
+            if ((Price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ExpireDate == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ComboRecordID));
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ExpireDate));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ComboRecordID));
+            if ((Original_ItemName == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ItemName));
+            }
+            if ((Original_ComboDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_ComboDescription));
+            }
+            if ((Original_PizzaBaseID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_PizzaBaseID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DrinkSizeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_DrinkSizeID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PizzaSizeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_PizzaSizeID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(Original_Price.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ExpireDate == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_ExpireDate));
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(ComboRecordID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10099,8 +9730,557 @@ SELECT ComboRecordID, ComboDescription, Price FROM ComboRecord WHERE (ComboRecor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ComboDescription, global::System.Nullable<decimal> Price, int Original_ComboRecordID, string Original_ComboDescription, global::System.Nullable<decimal> Original_Price) {
-            return this.Update(ComboDescription, Price, Original_ComboRecordID, Original_ComboDescription, Original_Price, Original_ComboRecordID);
+        public virtual int Update(string ItemName, string ComboDescription, global::System.Nullable<int> PizzaBaseID, global::System.Nullable<int> DrinkSizeID, global::System.Nullable<int> PizzaSizeID, global::System.Nullable<decimal> Price, string ExpireDate, int Original_ComboRecordID, string Original_ItemName, string Original_ComboDescription, global::System.Nullable<int> Original_PizzaBaseID, global::System.Nullable<int> Original_DrinkSizeID, global::System.Nullable<int> Original_PizzaSizeID, global::System.Nullable<decimal> Original_Price, string Original_ExpireDate) {
+            return this.Update(ItemName, ComboDescription, PizzaBaseID, DrinkSizeID, PizzaSizeID, Price, ExpireDate, Original_ComboRecordID, Original_ItemName, Original_ComboDescription, Original_PizzaBaseID, Original_DrinkSizeID, Original_PizzaSizeID, Original_Price, Original_ExpireDate, Original_ComboRecordID);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CombosTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public CombosTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Combos";
+            tableMapping.ColumnMappings.Add("ComboID", "ComboID");
+            tableMapping.ColumnMappings.Add("ItemName", "ItemName");
+            tableMapping.ColumnMappings.Add("ComboDescription", "ComboDescription");
+            tableMapping.ColumnMappings.Add("PizzaBaseID", "PizzaBaseID");
+            tableMapping.ColumnMappings.Add("DrinkSizeID", "DrinkSizeID");
+            tableMapping.ColumnMappings.Add("PizzaSizeID", "PizzaSizeID");
+            tableMapping.ColumnMappings.Add("Price", "Price");
+            tableMapping.ColumnMappings.Add("ExpireDate", "ExpireDate");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Combos] WHERE (([ComboID] = @Original_ComboID) AND ((@IsNull_ItemName = 1 AND [ItemName] IS NULL) OR ([ItemName] = @Original_ItemName)) AND ((@IsNull_ComboDescription = 1 AND [ComboDescription] IS NULL) OR ([ComboDescription] = @Original_ComboDescription)) AND ((@IsNull_PizzaBaseID = 1 AND [PizzaBaseID] IS NULL) OR ([PizzaBaseID] = @Original_PizzaBaseID)) AND ((@IsNull_DrinkSizeID = 1 AND [DrinkSizeID] IS NULL) OR ([DrinkSizeID] = @Original_DrinkSizeID)) AND ((@IsNull_PizzaSizeID = 1 AND [PizzaSizeID] IS NULL) OR ([PizzaSizeID] = @Original_PizzaSizeID)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ExpireDate = 1 AND [ExpireDate] IS NULL) OR ([ExpireDate] = @Original_ExpireDate)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ComboDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ExpireDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ExpireDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Combos] ([ItemName], [ComboDescription], [PizzaBaseID], [DrinkSizeID], [PizzaSizeID], [Price], [ExpireDate]) VALUES (@ItemName, @ComboDescription, @PizzaBaseID, @DrinkSizeID, @PizzaSizeID, @Price, @ExpireDate);
+SELECT ComboID, ItemName, ComboDescription, PizzaBaseID, DrinkSizeID, PizzaSizeID, Price, ExpireDate FROM Combos WHERE (ComboID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpireDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Combos] SET [ItemName] = @ItemName, [ComboDescription] = @ComboDescription, [PizzaBaseID] = @PizzaBaseID, [DrinkSizeID] = @DrinkSizeID, [PizzaSizeID] = @PizzaSizeID, [Price] = @Price, [ExpireDate] = @ExpireDate WHERE (([ComboID] = @Original_ComboID) AND ((@IsNull_ItemName = 1 AND [ItemName] IS NULL) OR ([ItemName] = @Original_ItemName)) AND ((@IsNull_ComboDescription = 1 AND [ComboDescription] IS NULL) OR ([ComboDescription] = @Original_ComboDescription)) AND ((@IsNull_PizzaBaseID = 1 AND [PizzaBaseID] IS NULL) OR ([PizzaBaseID] = @Original_PizzaBaseID)) AND ((@IsNull_DrinkSizeID = 1 AND [DrinkSizeID] IS NULL) OR ([DrinkSizeID] = @Original_DrinkSizeID)) AND ((@IsNull_PizzaSizeID = 1 AND [PizzaSizeID] IS NULL) OR ([PizzaSizeID] = @Original_PizzaSizeID)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ExpireDate = 1 AND [ExpireDate] IS NULL) OR ([ExpireDate] = @Original_ExpireDate)));
+SELECT ComboID, ItemName, ComboDescription, PizzaBaseID, DrinkSizeID, PizzaSizeID, Price, ExpireDate FROM Combos WHERE (ComboID = @ComboID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpireDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ComboDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ComboDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ComboDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PizzaBaseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaBaseID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DrinkSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DrinkSizeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PizzaSizeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PizzaSizeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ExpireDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ExpireDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpireDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ComboID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ComboID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::HenkINF370.Properties.Settings.Default.HenkINF370ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT ComboID, ItemName, ComboDescription, PizzaBaseID, DrinkSizeID, PizzaSizeID" +
+                ", Price, ExpireDate FROM dbo.Combos";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HenkINF370DataSet.CombosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HenkINF370DataSet.CombosDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            HenkINF370DataSet.CombosDataTable dataTable = new HenkINF370DataSet.CombosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(HenkINF370DataSet.CombosDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(HenkINF370DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Combos");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_ComboID, string Original_ItemName, string Original_ComboDescription, global::System.Nullable<int> Original_PizzaBaseID, global::System.Nullable<int> Original_DrinkSizeID, global::System.Nullable<int> Original_PizzaSizeID, global::System.Nullable<decimal> Original_Price, string Original_ExpireDate) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ComboID));
+            if ((Original_ItemName == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ItemName));
+            }
+            if ((Original_ComboDescription == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_ComboDescription));
+            }
+            if ((Original_PizzaBaseID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_PizzaBaseID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DrinkSizeID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_DrinkSizeID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PizzaSizeID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_PizzaSizeID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Price.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_Price.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ExpireDate == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_ExpireDate));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string ItemName, string ComboDescription, global::System.Nullable<int> PizzaBaseID, global::System.Nullable<int> DrinkSizeID, global::System.Nullable<int> PizzaSizeID, global::System.Nullable<decimal> Price, string ExpireDate) {
+            if ((ItemName == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ItemName));
+            }
+            if ((ComboDescription == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ComboDescription));
+            }
+            if ((PizzaBaseID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PizzaBaseID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DrinkSizeID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(DrinkSizeID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((PizzaSizeID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(PizzaSizeID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(Price.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ExpireDate == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ExpireDate));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string ItemName, 
+                    string ComboDescription, 
+                    global::System.Nullable<int> PizzaBaseID, 
+                    global::System.Nullable<int> DrinkSizeID, 
+                    global::System.Nullable<int> PizzaSizeID, 
+                    global::System.Nullable<decimal> Price, 
+                    string ExpireDate, 
+                    int Original_ComboID, 
+                    string Original_ItemName, 
+                    string Original_ComboDescription, 
+                    global::System.Nullable<int> Original_PizzaBaseID, 
+                    global::System.Nullable<int> Original_DrinkSizeID, 
+                    global::System.Nullable<int> Original_PizzaSizeID, 
+                    global::System.Nullable<decimal> Original_Price, 
+                    string Original_ExpireDate, 
+                    int ComboID) {
+            if ((ItemName == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ItemName));
+            }
+            if ((ComboDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ComboDescription));
+            }
+            if ((PizzaBaseID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(PizzaBaseID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DrinkSizeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(DrinkSizeID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((PizzaSizeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(PizzaSizeID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Price.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ExpireDate == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ExpireDate));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ComboID));
+            if ((Original_ItemName == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ItemName));
+            }
+            if ((Original_ComboDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_ComboDescription));
+            }
+            if ((Original_PizzaBaseID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_PizzaBaseID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DrinkSizeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_DrinkSizeID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PizzaSizeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_PizzaSizeID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(Original_Price.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ExpireDate == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_ExpireDate));
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(ComboID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string ItemName, string ComboDescription, global::System.Nullable<int> PizzaBaseID, global::System.Nullable<int> DrinkSizeID, global::System.Nullable<int> PizzaSizeID, global::System.Nullable<decimal> Price, string ExpireDate, int Original_ComboID, string Original_ItemName, string Original_ComboDescription, global::System.Nullable<int> Original_PizzaBaseID, global::System.Nullable<int> Original_DrinkSizeID, global::System.Nullable<int> Original_PizzaSizeID, global::System.Nullable<decimal> Original_Price, string Original_ExpireDate) {
+            return this.Update(ItemName, ComboDescription, PizzaBaseID, DrinkSizeID, PizzaSizeID, Price, ExpireDate, Original_ComboID, Original_ItemName, Original_ComboDescription, Original_PizzaBaseID, Original_DrinkSizeID, Original_PizzaSizeID, Original_Price, Original_ExpireDate, Original_ComboID);
         }
     }
     
@@ -14289,43 +14469,36 @@ SELECT TitleID, TitleDescription FROM Title WHERE (TitleID = @TitleID)";
             tableMapping.ColumnMappings.Add("ToppingRecordID", "ToppingRecordID");
             tableMapping.ColumnMappings.Add("ToppingName", "ToppingName");
             tableMapping.ColumnMappings.Add("Price", "Price");
-            tableMapping.ColumnMappings.Add("ToppingID", "ToppingID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ToppingRecord] WHERE (([ToppingRecordID] = @Original_ToppingRecordID) AND ((@IsNull_ToppingName = 1 AND [ToppingName] IS NULL) OR ([ToppingName] = @Original_ToppingName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ToppingID = 1 AND [ToppingID] IS NULL) OR ([ToppingID] = @Original_ToppingID)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ToppingRecord] WHERE (([ToppingRecordID] = @Original_ToppingRecordID) AND ((@IsNull_ToppingName = 1 AND [ToppingName] IS NULL) OR ([ToppingName] = @Original_ToppingName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ToppingRecordID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingRecordID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ToppingName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ToppingName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ToppingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ToppingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ToppingRecord] ([ToppingName], [Price], [ToppingID]) VALUES (@" +
-                "ToppingName, @Price, @ToppingID);\r\nSELECT ToppingRecordID, ToppingName, Price, T" +
-                "oppingID FROM ToppingRecord WHERE (ToppingRecordID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ToppingRecord] ([ToppingName], [Price]) VALUES (@ToppingName, " +
+                "@Price);\r\nSELECT ToppingRecordID, ToppingName, Price FROM ToppingRecord WHERE (T" +
+                "oppingRecordID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToppingName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToppingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ToppingRecord] SET [ToppingName] = @ToppingName, [Price] = @Price, [ToppingID] = @ToppingID WHERE (([ToppingRecordID] = @Original_ToppingRecordID) AND ((@IsNull_ToppingName = 1 AND [ToppingName] IS NULL) OR ([ToppingName] = @Original_ToppingName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ToppingID = 1 AND [ToppingID] IS NULL) OR ([ToppingID] = @Original_ToppingID)));
-SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (ToppingRecordID = @ToppingRecordID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ToppingRecord] SET [ToppingName] = @ToppingName, [Price] = @Price WHERE (([ToppingRecordID] = @Original_ToppingRecordID) AND ((@IsNull_ToppingName = 1 AND [ToppingName] IS NULL) OR ([ToppingName] = @Original_ToppingName)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
+SELECT ToppingRecordID, ToppingName, Price FROM ToppingRecord WHERE (ToppingRecordID = @ToppingRecordID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToppingName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToppingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ToppingRecordID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingRecordID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ToppingName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ToppingName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ToppingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ToppingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToppingRecordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ToppingRecordID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -14342,7 +14515,7 @@ SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM dbo.ToppingRecord";
+            this._commandCollection[0].CommandText = "SELECT ToppingRecordID, ToppingName, Price FROM dbo.ToppingRecord";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -14403,7 +14576,7 @@ SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ToppingRecordID, string Original_ToppingName, global::System.Nullable<decimal> Original_Price, global::System.Nullable<int> Original_ToppingID) {
+        public virtual int Delete(int Original_ToppingRecordID, string Original_ToppingName, global::System.Nullable<decimal> Original_Price) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ToppingRecordID));
             if ((Original_ToppingName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -14420,14 +14593,6 @@ SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ToppingID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_ToppingID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -14449,7 +14614,7 @@ SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ToppingName, global::System.Nullable<decimal> Price, global::System.Nullable<int> ToppingID) {
+        public virtual int Insert(string ToppingName, global::System.Nullable<decimal> Price) {
             if ((ToppingName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -14461,12 +14626,6 @@ SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ToppingID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(ToppingID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -14488,7 +14647,7 @@ SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ToppingName, global::System.Nullable<decimal> Price, global::System.Nullable<int> ToppingID, int Original_ToppingRecordID, string Original_ToppingName, global::System.Nullable<decimal> Original_Price, global::System.Nullable<int> Original_ToppingID, int ToppingRecordID) {
+        public virtual int Update(string ToppingName, global::System.Nullable<decimal> Price, int Original_ToppingRecordID, string Original_ToppingName, global::System.Nullable<decimal> Original_Price, int ToppingRecordID) {
             if ((ToppingName == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -14501,38 +14660,24 @@ SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((ToppingID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ToppingID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ToppingRecordID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ToppingRecordID));
             if ((Original_ToppingName == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_ToppingName));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_ToppingName));
             }
             if ((Original_Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_Price.Value));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_Price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_ToppingID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ToppingID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(ToppingRecordID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ToppingRecordID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -14553,8 +14698,8 @@ SELECT ToppingRecordID, ToppingName, Price, ToppingID FROM ToppingRecord WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ToppingName, global::System.Nullable<decimal> Price, global::System.Nullable<int> ToppingID, int Original_ToppingRecordID, string Original_ToppingName, global::System.Nullable<decimal> Original_Price, global::System.Nullable<int> Original_ToppingID) {
-            return this.Update(ToppingName, Price, ToppingID, Original_ToppingRecordID, Original_ToppingName, Original_Price, Original_ToppingID, Original_ToppingRecordID);
+        public virtual int Update(string ToppingName, global::System.Nullable<decimal> Price, int Original_ToppingRecordID, string Original_ToppingName, global::System.Nullable<decimal> Original_Price) {
+            return this.Update(ToppingName, Price, Original_ToppingRecordID, Original_ToppingName, Original_Price, Original_ToppingRecordID);
         }
     }
     
@@ -15937,11 +16082,9 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
         
         private UpdateOrderOption _updateOrder;
         
-        private ComboTableAdapter _comboTableAdapter;
+        private ComboRecordsTableAdapter _comboRecordsTableAdapter;
         
-        private ComboLineTableAdapter _comboLineTableAdapter;
-        
-        private ComboRecordTableAdapter _comboRecordTableAdapter;
+        private CombosTableAdapter _combosTableAdapter;
         
         private CustomisationTableAdapter _customisationTableAdapter;
         
@@ -15993,12 +16136,12 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ComboTableAdapter ComboTableAdapter {
+        public ComboRecordsTableAdapter ComboRecordsTableAdapter {
             get {
-                return this._comboTableAdapter;
+                return this._comboRecordsTableAdapter;
             }
             set {
-                this._comboTableAdapter = value;
+                this._comboRecordsTableAdapter = value;
             }
         }
         
@@ -16007,26 +16150,12 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ComboLineTableAdapter ComboLineTableAdapter {
+        public CombosTableAdapter CombosTableAdapter {
             get {
-                return this._comboLineTableAdapter;
+                return this._combosTableAdapter;
             }
             set {
-                this._comboLineTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public ComboRecordTableAdapter ComboRecordTableAdapter {
-            get {
-                return this._comboRecordTableAdapter;
-            }
-            set {
-                this._comboRecordTableAdapter = value;
+                this._combosTableAdapter = value;
             }
         }
         
@@ -16259,17 +16388,13 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._comboTableAdapter != null) 
-                            && (this._comboTableAdapter.Connection != null))) {
-                    return this._comboTableAdapter.Connection;
+                if (((this._comboRecordsTableAdapter != null) 
+                            && (this._comboRecordsTableAdapter.Connection != null))) {
+                    return this._comboRecordsTableAdapter.Connection;
                 }
-                if (((this._comboLineTableAdapter != null) 
-                            && (this._comboLineTableAdapter.Connection != null))) {
-                    return this._comboLineTableAdapter.Connection;
-                }
-                if (((this._comboRecordTableAdapter != null) 
-                            && (this._comboRecordTableAdapter.Connection != null))) {
-                    return this._comboRecordTableAdapter.Connection;
+                if (((this._combosTableAdapter != null) 
+                            && (this._combosTableAdapter.Connection != null))) {
+                    return this._combosTableAdapter.Connection;
                 }
                 if (((this._customisationTableAdapter != null) 
                             && (this._customisationTableAdapter.Connection != null))) {
@@ -16344,13 +16469,10 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._comboTableAdapter != null)) {
+                if ((this._comboRecordsTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._comboLineTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._comboRecordTableAdapter != null)) {
+                if ((this._combosTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._customisationTableAdapter != null)) {
@@ -16409,12 +16531,12 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(HenkINF370DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pizzaBaseTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.PizzaBase.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._pizzaSizeTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.PizzaSize.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._pizzaBaseTableAdapter.Update(updatedRows));
+                    result = (result + this._pizzaSizeTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16436,12 +16558,12 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._pizzaSizeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.PizzaSize.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._pizzaBaseTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.PizzaBase.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._pizzaSizeTableAdapter.Update(updatedRows));
+                    result = (result + this._pizzaBaseTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16463,15 +16585,6 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._drinkSizeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DrinkSize.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._drinkSizeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._genderTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Gender.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -16481,12 +16594,12 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._menuTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Menu.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._drinkSizeTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DrinkSize.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._menuTableAdapter.Update(updatedRows));
+                    result = (result + this._drinkSizeTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16517,12 +16630,12 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._comboTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Combo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._menuTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Menu.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._comboTableAdapter.Update(updatedRows));
+                    result = (result + this._menuTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16535,15 +16648,6 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._comboRecordTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ComboRecord.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._comboRecordTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._shiftLineTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.ShiftLine.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -16553,12 +16657,12 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._comboLineTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ComboLine.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._combosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Combos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._comboLineTableAdapter.Update(updatedRows));
+                    result = (result + this._combosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16568,6 +16672,15 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._toppingRecordTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._comboRecordsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ComboRecords.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._comboRecordsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16581,11 +16694,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(HenkINF370DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pizzaBaseTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.PizzaBase.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._pizzaSizeTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.PizzaSize.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._pizzaBaseTableAdapter.Update(addedRows));
+                    result = (result + this._pizzaSizeTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16605,11 +16718,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._pizzaSizeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.PizzaSize.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._pizzaBaseTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.PizzaBase.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._pizzaSizeTableAdapter.Update(addedRows));
+                    result = (result + this._pizzaBaseTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16629,14 +16742,6 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._drinkSizeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DrinkSize.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._drinkSizeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._genderTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Gender.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -16645,11 +16750,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._menuTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Menu.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._drinkSizeTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DrinkSize.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._menuTableAdapter.Update(addedRows));
+                    result = (result + this._drinkSizeTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16677,11 +16782,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._comboTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Combo.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._menuTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Menu.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._comboTableAdapter.Update(addedRows));
+                    result = (result + this._menuTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16693,14 +16798,6 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._comboRecordTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ComboRecord.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._comboRecordTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._shiftLineTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.ShiftLine.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -16709,11 +16806,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._comboLineTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ComboLine.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._combosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Combos.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._comboLineTableAdapter.Update(addedRows));
+                    result = (result + this._combosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16722,6 +16819,14 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._toppingRecordTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._comboRecordsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ComboRecords.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._comboRecordsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16735,6 +16840,14 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(HenkINF370DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._comboRecordsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ComboRecords.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._comboRecordsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._toppingRecordTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ToppingRecord.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -16743,11 +16856,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._comboLineTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ComboLine.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._combosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Combos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._comboLineTableAdapter.Update(deletedRows));
+                    result = (result + this._combosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16759,14 +16872,6 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._comboRecordTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ComboRecord.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._comboRecordTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._customisationTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Customisation.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -16775,11 +16880,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._comboTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Combo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._menuTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Menu.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._comboTableAdapter.Update(deletedRows));
+                    result = (result + this._menuTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16807,11 +16912,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._menuTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Menu.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._drinkSizeTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DrinkSize.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._menuTableAdapter.Update(deletedRows));
+                    result = (result + this._drinkSizeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16820,14 +16925,6 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._genderTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._drinkSizeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DrinkSize.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._drinkSizeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16847,11 +16944,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._pizzaSizeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.PizzaSize.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pizzaBaseTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.PizzaBase.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pizzaSizeTableAdapter.Update(deletedRows));
+                    result = (result + this._pizzaBaseTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16871,11 +16968,11 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._pizzaBaseTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.PizzaBase.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pizzaSizeTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.PizzaSize.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pizzaBaseTableAdapter.Update(deletedRows));
+                    result = (result + this._pizzaSizeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16918,18 +17015,13 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._comboTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._comboTableAdapter.Connection) == false))) {
+            if (((this._comboRecordsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._comboRecordsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._comboLineTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._comboLineTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._comboRecordTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._comboRecordTableAdapter.Connection) == false))) {
+            if (((this._combosTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._combosTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -17040,31 +17132,22 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._comboTableAdapter != null)) {
-                    revertConnections.Add(this._comboTableAdapter, this._comboTableAdapter.Connection);
-                    this._comboTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._comboTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._comboTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._comboTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._comboTableAdapter.Adapter);
+                if ((this._comboRecordsTableAdapter != null)) {
+                    revertConnections.Add(this._comboRecordsTableAdapter, this._comboRecordsTableAdapter.Connection);
+                    this._comboRecordsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._comboRecordsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._comboRecordsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._comboRecordsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._comboRecordsTableAdapter.Adapter);
                     }
                 }
-                if ((this._comboLineTableAdapter != null)) {
-                    revertConnections.Add(this._comboLineTableAdapter, this._comboLineTableAdapter.Connection);
-                    this._comboLineTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._comboLineTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._comboLineTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._comboLineTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._comboLineTableAdapter.Adapter);
-                    }
-                }
-                if ((this._comboRecordTableAdapter != null)) {
-                    revertConnections.Add(this._comboRecordTableAdapter, this._comboRecordTableAdapter.Connection);
-                    this._comboRecordTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._comboRecordTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._comboRecordTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._comboRecordTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._comboRecordTableAdapter.Adapter);
+                if ((this._combosTableAdapter != null)) {
+                    revertConnections.Add(this._combosTableAdapter, this._combosTableAdapter.Connection);
+                    this._combosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._combosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._combosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._combosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._combosTableAdapter.Adapter);
                     }
                 }
                 if ((this._customisationTableAdapter != null)) {
@@ -17260,17 +17343,13 @@ SELECT UserTypeID, UserDescription FROM UserType WHERE (UserTypeID = @UserTypeID
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._comboTableAdapter != null)) {
-                    this._comboTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._comboTableAdapter]));
-                    this._comboTableAdapter.Transaction = null;
+                if ((this._comboRecordsTableAdapter != null)) {
+                    this._comboRecordsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._comboRecordsTableAdapter]));
+                    this._comboRecordsTableAdapter.Transaction = null;
                 }
-                if ((this._comboLineTableAdapter != null)) {
-                    this._comboLineTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._comboLineTableAdapter]));
-                    this._comboLineTableAdapter.Transaction = null;
-                }
-                if ((this._comboRecordTableAdapter != null)) {
-                    this._comboRecordTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._comboRecordTableAdapter]));
-                    this._comboRecordTableAdapter.Transaction = null;
+                if ((this._combosTableAdapter != null)) {
+                    this._combosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._combosTableAdapter]));
+                    this._combosTableAdapter.Transaction = null;
                 }
                 if ((this._customisationTableAdapter != null)) {
                     this._customisationTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._customisationTableAdapter]));
