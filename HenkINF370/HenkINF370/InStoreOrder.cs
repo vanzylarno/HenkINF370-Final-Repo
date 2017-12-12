@@ -228,10 +228,107 @@ namespace HenkINF370
                 string Price = txtPrice.Text;
 
                 this.dataGridView1.Rows.Add(ItemName, DrinkSize, PizzaSize, PizzaBase, Price);
+
+                OrderTotal();
             }
 
 
             
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            
+            CustomiseOrder myform = new CustomiseOrder();
+            myform.ShowDialog();
+            this.dataGridView2.Rows.Add(Globals.Name, Globals.Price);
+
+            OrderTotal();
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            DialogResult d = MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to Place this Order?", "Messsage", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (d == DialogResult.Yes)
+            {
+                foreach(DataGridViewRow row in dataGridView1.Rows)
+                {
+                    SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
+                    sqlcon.Open();
+                    string cmd = "INSERT INTO OrderBasket(ItemName, DrinkSize, PizzaSize, PizzaBase, Price) VALUES(@ItemName, @DrinkSize, @PizzaSize, @PizzaBase, @Price)";
+                    SqlCommand sqlcom = new SqlCommand(cmd, sqlcon);
+                    sqlcom.Parameters.Add(new SqlParameter("@ItemName", row.Cells["colItemName"].Value));
+                    sqlcom.Parameters.Add(new SqlParameter("@DrinkSize", row.Cells["colDrinkSize"].Value));
+                    sqlcom.Parameters.Add(new SqlParameter("@PizzaSize", row.Cells["colPizzaSize"].Value));
+                    sqlcom.Parameters.Add(new SqlParameter("@PizzaBase", row.Cells["colPizzaBase"].Value));
+                    sqlcom.Parameters.Add(new SqlParameter("@Price", row.Cells["colPrice"].Value));
+                    sqlcom.ExecuteNonQuery();
+                    sqlcon.Close();
+                }
+                foreach(DataGridViewRow rows in dataGridView2.Rows)
+                {
+
+                    SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
+                    sqlcon2.Open();
+                    string cmd2 = "INSERT INTO ToppingBasket(ToppingName, Price) VALUES(@ToppingName, @Price)";
+                    SqlCommand sqlcom2 = new SqlCommand(cmd2, sqlcon2);
+                    sqlcom2.Parameters.Add(new SqlParameter("@ToppingName", rows.Cells["colTopping"].Value));
+                    sqlcom2.Parameters.Add(new SqlParameter("@Price", rows.Cells["colToppingPrice"].Value));
+                    sqlcom2.ExecuteNonQuery();
+                    sqlcon2.Close();
+                }
+                Globals.Total = Convert.ToDecimal(lblTotal.Text);
+                Payment_Choices myform = new Payment_Choices();
+                myform.ShowDialog();
+                this.dataGridView1.Rows.Clear();
+                this.dataGridView2.Rows.Clear();
+                lblTotal.Text = "0";
+            }
+            else
+            {
+                this.dataGridView1.Rows.Clear();
+                this.dataGridView2.Rows.Clear();
+            }
+        }
+        
+        private void OrderTotal()
+        {
+            try { 
+            //Calculate Sale Total
+            decimal sum = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+            {
+                sum += Convert.ToDecimal(dataGridView1.Rows[i].Cells[4].Value);
+            }
+          
+                //Calculate Sale Total
+                decimal sum2 = 0;
+                for (int i = 0; i < dataGridView2.Rows.Count; ++i)
+                {
+                    sum2 += Convert.ToDecimal(dataGridView2.Rows[i].Cells[1].Value);
+                }
+
+                decimal Total = sum + sum2;
+
+                lblTotal.Text =  Total.ToString();
+            }
+            catch
+            {
+                //Calculate Sale Total
+                decimal sum = 0;
+                for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+                {
+                    sum += Convert.ToDecimal(dataGridView1.Rows[i].Cells[4].Value);
+                }
+
+                lblTotal.Text =  sum.ToString();
+            }
+
+        }
+
+        private void metroLabel13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

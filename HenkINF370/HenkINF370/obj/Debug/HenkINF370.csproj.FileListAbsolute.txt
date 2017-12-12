@@ -211,3 +211,9 @@ F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Delete_Template.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Update_Template_2.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Update_Template.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Book_Template.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Schedule_form.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.CustomiseOrder.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Cash_Payment.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Payment_Choices.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Credit_Card_Sale.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Void_Order.resources

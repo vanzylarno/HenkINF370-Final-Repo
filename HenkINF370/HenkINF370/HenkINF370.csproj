@@ -165,6 +165,12 @@
     <Compile Include="Capture Float Amount.Designer.cs">
       <DependentUpon>Capture Float Amount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cash Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cash Payment.Designer.cs">
+      <DependentUpon>Cash Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Change Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,18 @@
     </Compile>
     <Compile Include="Create Shift.Designer.cs">
       <DependentUpon>Create Shift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Credit Card Sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credit Card Sale.Designer.cs">
+      <DependentUpon>Credit Card Sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomiseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomiseOrder.Designer.cs">
+      <DependentUpon>CustomiseOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Delete a Combo.cs">
       <SubType>Form</SubType>
@@ -363,6 +381,12 @@
     <Compile Include="Orders Form.Designer.cs">
       <DependentUpon>Orders Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payment Choices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Choices.Designer.cs">
+      <DependentUpon>Payment Choices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pizza Bases.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,6 +430,12 @@
     </Compile>
     <Compile Include="Remove Menu Item Type.Designer.cs">
       <DependentUpon>Remove Menu Item Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule form.Designer.cs">
+      <DependentUpon>Schedule form.cs</DependentUpon>
     </Compile>
     <Compile Include="Search Shifts.cs">
       <SubType>Form</SubType>
@@ -551,6 +581,12 @@
     <Compile Include="View Template.Designer.cs">
       <DependentUpon>View Template.cs</DependentUpon>
     </Compile>
+    <Compile Include="Void Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Void Order.Designer.cs">
+      <DependentUpon>Void Order.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add Drink Size.resx">
       <DependentUpon>Add Drink Size.cs</DependentUpon>
     </EmbeddedResource>
@@ -593,6 +629,9 @@
     <EmbeddedResource Include="Capture Float Amount.resx">
       <DependentUpon>Capture Float Amount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cash Payment.resx">
+      <DependentUpon>Cash Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Change Password.resx">
       <DependentUpon>Change Password.cs</DependentUpon>
     </EmbeddedResource>
@@ -604,6 +643,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Create Shift.resx">
       <DependentUpon>Create Shift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credit Card Sale.resx">
+      <DependentUpon>Credit Card Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomiseOrder.resx">
+      <DependentUpon>CustomiseOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Delete a Combo.resx">
       <DependentUpon>Delete a Combo.cs</DependentUpon>
@@ -689,6 +734,9 @@
     <EmbeddedResource Include="Orders Form.resx">
       <DependentUpon>Orders Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payment Choices.resx">
+      <DependentUpon>Payment Choices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pizza Bases.resx">
       <DependentUpon>Pizza Bases.cs</DependentUpon>
     </EmbeddedResource>
@@ -719,6 +767,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Remove Menu Item Type.resx">
       <DependentUpon>Remove Menu Item Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule form.resx">
+      <DependentUpon>Schedule form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search Shifts.resx">
       <DependentUpon>Search Shifts.cs</DependentUpon>
@@ -791,6 +842,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View Template.resx">
       <DependentUpon>View Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Void Order.resx">
+      <DependentUpon>Void Order.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="HenkINF370DataSet.xsc">
       <DependentUpon>HenkINF370DataSet.xsd</DependentUpon>
@@ -894,6 +948,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Images\if_10_111023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_aiga_cashier_134157%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_94_111052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_cancel_103431.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPizzaBaseID = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.txtPizzaSizeID = new MetroFramework.Controls.MetroTextBox();
@@ -53,14 +52,24 @@
             this.btnAdd = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.colItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDrinkSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPizzaSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPizzaBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.colTopping = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colToppingPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPlaceOrder = new MetroFramework.Controls.MetroButton();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.lblTotal = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,14 +94,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(538, 485);
             this.panel1.TabIndex = 11;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(263, 269);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 190);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // txtPizzaBaseID
             // 
@@ -516,20 +517,31 @@
             this.colPizzaSize,
             this.colPizzaBase,
             this.colPrice});
-            this.dataGridView1.Location = new System.Drawing.Point(879, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(851, 86);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(635, 211);
+            this.dataGridView1.Size = new System.Drawing.Size(698, 211);
             this.dataGridView1.TabIndex = 13;
             // 
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(911, 64);
+            this.metroLabel11.Location = new System.Drawing.Point(851, 64);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(80, 19);
             this.metroLabel11.TabIndex = 14;
             this.metroLabel11.Text = "Your Order:";
             this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(851, 303);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(698, 45);
+            this.metroButton1.TabIndex = 15;
+            this.metroButton1.Text = "Customise Order";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // colItemName
             // 
@@ -556,11 +568,93 @@
             this.colPrice.HeaderText = "Price";
             this.colPrice.Name = "colPrice";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colTopping,
+            this.colToppingPrice});
+            this.dataGridView2.Location = new System.Drawing.Point(851, 381);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(698, 150);
+            this.dataGridView2.TabIndex = 16;
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(851, 359);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(46, 19);
+            this.metroLabel12.TabIndex = 17;
+            this.metroLabel12.Text = "Extras:";
+            this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // colTopping
+            // 
+            this.colTopping.HeaderText = "Toppings";
+            this.colTopping.Name = "colTopping";
+            this.colTopping.ReadOnly = true;
+            // 
+            // colToppingPrice
+            // 
+            this.colToppingPrice.HeaderText = "Price";
+            this.colToppingPrice.Name = "colToppingPrice";
+            this.colToppingPrice.ReadOnly = true;
+            // 
+            // btnPlaceOrder
+            // 
+            this.btnPlaceOrder.Location = new System.Drawing.Point(851, 578);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(698, 81);
+            this.btnPlaceOrder.TabIndex = 18;
+            this.btnPlaceOrder.Text = "Place Order";
+            this.btnPlaceOrder.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnPlaceOrder.UseSelectable = true;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.Location = new System.Drawing.Point(1068, 33);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(183, 19);
+            this.metroLabel13.TabIndex = 19;
+            this.metroLabel13.Text = "Order Total (Excluding VAT): R";
+            this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel13.Click += new System.EventHandler(this.metroLabel13_Click);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(1257, 33);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(16, 19);
+            this.lblTotal.TabIndex = 20;
+            this.lblTotal.Text = "0";
+            this.lblTotal.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(263, 269);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 190);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // InStoreOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1561, 682);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.metroLabel13);
+            this.Controls.Add(this.btnPlaceOrder);
+            this.Controls.Add(this.metroLabel12);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAdd);
@@ -570,15 +664,21 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.txtFilter1);
             this.Controls.Add(this.metroLabel1);
+            this.MaximumSize = new System.Drawing.Size(1561, 682);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1561, 682);
+            this.Movable = false;
             this.Name = "InStoreOrder";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Lime;
-            this.Text = "In-Store Order";
+            this.Text = "Place New Order";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.InStoreOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,11 +710,19 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btnAdd;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDrinkSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPizzaSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPizzaBase;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTopping;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colToppingPrice;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroButton btnPlaceOrder;
+        private MetroFramework.Controls.MetroLabel metroLabel13;
+        private MetroFramework.Controls.MetroLabel lblTotal;
     }
 }

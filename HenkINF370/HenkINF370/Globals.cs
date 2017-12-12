@@ -34,6 +34,11 @@ namespace HenkINF370
 
         //Toppings
         public static int SelectedToppingID;
+        public static string Name;
+        public static string Price;
+
+        //Order
+        public static decimal Total;
 
     }
 }

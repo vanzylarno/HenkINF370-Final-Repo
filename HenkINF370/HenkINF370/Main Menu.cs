@@ -43,15 +43,8 @@ namespace HenkINF370
 
         private void metroTile5_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Template myform = new Template();
-                myform.ShowDialog();
-            }
-            catch
-            {
-
-            }
+            Schedule_form myform = new Schedule_form();
+            myform.ShowDialog();
 
         }
 

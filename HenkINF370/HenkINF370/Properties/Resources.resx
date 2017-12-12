@@ -133,20 +133,26 @@
   <data name="if_schedule_326689" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_schedule_326689.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Images\Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Manager Features" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\Manager Features.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_ic_local_pizza_48px_352511" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_ic_local_pizza_48px_352511.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_10_111023" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_10_111023.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_aiga_cashier_134157(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_aiga_cashier_134157(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="if_5_1845728" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_5_1845728.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_47_1714731" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_47_171473.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_cash-money-coin-value_2203534" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_cash-money-coin-value_2203534.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_5_18457283" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_5_1845728.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,9 +166,6 @@
   <data name="if_5_18457282" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_5_1845728.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_47_1714732" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Images\if_47_171473.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="if_97_1714563" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_97_171456.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +175,8 @@
   <data name="if_book_126586(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_book_126586(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_cash-money-coin-value_22035341" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Images\if_cash-money-coin-value_2203534.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="if_food-drink-22_808996" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_food-drink-22_808996.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,7 +196,10 @@
   <data name="if_164_QuestionMark_183285" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_164_QuestionMark_183285.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_cash-money-coin-value_2203534" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="if_clock_103755" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_clock_103755.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_cash-money-coin-value_22035341" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_cash-money-coin-value_2203534.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_food-drink-22_8089961" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -201,6 +207,9 @@
   </data>
   <data name="if_ic_mode_comment_48px_352546" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_ic_mode_comment_48px_352546.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_password_2639882" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_password_2639882.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,11 +220,11 @@
   <data name="if_food-drink-12_8090211" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_food-drink-12_809021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_password_2639882" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Images\if_password_2639882.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="if_47_1714732" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_47_171473.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_clock_103755" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Images\if_clock_103755.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_menu6_216511" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_menu6_216511.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,10 +238,10 @@
   <data name="if_97_1714561" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Images\if_97_171456.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_food-drink-22_808996" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Images\if_food-drink-22_808996.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="if_94_111052" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_94_111052.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_10_111023" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Images\if_10_111023.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="if_cancel_103431" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Images\if_cancel_103431.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
