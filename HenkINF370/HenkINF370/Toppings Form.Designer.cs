@@ -44,7 +44,7 @@
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile4.TabIndex = 10;
             this.metroTile4.Text = "View All Toppings";
-            this.metroTile4.TileImage = global::HenkINF370.Properties.Resources.if_food_drink_12_8090211;
+            this.metroTile4.TileImage = global::HenkINF370.Properties.Resources.if_food_drink_12_8090213;
             this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile4.UseSelectable = true;
@@ -76,7 +76,7 @@
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile2.TabIndex = 8;
             this.metroTile2.Text = "Find a Topping";
-            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.Search;
+            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.Search1;
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile2.UseSelectable = true;

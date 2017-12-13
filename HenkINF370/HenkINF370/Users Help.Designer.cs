@@ -43,7 +43,7 @@
             this.metroTile8.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile8.TabIndex = 9;
             this.metroTile8.Text = "User Types";
-            this.metroTile8.TileImage = global::HenkINF370.Properties.Resources.if_user_close_103746;
+            this.metroTile8.TileImage = global::HenkINF370.Properties.Resources.if_164_QuestionMark_1832851;
             this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile8.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile8.UseSelectable = true;
@@ -59,7 +59,7 @@
             this.metroTile6.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile6.TabIndex = 7;
             this.metroTile6.Text = "Titles";
-            this.metroTile6.TileImage = global::HenkINF370.Properties.Resources.if_164_QuestionMark_183285;
+            this.metroTile6.TileImage = global::HenkINF370.Properties.Resources.if_icons_user_1564534__2_2;
             this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile6.UseSelectable = true;
@@ -75,7 +75,7 @@
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile4.TabIndex = 5;
             this.metroTile4.Text = "Privileges";
-            this.metroTile4.TileImage = global::HenkINF370.Properties.Resources.Manager_Features;
+            this.metroTile4.TileImage = global::HenkINF370.Properties.Resources.Manager_Features2;
             this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile4.UseSelectable = true;
@@ -91,7 +91,7 @@
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile1.TabIndex = 3;
             this.metroTile1.Text = "Genders";
-            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.if_17_759441;
+            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.if_17_7594411;
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile1.UseSelectable = true;

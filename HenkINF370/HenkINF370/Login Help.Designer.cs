@@ -41,7 +41,7 @@
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile2.TabIndex = 3;
             this.metroTile2.Text = "Change Password";
-            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.if_password_2639882;
+            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.if_password_26398821;
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile2.UseSelectable = true;

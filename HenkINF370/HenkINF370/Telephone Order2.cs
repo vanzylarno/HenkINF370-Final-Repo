@@ -10,14 +10,16 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 
+
 namespace HenkINF370
 {
-    public partial class InStoreOrder : MetroFramework.Forms.MetroForm
+    public partial class Telephone_Order2 : MetroFramework.Forms.MetroForm
     {
-        public InStoreOrder()
+        public Telephone_Order2()
         {
             InitializeComponent();
         }
+
         //Menu Item Variables
         int id;
         string name;
@@ -28,7 +30,7 @@ namespace HenkINF370
         int pizzasizeid;
         int pizzabaseid;
 
-        private void InStoreOrder_Load(object sender, EventArgs e)
+        private void Telephone_Order2_Load(object sender, EventArgs e)
         {
             //Menu Item
             panel1.Enabled = false;
@@ -67,11 +69,6 @@ namespace HenkINF370
             }
             dr.Close();
             sqlcon.Close();
-        }
-
-        private void txtFilter2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtFilter2_TextChanged(object sender, EventArgs e)
@@ -231,14 +228,10 @@ namespace HenkINF370
 
                 OrderTotal();
             }
-
-
-            
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            
             CustomiseOrder myform = new CustomiseOrder();
             myform.ShowDialog();
             this.dataGridView2.Rows.Add(Globals.Name, Globals.Price);
@@ -251,7 +244,7 @@ namespace HenkINF370
             DialogResult d = MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to Place this Order?", "Messsage", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (d == DialogResult.Yes)
             {
-                foreach(DataGridViewRow row in dataGridView1.Rows)
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
                     sqlcon.Open();
@@ -265,7 +258,7 @@ namespace HenkINF370
                     sqlcom.ExecuteNonQuery();
                     sqlcon.Close();
                 }
-                foreach(DataGridViewRow rows in dataGridView2.Rows)
+                foreach (DataGridViewRow rows in dataGridView2.Rows)
                 {
 
                     SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
@@ -278,28 +271,16 @@ namespace HenkINF370
                     sqlcon2.Close();
                 }
 
-                string NA = "NA";
-                int InstoreCustomer = 1;
-
-                SqlConnection sqlcon4 = new SqlConnection(Globals.ConnectionString);
-                sqlcon4.Open();
-                string cmd4 = "INSERT INTO Customer(CustomerName, CustomerPhoneNumber, CustomerTypeID) VALUES(@Name, @CustomerPhoneNumber, @CustomerTypeID)";
-                SqlCommand sqlcom4 = new SqlCommand(cmd4, sqlcon4);
-                sqlcom4.Parameters.Add(new SqlParameter("@Name", NA));
-                sqlcom4.Parameters.Add(new SqlParameter("@CustomerPhoneNumber", NA));
-                sqlcom4.Parameters.Add(new SqlParameter("@CustomerTypeID", InstoreCustomer));
-                sqlcom4.ExecuteNonQuery();
-                sqlcon4.Close();
-
-                Globals.CustomerName = NA;
-                Globals.CustomerPhoneNumber = NA;
-
                 Globals.Total = Convert.ToDecimal(lblTotal.Text);
                 Payment_Choices myform = new Payment_Choices();
                 myform.ShowDialog();
                 this.dataGridView1.Rows.Clear();
                 this.dataGridView2.Rows.Clear();
                 lblTotal.Text = "0";
+
+                this.Close();
+                this.Dispose(true);
+
             }
             else
             {
@@ -307,17 +288,17 @@ namespace HenkINF370
                 this.dataGridView2.Rows.Clear();
             }
         }
-        
         private void OrderTotal()
         {
-            try { 
-            //Calculate Sale Total
-            decimal sum = 0;
-            for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+            try
             {
-                sum += Convert.ToDecimal(dataGridView1.Rows[i].Cells[4].Value);
-            }
-          
+                //Calculate Sale Total
+                decimal sum = 0;
+                for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+                {
+                    sum += Convert.ToDecimal(dataGridView1.Rows[i].Cells[4].Value);
+                }
+
                 //Calculate Sale Total
                 decimal sum2 = 0;
                 for (int i = 0; i < dataGridView2.Rows.Count; ++i)
@@ -327,7 +308,7 @@ namespace HenkINF370
 
                 decimal Total = sum + sum2;
 
-                lblTotal.Text =  Total.ToString();
+                lblTotal.Text = Total.ToString();
             }
             catch
             {
@@ -338,15 +319,9 @@ namespace HenkINF370
                     sum += Convert.ToDecimal(dataGridView1.Rows[i].Cells[4].Value);
                 }
 
-                lblTotal.Text =  sum.ToString();
+                lblTotal.Text = sum.ToString();
             }
-
-        }
-
-        private void metroLabel13_Click(object sender, EventArgs e)
-        {
 
         }
     }
 }
-

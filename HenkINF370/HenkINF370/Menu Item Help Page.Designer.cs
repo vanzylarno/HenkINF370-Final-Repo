@@ -43,7 +43,7 @@
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile4.TabIndex = 5;
             this.metroTile4.Text = "Item Types";
-            this.metroTile4.TileImage = global::HenkINF370.Properties.Resources.if_ic_mode_comment_48px_352546;
+            this.metroTile4.TileImage = global::HenkINF370.Properties.Resources.if_food_drink_22_8089964;
             this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile4.UseSelectable = true;
@@ -59,7 +59,7 @@
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile3.TabIndex = 4;
             this.metroTile3.Text = "Drink Sizes";
-            this.metroTile3.TileImage = global::HenkINF370.Properties.Resources.if_5_1845728;
+            this.metroTile3.TileImage = global::HenkINF370.Properties.Resources.if_5_18457285;
             this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile3.UseSelectable = true;
@@ -75,7 +75,7 @@
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile2.TabIndex = 3;
             this.metroTile2.Text = "Pizza Bases";
-            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.if_47_171473;
+            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.if_ic_local_pizza_48px_3525111;
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile2.UseSelectable = true;
@@ -91,7 +91,7 @@
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile1.TabIndex = 2;
             this.metroTile1.Text = "Pizza Sizes";
-            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.if_ic_local_pizza_48px_352511;
+            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.if_47_1714735;
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile1.UseSelectable = true;

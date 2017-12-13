@@ -8,20 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace HenkINF370
 {
-    public partial class Void_Order : MetroFramework.Forms.MetroForm
+    public partial class Search_Orders : MetroFramework.Forms.MetroForm
     {
-        public Void_Order()
+        public Search_Orders()
         {
             InitializeComponent();
         }
         int CustomerID;
         int PaymentID;
-        int OrderID;
-
-        private void Void_Order_Load(object sender, EventArgs e)
+        private void Search_Orders_Load(object sender, EventArgs e)
         {
             panel1.Enabled = false;
             SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
@@ -31,7 +30,7 @@ namespace HenkINF370
             SqlDataReader dr = sqlcom.ExecuteReader();
             if (dr.HasRows)
             {
-                while (dr.Read())
+                while(dr.Read())
                 {
                     listBox1.Items.Add((dr["OrderID"].ToString()));
                 }
@@ -40,60 +39,49 @@ namespace HenkINF370
             sqlcon.Close();
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            DialogResult d = MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to VOID this Order?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(d == DialogResult.Yes)
-            {
-                Globals.OrderID = OrderID;
-
-                this.Close();
-                this.Dispose(true);
-                VoidOrder2 myform = new VoidOrder2();
-                myform.ShowDialog();
-            }
-        }
-
         private void txtFilter1_TextChanged(object sender, EventArgs e)
         {
 
             listBox1.Items.Clear();
-            SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
-            sqlcon3.Open();
-            string cmd3 = "SELECT CustomerID FROM Customer WHERE CustomerName LIKE '%" + txtFilter1.Text + "%'";
-            SqlCommand sqlcom3 = new SqlCommand(cmd3, sqlcon3);
-            SqlDataReader dr3 = sqlcom3.ExecuteReader();
-            if (dr3.HasRows)
-            {
-
-                while (dr3.Read())
+SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
+                sqlcon3.Open();
+                string cmd3 = "SELECT CustomerID FROM Customer WHERE CustomerName LIKE '%" + txtFilter1.Text + "%'";
+                SqlCommand sqlcom3 = new SqlCommand(cmd3, sqlcon3);
+                SqlDataReader dr3 = sqlcom3.ExecuteReader();
+                if (dr3.HasRows)
                 {
-                    CustomerID = Convert.ToInt32((dr3["CustomerID"]));
-
-                    SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
-                    sqlcon2.Open();
-                    string cmd2 = "SELECT OrderID FROM Orders WHERE CustomerID ='" + CustomerID.ToString() + "'";
-                    SqlCommand sqlcom2 = new SqlCommand(cmd2, sqlcon2);
-                    SqlDataReader dr2 = sqlcom2.ExecuteReader();
-                    if (dr2.HasRows)
+                
+                    while(dr3.Read())
                     {
-                        while (dr2.Read())
+                        CustomerID = Convert.ToInt32((dr3["CustomerID"]));
+
+                        SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
+                        sqlcon2.Open();
+                        string cmd2 = "SELECT OrderID FROM Orders WHERE CustomerID ='" + CustomerID.ToString() + "'";
+                        SqlCommand sqlcom2 = new SqlCommand(cmd2, sqlcon2);
+                        SqlDataReader dr2 = sqlcom2.ExecuteReader();
+                        if (dr2.HasRows)
                         {
+                            while (dr2.Read())
+                            {
 
-                            listBox1.Items.Add((dr2["OrderID"].ToString()));
+                                listBox1.Items.Add((dr2["OrderID"].ToString()));
 
+                            }
                         }
+                        dr2.Close();
+                        sqlcon2.Close();
                     }
-                    dr2.Close();
-                    sqlcon2.Close();
                 }
-            }
-            dr3.Close();
+                dr3.Close();
             sqlcon3.Close();
+                    
+
         }
 
         private void txtFilter2_TextChanged(object sender, EventArgs e)
         {
+
             listBox1.Items.Clear();
             SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
             sqlcon.Open();
@@ -145,7 +133,7 @@ namespace HenkINF370
 
             SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
             sqlcon.Open();
-            string cmd = "SELECT CustomerID, OrderID FROM Orders WHERE OrderID ='" + listBox1.Text.ToString() + "'";
+            string cmd = "SELECT CustomerID FROM Orders WHERE OrderID ='" + listBox1.Text.ToString() + "'";
             SqlCommand sqlcom = new SqlCommand(cmd, sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
             if (dr.HasRows)
@@ -153,7 +141,6 @@ namespace HenkINF370
                 while (dr.Read())
                 {
                     CustomerID = Convert.ToInt32((dr["CustomerID"]));
-                    OrderID = Convert.ToInt32((dr["OrderID"]));
 
                     SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
                     sqlcon2.Open();
@@ -200,7 +187,7 @@ namespace HenkINF370
 
             SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
             sqlcon.Open();
-            string cmd = "SELECT PaymentID, OrderID FROM Orders WHERE OrderID ='" + listBox1.Text.ToString() + "'";
+            string cmd = "SELECT PaymentID FROM Orders WHERE OrderID ='" + listBox1.Text.ToString() + "'";
             SqlCommand sqlcom = new SqlCommand(cmd, sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
             if (dr.HasRows)
@@ -208,8 +195,6 @@ namespace HenkINF370
                 while (dr.Read())
                 {
                     PaymentID = Convert.ToInt32((dr["PaymentID"]));
-                    OrderID = Convert.ToInt32((dr["OrderID"]));
-
 
                     SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
                     sqlcon2.Open();

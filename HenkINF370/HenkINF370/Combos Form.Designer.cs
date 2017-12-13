@@ -44,7 +44,7 @@
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile5.TabIndex = 5;
             this.metroTile5.Text = "View All Combos";
-            this.metroTile5.TileImage = global::HenkINF370.Properties.Resources.if_food_drink_22_808996;
+            this.metroTile5.TileImage = global::HenkINF370.Properties.Resources.if_food_drink_22_8089962;
             this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile5.UseSelectable = true;

@@ -178,7 +178,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::HenkINF370.Properties.Resources.if_food_drink_22_808996;
+            this.pictureBox3.Image = global::HenkINF370.Properties.Resources.if_food_drink_22_8089963;
             this.pictureBox3.Location = new System.Drawing.Point(418, 263);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(79, 77);
@@ -188,7 +188,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::HenkINF370.Properties.Resources.if_5_18457283;
+            this.pictureBox1.Image = global::HenkINF370.Properties.Resources.if_5_18457284;
             this.pictureBox1.Location = new System.Drawing.Point(553, 263);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(62, 79);
@@ -198,7 +198,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::HenkINF370.Properties.Resources.if_97_1714562;
+            this.pictureBox5.Image = global::HenkINF370.Properties.Resources.if_97_1714564;
             this.pictureBox5.Location = new System.Drawing.Point(494, 263);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(65, 79);
@@ -208,7 +208,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::HenkINF370.Properties.Resources.if_imoticon_1_210817;
+            this.pictureBox4.Image = global::HenkINF370.Properties.Resources.if_imoticon_1_2108171;
             this.pictureBox4.Location = new System.Drawing.Point(515, 180);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(100, 94);
@@ -218,7 +218,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::HenkINF370.Properties.Resources.if_47_1714732;
+            this.pictureBox2.Image = global::HenkINF370.Properties.Resources.if_47_1714733;
             this.pictureBox2.Location = new System.Drawing.Point(615, 199);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(149, 143);

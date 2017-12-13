@@ -217,3 +217,9 @@ F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Cash_Payment.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Payment_Choices.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Credit_Card_Sale.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Void_Order.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Telephone_Order.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Telephone_Order2.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Search_Orders.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.VoidOrder2.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Update_Order.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.UpdateOrder2.resources

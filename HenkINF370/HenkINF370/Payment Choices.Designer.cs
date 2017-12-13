@@ -41,7 +41,7 @@
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile1.TabIndex = 7;
             this.metroTile1.Text = "Credit Card Payment";
-            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.if_94_111052;
+            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.if_94_1110521;
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile1.UseSelectable = true;
@@ -57,7 +57,7 @@
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile5.TabIndex = 6;
             this.metroTile5.Text = "Cash Payment";
-            this.metroTile5.TileImage = global::HenkINF370.Properties.Resources.if_aiga_cashier_134157_1_;
+            this.metroTile5.TileImage = global::HenkINF370.Properties.Resources.if_cash_money_coin_value_22035342;
             this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile5.UseSelectable = true;

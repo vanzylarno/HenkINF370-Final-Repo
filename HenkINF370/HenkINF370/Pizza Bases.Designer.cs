@@ -37,7 +37,7 @@
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Location = new System.Drawing.Point(237, 73);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(208, 203);
+            this.metroTile1.Size = new System.Drawing.Size(215, 203);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile1.TabIndex = 8;
             this.metroTile1.Text = "Remove a Pizza Base";

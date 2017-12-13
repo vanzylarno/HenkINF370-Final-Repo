@@ -39,6 +39,11 @@ namespace HenkINF370
 
         //Order
         public static decimal Total;
+        public static string CustomerName;
+        public static string CustomerPhoneNumber;
+        public static int OrderID;
+        public static int CustomerID;
+        public static int PaymentID;
 
     }
 }

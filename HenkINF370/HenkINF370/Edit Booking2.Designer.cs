@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btnCapture = new MetroFramework.Controls.MetroTile();
+            this.lblDate = new MetroFramework.Controls.MetroLabel();
             this.btnFind = new MetroFramework.Controls.MetroTile();
             this.btnRemove = new MetroFramework.Controls.MetroTile();
-            this.lblDate = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // btnCapture
@@ -43,12 +43,23 @@
             this.btnCapture.Style = MetroFramework.MetroColorStyle.Lime;
             this.btnCapture.TabIndex = 6;
             this.btnCapture.Text = "Capture Float Amount in Till";
-            this.btnCapture.TileImage = global::HenkINF370.Properties.Resources.if_cash_money_coin_value_22035341;
+            this.btnCapture.TileImage = global::HenkINF370.Properties.Resources.if_aiga_cashier_134157_1_1;
             this.btnCapture.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCapture.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnCapture.UseSelectable = true;
             this.btnCapture.UseTileImage = true;
             this.btnCapture.Click += new System.EventHandler(this.metroTile3_Click);
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(252, 32);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(81, 19);
+            this.lblDate.TabIndex = 7;
+            this.lblDate.Text = "metroLabel1";
+            this.lblDate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // btnFind
             // 
@@ -59,7 +70,7 @@
             this.btnFind.Style = MetroFramework.MetroColorStyle.Lime;
             this.btnFind.TabIndex = 5;
             this.btnFind.Text = "Choose a New Booking";
-            this.btnFind.TileImage = global::HenkINF370.Properties.Resources.Search1;
+            this.btnFind.TileImage = global::HenkINF370.Properties.Resources.Ca1;
             this.btnFind.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFind.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnFind.UseSelectable = true;
@@ -81,17 +92,6 @@
             this.btnRemove.UseSelectable = true;
             this.btnRemove.UseTileImage = true;
             this.btnRemove.Click += new System.EventHandler(this.metroTile2_Click);
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(252, 32);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(81, 19);
-            this.lblDate.TabIndex = 7;
-            this.lblDate.Text = "metroLabel1";
-            this.lblDate.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // Edit_Booking2
             // 

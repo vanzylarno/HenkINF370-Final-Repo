@@ -93,6 +93,36 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ca1 {
+            get {
+                object obj = ResourceManager.GetObject("Ca1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ca2 {
+            get {
+                object obj = ResourceManager.GetObject("Ca2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ca3 {
+            get {
+                object obj = ResourceManager.GetObject("Ca3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
@@ -113,6 +143,16 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_10_1110231 {
+            get {
+                object obj = ResourceManager.GetObject("if_10_1110231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_164_QuestionMark_183285 {
             get {
                 object obj = ResourceManager.GetObject("if_164_QuestionMark_183285", resourceCulture);
@@ -123,9 +163,29 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_164_QuestionMark_1832851 {
+            get {
+                object obj = ResourceManager.GetObject("if_164_QuestionMark_1832851", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_17_759441 {
             get {
                 object obj = ResourceManager.GetObject("if_17_759441", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_17_7594411 {
+            get {
+                object obj = ResourceManager.GetObject("if_17_7594411", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +216,36 @@ namespace HenkINF370.Properties {
         internal static System.Drawing.Bitmap if_47_1714732 {
             get {
                 object obj = ResourceManager.GetObject("if_47_1714732", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_47_1714733 {
+            get {
+                object obj = ResourceManager.GetObject("if_47_1714733", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_47_1714734 {
+            get {
+                object obj = ResourceManager.GetObject("if_47_1714734", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_47_1714735 {
+            get {
+                object obj = ResourceManager.GetObject("if_47_1714735", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +293,39 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_5_18457284 {
+            get {
+                object obj = ResourceManager.GetObject("if_5_18457284", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_5_18457285 {
+            get {
+                object obj = ResourceManager.GetObject("if_5_18457285", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_94_111052 {
             get {
                 object obj = ResourceManager.GetObject("if_94_111052", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_94_1110521 {
+            get {
+                object obj = ResourceManager.GetObject("if_94_1110521", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +373,16 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_97_1714564 {
+            get {
+                object obj = ResourceManager.GetObject("if_97_1714564", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_aiga_cashier_134157 {
             get {
                 object obj = ResourceManager.GetObject("if_aiga_cashier_134157", resourceCulture);
@@ -273,6 +403,36 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_aiga_cashier_134157_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("if_aiga_cashier_134157(1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_aiga_cashier_134157_1_2 {
+            get {
+                object obj = ResourceManager.GetObject("if_aiga_cashier_134157(1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_aiga_cashier_1341571 {
+            get {
+                object obj = ResourceManager.GetObject("if_aiga_cashier_1341571", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_book_126586_1_ {
             get {
                 object obj = ResourceManager.GetObject("if_book_126586(1)", resourceCulture);
@@ -283,9 +443,29 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_book_126586_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("if_book_126586(1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_cancel_103431 {
             get {
                 object obj = ResourceManager.GetObject("if_cancel_103431", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_cancel_1034311 {
+            get {
+                object obj = ResourceManager.GetObject("if_cancel_1034311", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +486,16 @@ namespace HenkINF370.Properties {
         internal static System.Drawing.Bitmap if_cash_money_coin_value_22035341 {
             get {
                 object obj = ResourceManager.GetObject("if_cash-money-coin-value_22035341", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_cash_money_coin_value_22035342 {
+            get {
+                object obj = ResourceManager.GetObject("if_cash-money-coin-value_22035342", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,6 +533,26 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_food_drink_12_8090212 {
+            get {
+                object obj = ResourceManager.GetObject("if_food-drink-12_8090212", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_food_drink_12_8090213 {
+            get {
+                object obj = ResourceManager.GetObject("if_food-drink-12_8090213", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_food_drink_22_808996 {
             get {
                 object obj = ResourceManager.GetObject("if_food-drink-22_808996", resourceCulture);
@@ -363,9 +573,49 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_food_drink_22_8089962 {
+            get {
+                object obj = ResourceManager.GetObject("if_food-drink-22_8089962", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_food_drink_22_8089963 {
+            get {
+                object obj = ResourceManager.GetObject("if_food-drink-22_8089963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_food_drink_22_8089964 {
+            get {
+                object obj = ResourceManager.GetObject("if_food-drink-22_8089964", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_ic_local_pizza_48px_352511 {
             get {
                 object obj = ResourceManager.GetObject("if_ic_local_pizza_48px_352511", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_ic_local_pizza_48px_3525111 {
+            get {
+                object obj = ResourceManager.GetObject("if_ic_local_pizza_48px_3525111", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +643,69 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_icons_user_1564534__2_ {
+            get {
+                object obj = ResourceManager.GetObject("if_icons_user_1564534 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_icons_user_1564534__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("if_icons_user_1564534 (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_icons_user_1564534__2_2 {
+            get {
+                object obj = ResourceManager.GetObject("if_icons_user_1564534 (2)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_icons_user_15645341 {
+            get {
+                object obj = ResourceManager.GetObject("if_icons_user_15645341", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_icons_user_15645342 {
+            get {
+                object obj = ResourceManager.GetObject("if_icons_user_15645342", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_imoticon_1_210817 {
             get {
                 object obj = ResourceManager.GetObject("if_imoticon_1_210817", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_imoticon_1_2108171 {
+            get {
+                object obj = ResourceManager.GetObject("if_imoticon_1_2108171", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,9 +723,29 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_menu6_2165111 {
+            get {
+                object obj = ResourceManager.GetObject("if_menu6_2165111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_password_2639882 {
             get {
                 object obj = ResourceManager.GetObject("if_password_2639882", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_password_26398821 {
+            get {
+                object obj = ResourceManager.GetObject("if_password_26398821", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -446,6 +776,26 @@ namespace HenkINF370.Properties {
         internal static System.Drawing.Bitmap Manager_Features {
             get {
                 object obj = ResourceManager.GetObject("Manager Features", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Manager_Features1 {
+            get {
+                object obj = ResourceManager.GetObject("Manager Features1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Manager_Features2 {
+            get {
+                object obj = ResourceManager.GetObject("Manager Features2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

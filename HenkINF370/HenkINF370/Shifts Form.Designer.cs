@@ -62,7 +62,7 @@
             this.metroTile6.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile6.TabIndex = 7;
             this.metroTile6.Text = "Book a Shift";
-            this.metroTile6.TileImage = global::HenkINF370.Properties.Resources.if_book_126586_1_;
+            this.metroTile6.TileImage = global::HenkINF370.Properties.Resources.if_book_126586_1_1;
             this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile6.UseSelectable = true;
@@ -110,7 +110,7 @@
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile3.TabIndex = 4;
             this.metroTile3.Text = "Create Shift";
-            this.metroTile3.TileImage = global::HenkINF370.Properties.Resources.Add1;
+            this.metroTile3.TileImage = global::HenkINF370.Properties.Resources.Add;
             this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile3.UseSelectable = true;
@@ -126,7 +126,7 @@
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile1.TabIndex = 3;
             this.metroTile1.Text = "Search Available Shifts";
-            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.Search1;
+            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.Search;
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile1.UseSelectable = true;
@@ -142,7 +142,7 @@
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile2.TabIndex = 2;
             this.metroTile2.Text = "View Available Shifts";
-            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.Ca;
+            this.metroTile2.TileImage = global::HenkINF370.Properties.Resources.Ca3;
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile2.UseSelectable = true;

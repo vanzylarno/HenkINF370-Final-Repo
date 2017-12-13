@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace HenkINF370
 {
-    public partial class Void_Order : MetroFramework.Forms.MetroForm
+    public partial class Update_Order : MetroFramework.Forms.MetroForm
     {
-        public Void_Order()
+        public Update_Order()
         {
             InitializeComponent();
         }
         int CustomerID;
         int PaymentID;
         int OrderID;
-
-        private void Void_Order_Load(object sender, EventArgs e)
+        private void Update_Order_Load(object sender, EventArgs e)
         {
             panel1.Enabled = false;
             SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
@@ -40,23 +40,8 @@ namespace HenkINF370
             sqlcon.Close();
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            DialogResult d = MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to VOID this Order?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(d == DialogResult.Yes)
-            {
-                Globals.OrderID = OrderID;
-
-                this.Close();
-                this.Dispose(true);
-                VoidOrder2 myform = new VoidOrder2();
-                myform.ShowDialog();
-            }
-        }
-
         private void txtFilter1_TextChanged(object sender, EventArgs e)
         {
-
             listBox1.Items.Clear();
             SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
             sqlcon3.Open();
@@ -140,7 +125,6 @@ namespace HenkINF370
         }
         private void GetCustomerDetails()
         {
-            int CustomerID;
             int CustomerTypeID;
 
             SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
@@ -194,7 +178,6 @@ namespace HenkINF370
 
         private void GetPaymentDetails()
         {
-            int PaymentID;
             int PaymentTypeID;
             int CCDetailsID;
 
@@ -265,6 +248,23 @@ namespace HenkINF370
             }
             dr.Close();
             sqlcon.Close();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult d = MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to Update this Order?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(d == DialogResult.Yes)
+            {
+                Globals.OrderID = OrderID;
+                Globals.PaymentID = PaymentID;
+                Globals.CustomerID = CustomerID;
+
+                this.Close();
+                this.Dispose(true);
+                UpdateOrder2 myform = new UpdateOrder2();
+                myform.ShowDialog();
+
+            }
         }
     }
 }

@@ -52,7 +52,7 @@ namespace HenkINF370
                 try
                 {
                     int paymentID;
-                    int CustomerID = 1;
+                    int CustomerID;
 
                     SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
                     sqlcon.Open();
@@ -67,6 +67,50 @@ namespace HenkINF370
                     sqlcom.Parameters.Add(new SqlParameter("@CreditCardDetailsID", NoCC));
                     sqlcom.ExecuteNonQuery();
                     sqlcon.Close();
+
+                    //Get CustomerID
+                    SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
+                    sqlcon2.Open();
+                    string cmd2 = "SELECT CustomerID From Customer WHERE CustomerName ='" + Globals.CustomerName.ToString() + "' AND CustomerPhoneNumber ='" + Globals.CustomerPhoneNumber.ToString() + "'";
+                    SqlCommand sqlcom2 = new SqlCommand(cmd2, sqlcon2);
+                    SqlDataReader dr2 = sqlcom2.ExecuteReader();
+                    if(dr2.HasRows)
+                    {
+                        while(dr2.Read())
+                        {
+                            CustomerID = Convert.ToInt32((dr2["CustomerID"]));
+
+                            //Get PaymentID
+                            SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
+                            sqlcon3.Open();
+                            string cmd3 = "SELECT PaymentID From Payment WHERE PaymentAmount ='" + txtOrderTotal.Text + "' AND PaymentDate ='" + lblDate.Text + "' AND PaymentVAt ='" + txtVAT.Text + "' AND AmountReceived ='" + txtAmountReceived.Text + "' AND Change ='" + txtChange.Text + "' AND PaymentTypeID ='" + CashSale.ToString() + "' AND CreditCardDetailsID ='" + NoCC.ToString() + "'";
+                            SqlCommand sqlcom3 = new SqlCommand(cmd3, sqlcon3);
+                            SqlDataReader dr3 = sqlcom3.ExecuteReader();
+                            if (dr3.HasRows)
+                            {
+                                while (dr3.Read())
+                                {
+                                    paymentID = Convert.ToInt32((dr3["PaymentID"]));
+
+
+                                    //Insert Into Orders
+                                    SqlConnection sqlcon4 = new SqlConnection(Globals.ConnectionString);
+                                    sqlcon4.Open();
+                                    string cmd4 = "INSERT INTO Orders(PaymentID, CustomerID) VALUES(@PaymentID, @CustomerID)";
+                                    SqlCommand sqlcom4 = new SqlCommand(cmd4, sqlcon4);
+                                    sqlcom4.Parameters.Add(new SqlParameter("@PaymentID", paymentID));
+                                    sqlcom4.Parameters.Add(new SqlParameter("@CustomerID", CustomerID));
+                                    sqlcom4.ExecuteNonQuery();
+                                    sqlcon4.Close();
+                                }
+                            }
+                            dr3.Close();
+                            sqlcon3.Close();
+                        }
+                    }
+                    dr2.Close();
+                    sqlcon2.Close();
+
 
 
 

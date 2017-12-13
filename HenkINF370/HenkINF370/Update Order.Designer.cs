@@ -1,6 +1,6 @@
 ﻿namespace HenkINF370
 {
-    partial class Void_Order
+    partial class Update_Order
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.txtCardNumber = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -43,19 +46,64 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.txtPaymentAmount = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.txtCustomerType = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.txtPhoneNumber = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtCustomerName = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCustomerType = new MetroFramework.Controls.MetroTextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.txtFilter2 = new MetroFramework.Controls.MetroTextBox();
             this.txtFilter1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(240, 525);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(473, 97);
+            this.metroButton1.TabIndex = 16;
+            this.metroButton1.Text = "Update Order";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(240, 57);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(90, 19);
+            this.metroLabel1.TabIndex = 15;
+            this.metroLabel1.Text = "Order Details:";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.metroLabel11);
+            this.panel1.Controls.Add(this.txtCardNumber);
+            this.panel1.Controls.Add(this.metroLabel10);
+            this.panel1.Controls.Add(this.txtPaymentType);
+            this.panel1.Controls.Add(this.metroLabel9);
+            this.panel1.Controls.Add(this.txtChange);
+            this.panel1.Controls.Add(this.metroLabel8);
+            this.panel1.Controls.Add(this.txtAmountReceived);
+            this.panel1.Controls.Add(this.metroLabel7);
+            this.panel1.Controls.Add(this.txtVAT);
+            this.panel1.Controls.Add(this.metroLabel6);
+            this.panel1.Controls.Add(this.txtDate);
+            this.panel1.Controls.Add(this.metroLabel5);
+            this.panel1.Controls.Add(this.txtPaymentAmount);
+            this.panel1.Controls.Add(this.metroLabel4);
+            this.panel1.Controls.Add(this.txtCustomerType);
+            this.panel1.Controls.Add(this.metroLabel3);
+            this.panel1.Controls.Add(this.txtPhoneNumber);
+            this.panel1.Controls.Add(this.metroLabel2);
+            this.panel1.Controls.Add(this.txtCustomerName);
+            this.panel1.Location = new System.Drawing.Point(240, 82);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(473, 436);
+            this.panel1.TabIndex = 14;
             // 
             // metroLabel11
             // 
@@ -354,6 +402,37 @@
             this.metroLabel4.Text = "Customer Type:";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // txtCustomerType
+            // 
+            // 
+            // 
+            // 
+            this.txtCustomerType.CustomButton.Image = null;
+            this.txtCustomerType.CustomButton.Location = new System.Drawing.Point(149, 1);
+            this.txtCustomerType.CustomButton.Name = "";
+            this.txtCustomerType.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCustomerType.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCustomerType.CustomButton.TabIndex = 1;
+            this.txtCustomerType.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCustomerType.CustomButton.UseSelectable = true;
+            this.txtCustomerType.CustomButton.Visible = false;
+            this.txtCustomerType.Lines = new string[0];
+            this.txtCustomerType.Location = new System.Drawing.Point(13, 145);
+            this.txtCustomerType.MaxLength = 32767;
+            this.txtCustomerType.Name = "txtCustomerType";
+            this.txtCustomerType.PasswordChar = '\0';
+            this.txtCustomerType.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCustomerType.SelectedText = "";
+            this.txtCustomerType.SelectionLength = 0;
+            this.txtCustomerType.SelectionStart = 0;
+            this.txtCustomerType.ShortcutsEnabled = true;
+            this.txtCustomerType.Size = new System.Drawing.Size(171, 23);
+            this.txtCustomerType.TabIndex = 8;
+            this.txtCustomerType.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtCustomerType.UseSelectable = true;
+            this.txtCustomerType.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCustomerType.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
@@ -436,74 +515,6 @@
             this.txtCustomerName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCustomerName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(240, 57);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(90, 19);
-            this.metroLabel1.TabIndex = 9;
-            this.metroLabel1.Text = "Order Details:";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.metroLabel11);
-            this.panel1.Controls.Add(this.txtCardNumber);
-            this.panel1.Controls.Add(this.metroLabel10);
-            this.panel1.Controls.Add(this.txtPaymentType);
-            this.panel1.Controls.Add(this.metroLabel9);
-            this.panel1.Controls.Add(this.txtChange);
-            this.panel1.Controls.Add(this.metroLabel8);
-            this.panel1.Controls.Add(this.txtAmountReceived);
-            this.panel1.Controls.Add(this.metroLabel7);
-            this.panel1.Controls.Add(this.txtVAT);
-            this.panel1.Controls.Add(this.metroLabel6);
-            this.panel1.Controls.Add(this.txtDate);
-            this.panel1.Controls.Add(this.metroLabel5);
-            this.panel1.Controls.Add(this.txtPaymentAmount);
-            this.panel1.Controls.Add(this.metroLabel4);
-            this.panel1.Controls.Add(this.txtCustomerType);
-            this.panel1.Controls.Add(this.metroLabel3);
-            this.panel1.Controls.Add(this.txtPhoneNumber);
-            this.panel1.Controls.Add(this.metroLabel2);
-            this.panel1.Controls.Add(this.txtCustomerName);
-            this.panel1.Location = new System.Drawing.Point(240, 82);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 436);
-            this.panel1.TabIndex = 8;
-            // 
-            // txtCustomerType
-            // 
-            // 
-            // 
-            // 
-            this.txtCustomerType.CustomButton.Image = null;
-            this.txtCustomerType.CustomButton.Location = new System.Drawing.Point(149, 1);
-            this.txtCustomerType.CustomButton.Name = "";
-            this.txtCustomerType.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtCustomerType.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtCustomerType.CustomButton.TabIndex = 1;
-            this.txtCustomerType.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCustomerType.CustomButton.UseSelectable = true;
-            this.txtCustomerType.CustomButton.Visible = false;
-            this.txtCustomerType.Lines = new string[0];
-            this.txtCustomerType.Location = new System.Drawing.Point(13, 145);
-            this.txtCustomerType.MaxLength = 32767;
-            this.txtCustomerType.Name = "txtCustomerType";
-            this.txtCustomerType.PasswordChar = '\0';
-            this.txtCustomerType.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCustomerType.SelectedText = "";
-            this.txtCustomerType.SelectionLength = 0;
-            this.txtCustomerType.SelectionStart = 0;
-            this.txtCustomerType.ShortcutsEnabled = true;
-            this.txtCustomerType.Size = new System.Drawing.Size(171, 23);
-            this.txtCustomerType.TabIndex = 8;
-            this.txtCustomerType.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtCustomerType.UseSelectable = true;
-            this.txtCustomerType.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCustomerType.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -512,7 +523,7 @@
             this.listBox1.Location = new System.Drawing.Point(23, 141);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(201, 481);
-            this.listBox1.TabIndex = 7;
+            this.listBox1.TabIndex = 13;
             this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
             // 
             // txtFilter2
@@ -542,7 +553,7 @@
             this.txtFilter2.ShortcutsEnabled = true;
             this.txtFilter2.Size = new System.Drawing.Size(200, 23);
             this.txtFilter2.Style = MetroFramework.MetroColorStyle.Lime;
-            this.txtFilter2.TabIndex = 6;
+            this.txtFilter2.TabIndex = 12;
             this.txtFilter2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtFilter2.UseSelectable = true;
             this.txtFilter2.WaterMark = "Please Enter an Order Date";
@@ -577,7 +588,7 @@
             this.txtFilter1.ShortcutsEnabled = true;
             this.txtFilter1.Size = new System.Drawing.Size(200, 23);
             this.txtFilter1.Style = MetroFramework.MetroColorStyle.Lime;
-            this.txtFilter1.TabIndex = 5;
+            this.txtFilter1.TabIndex = 11;
             this.txtFilter1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtFilter1.UseSelectable = true;
             this.txtFilter1.WaterMark = "Please Enter a Customer Name";
@@ -585,22 +596,11 @@
             this.txtFilter1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtFilter1.TextChanged += new System.EventHandler(this.txtFilter1_TextChanged);
             // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(240, 525);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(473, 97);
-            this.metroButton1.TabIndex = 10;
-            this.metroButton1.Text = "Void Order";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // Void_Order
+            // Update_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 648);
+            this.ClientSize = new System.Drawing.Size(732, 650);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.panel1);
@@ -608,14 +608,15 @@
             this.Controls.Add(this.txtFilter2);
             this.Controls.Add(this.txtFilter1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(732, 650);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(743, 541);
-            this.Name = "Void_Order";
+            this.MinimumSize = new System.Drawing.Size(732, 650);
+            this.Name = "Update_Order";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Lime;
-            this.Text = "Void Order";
+            this.Text = "Update Order";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.Load += new System.EventHandler(this.Void_Order_Load);
+            this.Load += new System.EventHandler(this.Update_Order_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -625,6 +626,9 @@
 
         #endregion
 
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroTextBox txtCardNumber;
         private MetroFramework.Controls.MetroLabel metroLabel10;
@@ -640,16 +644,13 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroTextBox txtPaymentAmount;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroTextBox txtCustomerType;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroTextBox txtPhoneNumber;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox txtCustomerName;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroTextBox txtCustomerType;
         private System.Windows.Forms.ListBox listBox1;
         private MetroFramework.Controls.MetroTextBox txtFilter2;
         private MetroFramework.Controls.MetroTextBox txtFilter1;
-        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

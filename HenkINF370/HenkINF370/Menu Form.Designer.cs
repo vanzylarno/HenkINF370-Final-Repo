@@ -44,7 +44,7 @@
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile5.TabIndex = 5;
             this.metroTile5.Text = "View All Menu Items";
-            this.metroTile5.TileImage = global::HenkINF370.Properties.Resources.if_97_171456;
+            this.metroTile5.TileImage = global::HenkINF370.Properties.Resources.if_47_1714734;
             this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile5.UseSelectable = true;
