@@ -203,6 +203,16 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_22_171495 {
+            get {
+                object obj = ResourceManager.GetObject("if_22_171495", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_47_171473 {
             get {
                 object obj = ResourceManager.GetObject("if_47_171473", resourceCulture);

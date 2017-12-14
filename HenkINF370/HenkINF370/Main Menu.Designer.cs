@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.metroTile9 = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
@@ -37,6 +38,22 @@
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
+            // 
+            // metroTile9
+            // 
+            this.metroTile9.ActiveControl = null;
+            this.metroTile9.Location = new System.Drawing.Point(1709, 81);
+            this.metroTile9.Name = "metroTile9";
+            this.metroTile9.Size = new System.Drawing.Size(208, 203);
+            this.metroTile9.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTile9.TabIndex = 8;
+            this.metroTile9.Text = "Logout";
+            this.metroTile9.TileImage = global::HenkINF370.Properties.Resources.if_22_171495;
+            this.metroTile9.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile9.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile9.UseSelectable = true;
+            this.metroTile9.UseTileImage = true;
+            this.metroTile9.Click += new System.EventHandler(this.metroTile9_Click);
             // 
             // metroTile8
             // 
@@ -171,6 +188,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.Controls.Add(this.metroTile9);
             this.Controls.Add(this.metroTile8);
             this.Controls.Add(this.metroTile7);
             this.Controls.Add(this.metroTile6);
@@ -202,5 +220,6 @@
         private MetroFramework.Controls.MetroTile metroTile6;
         private MetroFramework.Controls.MetroTile metroTile7;
         private MetroFramework.Controls.MetroTile metroTile8;
+        private MetroFramework.Controls.MetroTile metroTile9;
     }
 }

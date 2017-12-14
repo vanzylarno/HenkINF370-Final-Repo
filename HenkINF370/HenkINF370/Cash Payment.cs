@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using word = Microsoft.Office.Interop.Word;
 
 namespace HenkINF370
 {
@@ -110,6 +111,127 @@ namespace HenkINF370
                     }
                     dr2.Close();
                     sqlcon2.Close();
+
+                    //Create Receipt
+                    //Create Word Application
+                    word.Application wordApp = new word.Application();
+                    wordApp.Visible = true;
+
+                    //Create the Document
+                    word.Document wordDoc = wordApp.Documents.Add();
+
+                    //Create the Heading Parahraph
+                    word.Paragraph wordPara = wordDoc.Paragraphs.Add();
+                    wordPara.Range.Text = "Receipt";
+                    object styleName = "Quote";
+                    wordPara.Range.set_Style(ref styleName);
+                    wordPara.Range.InsertParagraphAfter();
+
+
+                   
+
+
+                    string Details;
+                    string ItemName;
+                    string DrinkSize;
+                    string PizzaSize;
+                    string PizzaBase;
+                    double Price;
+                    string ToppingName;
+                    double ToppingPrice;
+
+                    //Get Ordered Items
+                    SqlConnection sqlcon5 = new SqlConnection(Globals.ConnectionString);
+                    sqlcon5.Open();
+                    string cmd5 = "SELECT  * FROM OrderBasket";
+                    SqlCommand sqlcom5 = new SqlCommand(cmd5, sqlcon5);
+                    SqlDataReader dr5 = sqlcom5.ExecuteReader();
+                    if(dr5.HasRows)
+                    {
+                        while(dr5.Read())
+                        {
+                            ItemName = (dr5["ItemName"].ToString());
+                            DrinkSize = (dr5["DrinkSize"].ToString());
+                            PizzaSize = (dr5["PizzaSize"].ToString());
+                            PizzaBase = (dr5["PizzaBase"].ToString());
+                            Price = Convert.ToDouble((dr5["Price"]));
+
+                            try
+                            {
+
+                                //Get Toppings
+                                SqlConnection sqlcon6 = new SqlConnection(Globals.ConnectionString);
+                                sqlcon6.Open();
+                                string cmd6 = "SELECT * FROM ToppingBasket";
+                                SqlCommand sqlcom6 = new SqlCommand(cmd6, sqlcon6);
+                                SqlDataReader dr6 = sqlcom6.ExecuteReader();
+                                if (dr6.HasRows)
+                                {
+                                    while (dr6.Read())
+                                    {
+                                        ToppingName = (dr6["ToppingName"].ToString());
+                                        ToppingPrice = Convert.ToDouble((dr6["Price"]));
+
+                                        Details = "Item Name: " + ItemName + "\n" +
+                                            "Drink Size: " + DrinkSize + "\n" +
+                                            "Pizza Size: " + PizzaSize + "\n" +
+                                            "Pizza Base: " + PizzaBase + "\n" +
+                                            "Price: R" + Price.ToString() + "\n" +
+                                            "Topping: " + ToppingName + "\n" +
+                                            "Price: R" + ToppingPrice + "\n";
+
+
+                                        //Details
+                                        word.Paragraph wordPara3 = wordDoc.Paragraphs.Add();
+                                        object styleName3 = "Emphasis";
+                                        wordPara3.Range.set_Style(ref styleName3);
+                                        wordPara3.Range.InsertParagraphAfter();
+                                        wordPara3.Range.Text = Details;
+                                    }
+                                }
+                                dr6.Close();
+                                sqlcon6.Close();
+                            }
+                            catch
+                            {
+
+                                Details = "Item Name: " + ItemName + "\n" +
+                                    "Drink Size: " + DrinkSize + "\n" +
+                                    "Pizza Size: " + PizzaSize + "\n" +
+                                    "Pizza Base: " + PizzaBase + "\n" +
+                                    "Price: R" + Price.ToString() + "\n";
+                                   
+                                //Details
+                                word.Paragraph wordPara3 = wordDoc.Paragraphs.Add();
+                                object styleName3 = "Emphasis";
+                                wordPara3.Range.set_Style(ref styleName3);
+                                wordPara3.Range.InsertParagraphAfter();
+                                wordPara3.Range.Text = Details;
+                            }
+                        }
+                    }
+                    dr5.Close();
+                    sqlcon5.Close();
+                    string Date = lblDate.Text;
+                    double SubTotal = Convert.ToDouble(Globals.Total);
+                    double VAT = Convert.ToDouble(txtVAT.Text);
+                    double Total = Convert.ToDouble(txtOrderTotal.Text);
+                    double AmountReceived = Convert.ToDouble(txtAmountReceived.Text);
+                    double Change = Convert.ToDouble(txtChange.Text);
+                    //Totals
+                    word.Paragraph wordPara4 = wordDoc.Paragraphs.Add();
+                    wordPara4.Range.Text = "Totals";
+                    object styleName4 = "Strong";
+                    wordPara4.Range.set_Style(ref styleName);
+                    wordPara4.Range.InsertParagraphAfter();
+                    wordPara4.Range.Text = "Date: " + Date + "\n" +
+                        "Sub Total: R" + SubTotal.ToString() + "\n" +
+                        "VAT: R" + VAT.ToString() + "\n" +
+                        "Total: R" + Total.ToString() + "\n" +
+                        "Amount Received: R" + AmountReceived.ToString() + "\n" +
+                        "Change: R" + Change.ToString();
+
+
 
 
 

@@ -49,6 +49,7 @@ namespace HenkINF370
             }
             dr.Close();
             sqlcon.Close();
+
         }
 
         private void txtFilter1_TextChanged(object sender, EventArgs e)
@@ -92,54 +93,60 @@ namespace HenkINF370
         }
 
         private void listBox1_Click(object sender, EventArgs e)
-        {
-            SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
-            sqlcon.Open();
-            string cmd = "SELECT * FROM Menu WHERE ItemName ='" + listBox1.Text.ToString() + "'";
-            SqlCommand sqlcom = new SqlCommand(cmd, sqlcon);
-            SqlDataReader dr = sqlcom.ExecuteReader();
-            if (dr.HasRows)
+        {try
             {
-                while (dr.Read())
+                SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
+                sqlcon.Open();
+                string cmd = "SELECT * FROM Menu WHERE ItemName ='" + listBox1.Text.ToString() + "'";
+                SqlCommand sqlcom = new SqlCommand(cmd, sqlcon);
+                SqlDataReader dr = sqlcom.ExecuteReader();
+                if (dr.HasRows)
                 {
-                    id = Convert.ToInt32((dr["MenuItemID"]));
-                    name = (dr["ItemName"].ToString());
-                    price = Convert.ToDecimal((dr["Price"]));
-                    description = (dr["Description"].ToString());
-                    menuitemid = Convert.ToInt32((dr["MenuItemTypeID"]));
-                    drinksizeid = Convert.ToInt32((dr["DrinkSizeID"]));
-                    pizzasizeid = Convert.ToInt32((dr["PizzaSizeID"]));
-                    pizzabaseid = Convert.ToInt32((dr["PizzaBaseID"]));
+                    while (dr.Read())
+                    {
+                        id = Convert.ToInt32((dr["MenuItemID"]));
+                        name = (dr["ItemName"].ToString());
+                        price = Convert.ToDecimal((dr["Price"]));
+                        description = (dr["Description"].ToString());
+                        menuitemid = Convert.ToInt32((dr["MenuItemTypeID"]));
+                        drinksizeid = Convert.ToInt32((dr["DrinkSizeID"]));
+                        pizzasizeid = Convert.ToInt32((dr["PizzaSizeID"]));
+                        pizzabaseid = Convert.ToInt32((dr["PizzaBaseID"]));
 
+                    }
                 }
+                dr.Close();
+                sqlcon.Close();
+
+                SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
+                sqlcon2.Open();
+                string Select2 = "SELECT Image FROM Menu WHERE MenuItemID ='" + id.ToString() + "'";
+                SqlCommand sqlcom2 = new SqlCommand(Select2, sqlcon2);
+                SqlDataAdapter da = new SqlDataAdapter(sqlcom2);
+                SqlCommandBuilder cmb = new SqlCommandBuilder(da);
+                DataSet ds = new DataSet();
+
+                da.Fill(ds);
+                sqlcon2.Close();
+                byte[] image = (byte[])(ds.Tables[0].Rows[0]["Image"]);
+                MemoryStream ms = new MemoryStream(image);
+                pictureBox1.Image = Image.FromStream(ms);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                ms.Close();
+
+                GetMenuItemDesc();
+                GetDrinkSizeDesc();
+                GetPizzaSizeDesc();
+                GetPizzaBaseDesc();
+
+                txtItemName.Text = name;
+                txtPrice.Text = price.ToString();
+                txtDescription.Text = description.ToString();
             }
-            dr.Close();
-            sqlcon.Close();
+            catch
+            {
 
-            SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
-            sqlcon2.Open();
-            string Select2 = "SELECT Image FROM Menu WHERE MenuItemID ='" + id.ToString() + "'";
-            SqlCommand sqlcom2 = new SqlCommand(Select2, sqlcon2);
-            SqlDataAdapter da = new SqlDataAdapter(sqlcom2);
-            SqlCommandBuilder cmb = new SqlCommandBuilder(da);
-            DataSet ds = new DataSet();
-
-            da.Fill(ds);
-            sqlcon2.Close();
-            byte[] image = (byte[])(ds.Tables[0].Rows[0]["Image"]);
-            MemoryStream ms = new MemoryStream(image);
-            pictureBox1.Image = Image.FromStream(ms);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            ms.Close();
-
-            GetMenuItemDesc();
-            GetDrinkSizeDesc();
-            GetPizzaSizeDesc();
-            GetPizzaBaseDesc();
-
-            txtItemName.Text = name;
-            txtPrice.Text = price.ToString();
-            txtDescription.Text = description.ToString();
+            }
         }
         private void GetMenuItemDesc()
         {

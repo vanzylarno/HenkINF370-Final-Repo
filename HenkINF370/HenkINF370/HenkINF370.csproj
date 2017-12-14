@@ -1102,5 +1102,8 @@
   <ItemGroup>
     <None Include="bin\Images\Monthly.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\if_22_171495.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
