@@ -123,6 +123,16 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Daily {
+            get {
+                object obj = ResourceManager.GetObject("Daily", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
@@ -433,6 +443,16 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_backup_326537_1_ {
+            get {
+                object obj = ResourceManager.GetObject("if_backup_326537(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_book_126586_1_ {
             get {
                 object obj = ResourceManager.GetObject("if_book_126586(1)", resourceCulture);
@@ -633,6 +653,26 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_ic_receipt_48px_352435 {
+            get {
+                object obj = ResourceManager.GetObject("if_ic_receipt_48px_352435", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_ic_restore_48px_352450_1_ {
+            get {
+                object obj = ResourceManager.GetObject("if_ic_restore_48px_352450(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_icons_user_1564534 {
             get {
                 object obj = ResourceManager.GetObject("if_icons_user_1564534", resourceCulture);
@@ -733,6 +773,16 @@ namespace HenkINF370.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_night_shift_1_1504704 {
+            get {
+                object obj = ResourceManager.GetObject("if_night-shift_1_1504704", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_password_2639882 {
             get {
                 object obj = ResourceManager.GetObject("if_password_2639882", resourceCulture);
@@ -796,6 +846,16 @@ namespace HenkINF370.Properties {
         internal static System.Drawing.Bitmap Manager_Features2 {
             get {
                 object obj = ResourceManager.GetObject("Manager Features2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Monthly {
+            get {
+                object obj = ResourceManager.GetObject("Monthly", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

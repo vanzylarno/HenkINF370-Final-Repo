@@ -223,3 +223,10 @@ F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Search_Orders.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.VoidOrder2.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Update_Order.resources
 F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.UpdateOrder2.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Backup_System.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Restore_System.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.End_of_Shift_Report.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Reports_Form.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Daily_Sales_Report.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Daily_Sales_Graph.resources
+F:\Henk\HenkINF370\HenkINF370\obj\Debug\HenkINF370.Monthly_Sales_Graph.resources

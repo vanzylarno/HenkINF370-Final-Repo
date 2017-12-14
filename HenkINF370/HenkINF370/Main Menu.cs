@@ -65,5 +65,11 @@ namespace HenkINF370
             Orders_Form myform = new Orders_Form();
             myform.ShowDialog();
         }
+
+        private void metroTile8_Click(object sender, EventArgs e)
+        {
+            Reports_Form myform = new Reports_Form();
+            myform.ShowDialog();
+        }
     }
 }
