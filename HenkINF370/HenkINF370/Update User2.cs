@@ -95,6 +95,137 @@ namespace HenkINF370
             }
             dr4.Close();
             sqlcon4.Close();
+
+            UserInfo();
+        }
+        private void UserInfo()
+        {
+            string Name;
+            string Surname;
+            string PhoneNumber;
+            string EmailAddress;
+            string UserName;
+            string UserPassword;
+            int PrivilegeID;
+            int GenderID;
+            int TitleID;
+            string GenderDescription;
+            int UserTypeID;
+            string PrivilegeDescription;
+            string UserTypeDescription;
+            string TitleDescription;
+
+
+            SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
+            sqlcon.Open();
+            string cmd = "SELECT * FROM Users Where UserID ='" + Globals.SelectedUserID.ToString() + "'";
+            SqlCommand sqlcom = new SqlCommand(cmd, sqlcon);
+            SqlDataReader dr = sqlcom.ExecuteReader();
+            if(dr.HasRows)
+            {
+                while(dr.Read())
+                {
+                //    try
+                //    {
+                        Name = (dr["Name"].ToString());
+                        Surname = (dr["Surname"].ToString());
+                        PhoneNumber = (dr["PhoneNumber"].ToString());
+                        UserName = (dr["UserName"].ToString());
+                        UserPassword = (dr["UserPassword"].ToString());
+                        PrivilegeID = Convert.ToInt32((dr["PrivilegeID"]));
+                        GenderID = Convert.ToInt32((dr["GenderID"]));
+                        TitleID = Convert.ToInt32((dr["TitleID"]));
+                        UserTypeID = Convert.ToInt32((dr["UserTypeID"]));
+                        EmailAddress = (dr["EmailAddress"].ToString());
+
+                        txtName.Text = Name;
+                        txtSurname.Text = Surname;
+                        txtPhoneNumber.Text = PhoneNumber;
+                        txtUsername.Text = UserName;
+                        txtPassword.Text = UserPassword;
+                        txtEmailAddress.Text = EmailAddress;
+
+                        //Get Gender
+                        SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
+                        sqlcon2.Open();
+                        string cmd2 = "SELECT GenderDescription FROM Gender WHERE GenderID ='" + GenderID.ToString() + "'";
+                        SqlCommand sqlcom2 = new SqlCommand(cmd2, sqlcon2);
+                        SqlDataReader dr2;
+                        dr2 = sqlcom2.ExecuteReader();
+                        if (dr2.HasRows)
+                        {
+                            while (dr2.Read())
+                            {
+                                GenderDescription = (dr2["GenderDescription"].ToString());
+                                cbxGender.Text = GenderDescription;
+                            }
+                        }
+                        dr2.Close();
+                        sqlcon2.Close();
+
+                        //Get Title
+                        SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
+                        sqlcon3.Open();
+                        string cmd3 = "SELECT TitleDescription FROM Title WHERE TitleID ='" + TitleID.ToString() + "'";
+                        SqlCommand sqlcom3 = new SqlCommand(cmd3, sqlcon3);
+                        SqlDataReader dr3;
+                        dr3 = sqlcom3.ExecuteReader();
+                        if (dr3.HasRows)
+                        {
+                            while (dr3.Read())
+                            {
+                                TitleDescription = (dr3["TitleDescription"].ToString());
+                                cbxTitle.Text = TitleDescription;
+                            }
+                        }
+                        dr3.Close();
+                        sqlcon3.Close();
+
+                        //Get Privilege
+                        SqlConnection sqlcon4 = new SqlConnection(Globals.ConnectionString);
+                        sqlcon4.Open();
+                        string cmd4 = "SELECT PrivilegeDescription FROM Privilege WHERE PrivilegeID ='" + PrivilegeID.ToString() + "'";
+                        SqlCommand sqlcom4 = new SqlCommand(cmd4, sqlcon4);
+                        SqlDataReader dr4;
+                        dr4 = sqlcom4.ExecuteReader();
+                        if (dr4.HasRows)
+                        {
+                            while (dr4.Read())
+                            {
+                                PrivilegeDescription = (dr4["PrivilegeDescription"].ToString());
+                                cbxPrivilegeType.Text = PrivilegeDescription;
+                            }
+                        }
+                        dr4.Close();
+                        sqlcon4.Close();
+
+                        //Get UserType
+                        SqlConnection sqlcon5 = new SqlConnection(Globals.ConnectionString);
+                        sqlcon5.Open();
+                        string cmd5 = "SELECT UserDescription FROM UserType WHERE UserTypeID ='" + UserTypeID.ToString() + "'";
+                        SqlCommand sqlcom5 = new SqlCommand(cmd5, sqlcon5);
+                        SqlDataReader dr5;
+                        dr5 = sqlcom5.ExecuteReader();
+                        if (dr5.HasRows)
+                        {
+                            while (dr5.Read())
+                            {
+                                UserTypeDescription = (dr5["UserDescription"].ToString());
+                                cbxUserType.Text = UserTypeDescription;
+                            }
+                        }
+                        dr5.Close();
+                        sqlcon5.Close();
+               //     }
+                //    catch
+                //    {
+
+
+                 //   }
+                }
+            }
+            dr.Close();
+            sqlcon.Close();
         }
 
         private void cbxPrivilegeType_Click(object sender, EventArgs e)
@@ -193,154 +324,307 @@ namespace HenkINF370
                 {
                     try
                     {
-                        //Check if Username already exists
-                        SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
-                        sqlcon.Open();
-                        string cmd = "SELECT UserID, UserName, UserPassword FROM Users WHERE UserName ='" + txtUsername.Text + "'";
-                        SqlCommand sqlcom = new SqlCommand(cmd, sqlcon);
-                        SqlDataReader reader;
-                        reader = sqlcom.ExecuteReader();
-                        if (reader.HasRows)
+                        string UserName;
+                        //Check if same Username 
+                        SqlConnection sqlcon6 = new SqlConnection(Globals.ConnectionString);
+                        sqlcon6.Open();
+                        string cmd6 = "SELECT UserName From Users WHERE UserID ='" + Globals.SelectedUserID.ToString() + "'";
+                        SqlCommand sqlcom6 = new SqlCommand(cmd6, sqlcon6);
+                        SqlDataReader dr6 = sqlcom6.ExecuteReader();
+                        if(dr6.HasRows)
                         {
-                            while (reader.Read())
+                            while(dr6.Read())
                             {
-                                lblDetails.Text = "Error!" +
-                                     "\n" +
-                                     "\n" +
-                                     "This Username is already assigned!" +
-                                     "\n" +
-                                     "Please choose a different one";
+                                UserName = (dr6["UserName"].ToString());
+                                if (UserName == txtUsername.Text)
+                                {
+                                    try
+                                    {
+                                        
+                                            //Get Gender
+                                            SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon2.Open();
+                                            string cmd2 = "SELECT GenderID FROM Gender WHERE GenderDescription ='" + cbxGender.SelectedItem.ToString() + "'";
+                                            SqlCommand sqlcom2 = new SqlCommand(cmd2, sqlcon2);
+                                            SqlDataReader dr2;
+                                            dr2 = sqlcom2.ExecuteReader();
+                                            if (dr2.HasRows)
+                                            {
+                                                while (dr2.Read())
+                                                {
+                                                    Gender = Convert.ToInt32((dr2["GenderID"]));
+                                                }
+                                            }
+                                            dr2.Close();
+                                            sqlcon2.Close();
+
+                                            //Get Title
+                                            SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon3.Open();
+                                            string cmd3 = "SELECT TitleID FROM Title WHERE TitleDescription ='" + cbxTitle.SelectedItem.ToString() + "'";
+                                            SqlCommand sqlcom3 = new SqlCommand(cmd3, sqlcon3);
+                                            SqlDataReader dr3;
+                                            dr3 = sqlcom3.ExecuteReader();
+                                            if (dr3.HasRows)
+                                            {
+                                                while (dr3.Read())
+                                                {
+                                                    Title = Convert.ToInt32((dr3["TitleID"]));
+                                                }
+                                            }
+                                            dr3.Close();
+                                            sqlcon3.Close();
+
+                                            //Get Privilege
+                                            SqlConnection sqlcon4 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon4.Open();
+                                            string cmd4 = "SELECT PrivilegeID FROM Privilege WHERE PrivilegeDescription ='" + cbxPrivilegeType.SelectedItem.ToString() + "'";
+                                            SqlCommand sqlcom4 = new SqlCommand(cmd4, sqlcon4);
+                                            SqlDataReader dr4;
+                                            dr4 = sqlcom4.ExecuteReader();
+                                            if (dr4.HasRows)
+                                            {
+                                                while (dr4.Read())
+                                                {
+                                                    Privilege = Convert.ToInt32((dr4["PrivilegeID"]));
+                                                }
+                                            }
+                                            dr4.Close();
+                                            sqlcon4.Close();
+
+                                            //Get UserType
+                                            SqlConnection sqlcon5 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon5.Open();
+                                            string cmd5 = "SELECT UserTypeID FROM UserType WHERE UserDescription ='" + cbxUserType.SelectedItem.ToString() + "'";
+                                            SqlCommand sqlcom5 = new SqlCommand(cmd5, sqlcon5);
+                                            SqlDataReader dr5;
+                                            dr5 = sqlcom5.ExecuteReader();
+                                            if (dr5.HasRows)
+                                            {
+                                                while (dr5.Read())
+                                                {
+                                                    UserType = Convert.ToInt32((dr5["UserTypeID"]));
+                                                }
+                                            }
+                                            dr5.Close();
+                                            sqlcon5.Close();
+
+
+                                            //Insert Into Users
+                                            string name = txtName.Text;
+                                            string Surname = txtSurname.Text;
+                                            string phoneNumber = txtPhoneNumber.Text;
+                                            string email = txtEmailAddress.Text;
+                                            string username = txtUsername.Text;
+                                            string password = txtPassword.Text;
+
+
+                                            SqlConnection sqlcon1 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon1.Open();
+                                            string cmd1 = "UPDATE Users SET Name = @Name, Surname = @Surname, PhoneNumber = @PhoneNumber, EmailAddress = @EmailAddress, UserName = @UserName, UserPassword = @UserPassword, PrivilegeID = @PrivilegeID, GenderID = @GenderID, TitleID = @TitleID, UserTypeID = @UserTypeID WHERE UserID ='" + Globals.UpdateUserID.ToString() + "'";
+                                            SqlCommand sqlcom1 = new SqlCommand(cmd1, sqlcon1);
+                                            sqlcom1.Parameters.Add(new SqlParameter("@Name", name));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@Surname", Surname));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@PhoneNumber", phoneNumber));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@EmailAddress", email));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@UserName", username));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@UserPassword", password));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@PrivilegeID", Privilege));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@GenderID", Gender));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@TitleID", Title));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@UserTypeID", UserType));
+                                            sqlcom1.ExecuteNonQuery();
+                                            sqlcon1.Close();
+
+                                            lblDetails.Text = "Success!" +
+                                                "\n" +
+                                                "\n" +
+                                                "The User information was Updated Successfully!";
+
+                                            txtUsername.Text = "";
+                                            txtPassword.Text = "";
+                                            txtEmailAddress.Text = "";
+                                            txtName.Text = "";
+                                            txtPhoneNumber.Text = "";
+                                            txtSurname.Text = "";
+                                            cbxGender.Text = "";
+                                            cbxPrivilegeType.Text = "";
+                                            cbxTitle.Text = "";
+                                            cbxGender.Items.Clear();
+                                            cbxPrivilegeType.Items.Clear();
+                                            cbxTitle.Items.Clear();
+                                            cbxUserType.Items.Clear();
+                                        }
+                                        catch
+                                        {
+                                            lblDetails.Text = "Error!" +
+                                                "\n" +
+                                                "\n" +
+                                                "A Connection to the Database could" +
+                                                "not be made!";
+                                        }
+ 
+                                   
+                                }
+                                else
+                                {
+
+                                    //Check if Username already exists
+                                    SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
+                                    sqlcon.Open();
+                                    string cmd = "SELECT UserID, UserName FROM Users WHERE UserName ='" + txtUsername.Text + "'";
+                                    SqlCommand sqlcom = new SqlCommand(cmd, sqlcon);
+                                    SqlDataReader reader;
+                                    reader = sqlcom.ExecuteReader();
+                                    if (reader.HasRows)
+                                    {
+                                        while (reader.Read())
+                                        {
+                                            lblDetails.Text = "Error!" +
+                                                 "\n" +
+                                                 "\n" +
+                                                 "This Username is already assigned!" +
+                                                 "\n" +
+                                                 "Please choose a different one";
+                                        }
+                                    }
+                                    else
+                                    {
+                                        //Update
+                                        try
+                                        {
+
+                                            //Get Gender
+                                            SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon2.Open();
+                                            string cmd2 = "SELECT GenderID FROM Gender WHERE GenderDescription ='" + cbxGender.SelectedItem.ToString() + "'";
+                                            SqlCommand sqlcom2 = new SqlCommand(cmd2, sqlcon2);
+                                            SqlDataReader dr2;
+                                            dr2 = sqlcom2.ExecuteReader();
+                                            if (dr2.HasRows)
+                                            {
+                                                while (dr2.Read())
+                                                {
+                                                    Gender = Convert.ToInt32((dr2["GenderID"]));
+                                                }
+                                            }
+                                            dr2.Close();
+                                            sqlcon2.Close();
+
+                                            //Get Title
+                                            SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon3.Open();
+                                            string cmd3 = "SELECT TitleID FROM Title WHERE TitleDescription ='" + cbxTitle.SelectedItem.ToString() + "'";
+                                            SqlCommand sqlcom3 = new SqlCommand(cmd3, sqlcon3);
+                                            SqlDataReader dr3;
+                                            dr3 = sqlcom3.ExecuteReader();
+                                            if (dr3.HasRows)
+                                            {
+                                                while (dr3.Read())
+                                                {
+                                                    Title = Convert.ToInt32((dr3["TitleID"]));
+                                                }
+                                            }
+                                            dr3.Close();
+                                            sqlcon3.Close();
+
+                                            //Get Privilege
+                                            SqlConnection sqlcon4 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon4.Open();
+                                            string cmd4 = "SELECT PrivilegeID FROM Privilege WHERE PrivilegeDescription ='" + cbxPrivilegeType.SelectedItem.ToString() + "'";
+                                            SqlCommand sqlcom4 = new SqlCommand(cmd4, sqlcon4);
+                                            SqlDataReader dr4;
+                                            dr4 = sqlcom4.ExecuteReader();
+                                            if (dr4.HasRows)
+                                            {
+                                                while (dr4.Read())
+                                                {
+                                                    Privilege = Convert.ToInt32((dr4["PrivilegeID"]));
+                                                }
+                                            }
+                                            dr4.Close();
+                                            sqlcon4.Close();
+
+                                            //Get UserType
+                                            SqlConnection sqlcon5 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon5.Open();
+                                            string cmd5 = "SELECT UserTypeID FROM UserType WHERE UserDescription ='" + cbxUserType.SelectedItem.ToString() + "'";
+                                            SqlCommand sqlcom5 = new SqlCommand(cmd5, sqlcon5);
+                                            SqlDataReader dr5;
+                                            dr5 = sqlcom5.ExecuteReader();
+                                            if (dr5.HasRows)
+                                            {
+                                                while (dr5.Read())
+                                                {
+                                                    UserType = Convert.ToInt32((dr5["UserTypeID"]));
+                                                }
+                                            }
+                                            dr5.Close();
+                                            sqlcon5.Close();
+
+
+                                            //Insert Into Users
+                                            string name = txtName.Text;
+                                            string Surname = txtSurname.Text;
+                                            string phoneNumber = txtPhoneNumber.Text;
+                                            string email = txtEmailAddress.Text;
+                                            string username = txtUsername.Text;
+                                            string password = txtPassword.Text;
+
+
+                                            SqlConnection sqlcon1 = new SqlConnection(Globals.ConnectionString);
+                                            sqlcon1.Open();
+                                            string cmd1 = "UPDATE Users SET Name = @Name, Surname = @Surname, PhoneNumber = @PhoneNumber, EmailAddress = @EmailAddress, UserName = @UserName, UserPassword = @UserPassword, PrivilegeID = @PrivilegeID, GenderID = @GenderID, TitleID = @TitleID, UserTypeID = @UserTypeID WHERE UserID ='" + Globals.UpdateUserID.ToString() + "'";
+                                            SqlCommand sqlcom1 = new SqlCommand(cmd1, sqlcon1);
+                                            sqlcom1.Parameters.Add(new SqlParameter("@Name", name));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@Surname", Surname));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@PhoneNumber", phoneNumber));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@EmailAddress", email));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@UserName", username));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@UserPassword", password));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@PrivilegeID", Privilege));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@GenderID", Gender));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@TitleID", Title));
+                                            sqlcom1.Parameters.Add(new SqlParameter("@UserTypeID", UserType));
+                                            sqlcom1.ExecuteNonQuery();
+                                            sqlcon1.Close();
+
+                                            lblDetails.Text = "Success!" +
+                                                "\n" +
+                                                "\n" +
+                                                "The User information was Updated Successfully!";
+
+                                            txtUsername.Text = "";
+                                            txtPassword.Text = "";
+                                            txtEmailAddress.Text = "";
+                                            txtName.Text = "";
+                                            txtPhoneNumber.Text = "";
+                                            txtSurname.Text = "";
+                                            cbxGender.Text = "";
+                                            cbxPrivilegeType.Text = "";
+                                            cbxTitle.Text = "";
+                                            cbxGender.Items.Clear();
+                                            cbxPrivilegeType.Items.Clear();
+                                            cbxTitle.Items.Clear();
+                                            cbxUserType.Items.Clear();
+                                        }
+                                        catch
+                                        {
+                                            lblDetails.Text = "Error!" +
+                                                "\n" +
+                                                "\n" +
+                                                "A Connection to the Database could" +
+                                                "not be made!";
+                                        }
+                                    }
+                                    reader.Close();
+                                    sqlcon.Close();
+                                }
                             }
                         }
-                        else
-                        {
-                            try
-                            {
-                                //Get Gender
-                                SqlConnection sqlcon2 = new SqlConnection(Globals.ConnectionString);
-                                sqlcon2.Open();
-                                string cmd2 = "SELECT GenderID FROM Gender WHERE GenderDescription ='" + cbxGender.SelectedItem.ToString() + "'";
-                                SqlCommand sqlcom2 = new SqlCommand(cmd2, sqlcon2);
-                                SqlDataReader dr2;
-                                dr2 = sqlcom2.ExecuteReader();
-                                if (dr2.HasRows)
-                                {
-                                    while (dr2.Read())
-                                    {
-                                        Gender = Convert.ToInt32((dr2["GenderID"]));
-                                    }
-                                }
-                                dr2.Close();
-                                sqlcon2.Close();
+                        dr6.Close();
+                        sqlcon6.Close();
 
-                                //Get Title
-                                SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
-                                sqlcon3.Open();
-                                string cmd3 = "SELECT TitleID FROM Title WHERE TitleDescription ='" + cbxTitle.SelectedItem.ToString() + "'";
-                                SqlCommand sqlcom3 = new SqlCommand(cmd3, sqlcon3);
-                                SqlDataReader dr3;
-                                dr3 = sqlcom3.ExecuteReader();
-                                if (dr3.HasRows)
-                                {
-                                    while (dr3.Read())
-                                    {
-                                        Title = Convert.ToInt32((dr3["TitleID"]));
-                                    }
-                                }
-                                dr3.Close();
-                                sqlcon3.Close();
-
-                                //Get Privilege
-                                SqlConnection sqlcon4 = new SqlConnection(Globals.ConnectionString);
-                                sqlcon4.Open();
-                                string cmd4 = "SELECT PrivilegeID FROM Privilege WHERE PrivilegeDescription ='" + cbxPrivilegeType.SelectedItem.ToString() + "'";
-                                SqlCommand sqlcom4 = new SqlCommand(cmd4, sqlcon4);
-                                SqlDataReader dr4;
-                                dr4 = sqlcom4.ExecuteReader();
-                                if (dr4.HasRows)
-                                {
-                                    while (dr4.Read())
-                                    {
-                                        Privilege = Convert.ToInt32((dr4["PrivilegeID"]));
-                                    }
-                                }
-                                dr4.Close();
-                                sqlcon4.Close();
-
-                                //Get UserType
-                                SqlConnection sqlcon5 = new SqlConnection(Globals.ConnectionString);
-                                sqlcon5.Open();
-                                string cmd5 = "SELECT UserTypeID FROM UserType WHERE UserDescription ='" + cbxUserType.SelectedItem.ToString() + "'";
-                                SqlCommand sqlcom5 = new SqlCommand(cmd5, sqlcon5);
-                                SqlDataReader dr5;
-                                dr5 = sqlcom5.ExecuteReader();
-                                if (dr5.HasRows)
-                                {
-                                    while (dr5.Read())
-                                    {
-                                        UserType = Convert.ToInt32((dr5["UserTypeID"]));
-                                    }
-                                }
-                                dr5.Close();
-                                sqlcon5.Close();
-
-
-                                //Insert Into Users
-                                string name = txtName.Text;
-                                string Surname = txtSurname.Text;
-                                string phoneNumber = txtPhoneNumber.Text;
-                                string email = txtEmailAddress.Text;
-                                string username = txtUsername.Text;
-                                string password = txtPassword.Text;
-
-
-                                SqlConnection sqlcon1 = new SqlConnection(Globals.ConnectionString);
-                                sqlcon1.Open();
-                                string cmd1 = "UPDATE Users SET Name = @Name, Surname = @Surname, PhoneNumber = @PhoneNumber, EmailAddress = @EmailAddress, UserName = @UserName, UserPassword = @UserPassword, PrivilegeID = @PrivilegeID, GenderID = @GenderID, TitleID = @TitleID, UserTypeID = @UserTypeID WHERE UserID ='" + Globals.UpdateUserID.ToString() + "'";
-                                SqlCommand sqlcom1 = new SqlCommand(cmd1, sqlcon1);
-                                sqlcom1.Parameters.Add(new SqlParameter("@Name", name));
-                                sqlcom1.Parameters.Add(new SqlParameter("@Surname", Surname));
-                                sqlcom1.Parameters.Add(new SqlParameter("@PhoneNumber", phoneNumber));
-                                sqlcom1.Parameters.Add(new SqlParameter("@EmailAddress", email));
-                                sqlcom1.Parameters.Add(new SqlParameter("@UserName", username));
-                                sqlcom1.Parameters.Add(new SqlParameter("@UserPassword", password));
-                                sqlcom1.Parameters.Add(new SqlParameter("@PrivilegeID", Privilege));
-                                sqlcom1.Parameters.Add(new SqlParameter("@GenderID", Gender));
-                                sqlcom1.Parameters.Add(new SqlParameter("@TitleID", Title));
-                                sqlcom1.Parameters.Add(new SqlParameter("@UserTypeID", UserType));
-                                sqlcom1.ExecuteNonQuery();
-                                sqlcon1.Close();
-
-                                lblDetails.Text = "Success!" +
-                                    "\n" +
-                                    "\n" +
-                                    "The User information was Updated Successfully!";
-
-                                txtUsername.Text = "";
-                                txtPassword.Text = "";
-                                txtEmailAddress.Text = "";
-                                txtName.Text = "";
-                                txtPhoneNumber.Text = "";
-                                txtSurname.Text = "";
-                                cbxGender.Text = "";
-                                cbxPrivilegeType.Text = "";
-                                cbxTitle.Text = "";
-                                cbxGender.Items.Clear();
-                                cbxPrivilegeType.Items.Clear();
-                                cbxTitle.Items.Clear();
-                                cbxUserType.Items.Clear();
-                            }
-                            catch
-                            {
-                                lblDetails.Text = "Error!" +
-                                    "\n" +
-                                    "\n" +
-                                    "A Connection to the Database could" +
-                                    "not be made!";
-                            }
-                        }
-                        reader.Close();
-                        sqlcon.Close();
                     }
                     catch
                     {
@@ -353,6 +637,7 @@ namespace HenkINF370
                 }
                 else
                 {
+                    MetroFramework.MetroMessageBox.Show(this, "Action declined Successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtUsername.Text = "";
                     txtPassword.Text = "";
                     txtEmailAddress.Text = "";

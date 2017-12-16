@@ -20,6 +20,7 @@ namespace HenkINF370
 
         private void Main_Menu_Load(object sender, EventArgs e)
         {
+            
           //  MetroFramework.MetroMessageBox.Show(this, "If this is your first login, please Remember to Capture the Float Amount in the Till!",  "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 

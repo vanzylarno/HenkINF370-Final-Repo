@@ -89,6 +89,7 @@ namespace HenkINF370
                     Title = Convert.ToInt32((dr["TitleID"]));
                     UserType = Convert.ToInt32((dr["UserTypeID"]));
                     UserID = Convert.ToInt32((dr["UserID"]));
+                    Globals.SelectedUserID = Convert.ToInt32((dr["UserID"]));
                 }
             }
             dr.Close();
@@ -173,6 +174,10 @@ namespace HenkINF370
                 myform.ShowDialog();
                 this.Close();
                 this.Dispose(true);
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Action declined Successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

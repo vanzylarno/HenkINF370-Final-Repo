@@ -173,7 +173,7 @@ namespace HenkINF370
                 sqlcom2.ExecuteNonQuery();
                 sqlcon2.Close();
 
-                MetroFramework.MetroMessageBox.Show(this, "User Deleted Successfully!", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.None);
+                MetroFramework.MetroMessageBox.Show(this, "User Deleted Successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                 lbxUsers.Items.Clear();
                 SqlConnection sqlcon = new SqlConnection(Globals.ConnectionString);
@@ -203,10 +203,11 @@ namespace HenkINF370
                 txtUserName.Text = "";
                 txtUserType.Text = "";
                 
+                
             }
             else
             {
-
+                MetroFramework.MetroMessageBox.Show(this, "Action declined Successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEmailAddress.Text = "";
                 txtFilter.Text = "";
                 txtGender.Text = "";

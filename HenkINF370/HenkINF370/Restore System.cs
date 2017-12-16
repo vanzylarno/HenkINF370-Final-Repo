@@ -88,6 +88,12 @@ namespace HenkINF370
                         MetroFramework.MetroMessageBox.Show(this, "An Error Has Occurred whils Restoring the Database!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Action declined Successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                    this.Dispose(true);
+                }
 
             }
         }

@@ -37,38 +37,48 @@ namespace HenkINF370
 
         private void btnCreatebackup_Click(object sender, EventArgs e)
         {
-            if (cbxDatabaseName.Text == "")
+            DialogResult d = MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to Create a Backup of the System?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (d == DialogResult.Yes)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Please Select a Server and a Database to Backup!", "Message", MessageBoxButtons.OK, MessageBoxIcon.None);
+                if (cbxDatabaseName.Text == "")
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Please Select a Server and a Database to Backup!", "Message", MessageBoxButtons.OK, MessageBoxIcon.None);
 
+                }
+                else
+                {
+                    try
+                    {
+
+                        sfd.DefaultExt = ".bak";
+
+                        sfd.ShowDialog();
+
+                        string FilePath = sfd.FileName;
+
+                        SqlConnection sqlCon = new SqlConnection(Globals.ConnectionString);
+                        sqlCon.Open();
+                        string Command = "BACKUP DATABASE " + cbxDatabaseName.Text + " TO DISK ='" + @"" + FilePath + "" + "'";
+                        SqlCommand sqlCom = new SqlCommand(Command, sqlCon);
+                        sqlCom.ExecuteNonQuery();
+
+                        MetroFramework.MetroMessageBox.Show(this, "Database Successfully Backedup!" + "\n" + "Backup Location " + FilePath, "Message", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        sqlCon.Close();
+                        this.Close();
+                        this.Dispose(true);
+
+                    }
+                    catch
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "An Error has Occured backing up the Database!", "Message", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    }
+                }
             }
             else
             {
-                try
-                {
-
-                    sfd.DefaultExt = ".bak";
-
-                    sfd.ShowDialog();
-
-                    string FilePath = sfd.FileName;
-
-                    SqlConnection sqlCon = new SqlConnection(Globals.ConnectionString);
-                    sqlCon.Open();
-                    string Command = "BACKUP DATABASE " + cbxDatabaseName.Text + " TO DISK ='" + @"" + FilePath + "" + "'";
-                    SqlCommand sqlCom = new SqlCommand(Command, sqlCon);
-                    sqlCom.ExecuteNonQuery();
-
-                    MetroFramework.MetroMessageBox.Show(this, "Database Successfully Backedup!" + "\n" + "Backup Location " + FilePath, "Message", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    sqlCon.Close();
-                    this.Close();
-                    this.Dispose(true);
-
-                }
-                catch
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "An Error has Occured backing up the Database!", "Message", MessageBoxButtons.OK, MessageBoxIcon.None);
-                }
+                MetroFramework.MetroMessageBox.Show(this, "Action declined Successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                this.Dispose(true);
             }
         }
     }

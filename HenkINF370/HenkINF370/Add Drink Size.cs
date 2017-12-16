@@ -25,7 +25,6 @@ namespace HenkINF370
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            //Test
             if (txtDescription.Text == "" || txtPrice.Text == "")
             {
                 lblDetails.Text = "Error!" +

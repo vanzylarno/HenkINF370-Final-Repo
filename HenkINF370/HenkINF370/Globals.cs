@@ -45,5 +45,8 @@ namespace HenkINF370
         public static int CustomerID;
         public static int PaymentID;
 
+        //Update User
+        public static int SelectedUserID;
+
     }
 }

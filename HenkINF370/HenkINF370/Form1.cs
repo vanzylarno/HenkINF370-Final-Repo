@@ -25,12 +25,21 @@ namespace HenkINF370
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "" || txtPassword.Text == "")
+            if (txtUsername.Text == "")
             {
                 lblDetails.Text = "Error!" +
                     "\n" +
                     "\n" +
-                    "Not all fields required have been provided!";
+                    "Username not Provided!";
+                txtUsername.Focus();
+            }
+            else if(txtPassword.Text == "")
+            {
+                lblDetails.Text = "Error!" +
+    "\n" +
+    "\n" +
+    "Password not Provided!";
+                txtPassword.Focus();
             }
             else
             {
