@@ -57,10 +57,12 @@ namespace HenkINF370
                         {
                             Globals.UserName = (reader["UserName"].ToString());
                             Globals.UserID = Convert.ToInt32((reader["UserID"]));
+                            this.Hide();
                             Main_Menu myform = new Main_Menu();
                             myform.ShowDialog();
                             this.Close();
                             this.Dispose(true);
+
                         }
                     }
                     else

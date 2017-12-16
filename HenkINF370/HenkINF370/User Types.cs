@@ -24,12 +24,16 @@ namespace HenkINF370
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose(true);
             Add_User_Types myform = new Add_User_Types();
             myform.ShowDialog();
         }
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose(true);
             Delete_User_Types myform = new Delete_User_Types();
             myform.ShowDialog();
         }

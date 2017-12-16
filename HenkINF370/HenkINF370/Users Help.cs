@@ -25,6 +25,8 @@ namespace HenkINF370
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose(true);
             Genders myform = new Genders();
             myform.ShowDialog();
             
@@ -32,18 +34,24 @@ namespace HenkINF370
 
         private void metroTile6_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose(true);
             Titles myform = new Titles();
             myform.ShowDialog();
         }
 
         private void metroTile4_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose(true);
             Privileges myform = new Privileges();
             myform.ShowDialog();
         }
 
         private void metroTile8_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose(true);
             User_Types myform = new User_Types();
             myform.ShowDialog();
         }

@@ -24,12 +24,16 @@ namespace HenkINF370
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose(true);
             Add_Title myform = new Add_Title();
             myform.ShowDialog();
         }
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose(true);
             Delete_Title myform = new Delete_Title();
             myform.ShowDialog();
         }

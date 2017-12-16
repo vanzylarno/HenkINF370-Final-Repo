@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.metroTile9 = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
@@ -36,21 +37,32 @@
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.mtManagerFeatures = new MetroFramework.Controls.MetroTile();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.lblUser = new MetroFramework.Controls.MetroLabel();
+            this.lblDate = new MetroFramework.Controls.MetroLabel();
+            this.lblTime = new MetroFramework.Controls.MetroLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTile9
             // 
             this.metroTile9.ActiveControl = null;
-            this.metroTile9.Location = new System.Drawing.Point(1709, 81);
+            this.metroTile9.Location = new System.Drawing.Point(1492, 238);
             this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(208, 203);
+            this.metroTile9.Size = new System.Drawing.Size(343, 46);
             this.metroTile9.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTile9.TabIndex = 8;
             this.metroTile9.Text = "Logout";
-            this.metroTile9.TileImage = global::HenkINF370.Properties.Resources.if_22_171495;
+            this.metroTile9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile9.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile9.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile9.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile9.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.metroTile9.UseSelectable = true;
             this.metroTile9.UseTileImage = true;
             this.metroTile9.Click += new System.EventHandler(this.metroTile9_Click);
@@ -167,27 +179,124 @@
             this.metroTile2.UseTileImage = true;
             this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
-            // metroTile1
+            // mtManagerFeatures
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(53, 81);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(208, 412);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile1.TabIndex = 0;
-            this.metroTile1.Text = "Manager Features";
-            this.metroTile1.TileImage = global::HenkINF370.Properties.Resources.Manager_Features1;
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseTileImage = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            this.mtManagerFeatures.ActiveControl = null;
+            this.mtManagerFeatures.Location = new System.Drawing.Point(53, 81);
+            this.mtManagerFeatures.Name = "mtManagerFeatures";
+            this.mtManagerFeatures.Size = new System.Drawing.Size(208, 412);
+            this.mtManagerFeatures.Style = MetroFramework.MetroColorStyle.Lime;
+            this.mtManagerFeatures.TabIndex = 0;
+            this.mtManagerFeatures.Text = "Manager Features";
+            this.mtManagerFeatures.TileImage = global::HenkINF370.Properties.Resources.Manager_Features1;
+            this.mtManagerFeatures.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtManagerFeatures.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.mtManagerFeatures.UseSelectable = true;
+            this.mtManagerFeatures.UseTileImage = true;
+            this.mtManagerFeatures.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblTime);
+            this.panel1.Controls.Add(this.lblDate);
+            this.panel1.Controls.Add(this.lblUser);
+            this.panel1.Controls.Add(this.metroLabel4);
+            this.panel1.Controls.Add(this.metroLabel3);
+            this.panel1.Controls.Add(this.metroLabel2);
+            this.panel1.Location = new System.Drawing.Point(1489, 88);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(346, 144);
+            this.panel1.TabIndex = 9;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.Location = new System.Drawing.Point(1489, 60);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(90, 25);
+            this.metroLabel1.TabIndex = 10;
+            this.metroLabel1.Text = "Welcome!";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 10);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(100, 19);
+            this.metroLabel2.TabIndex = 11;
+            this.metroLabel2.Text = "User Signed in:";
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.Location = new System.Drawing.Point(62, 44);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel3.TabIndex = 12;
+            this.metroLabel3.Text = "Date:";
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel4.Location = new System.Drawing.Point(62, 83);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel4.TabIndex = 13;
+            this.metroLabel4.Text = "Time:";
+            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblUser.Location = new System.Drawing.Point(119, 10);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(37, 19);
+            this.lblUser.TabIndex = 12;
+            this.lblUser.Text = "User";
+            this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblDate.Location = new System.Drawing.Point(119, 44);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(38, 19);
+            this.lblDate.TabIndex = 14;
+            this.lblDate.Text = "Date";
+            this.lblDate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblTime.Location = new System.Drawing.Point(119, 83);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(38, 19);
+            this.lblTime.TabIndex = 12;
+            this.lblTime.Text = "Time";
+            this.lblTime.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Main_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroTile9);
             this.Controls.Add(this.metroTile8);
             this.Controls.Add(this.metroTile7);
@@ -196,7 +305,7 @@
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile2);
-            this.Controls.Add(this.metroTile1);
+            this.Controls.Add(this.mtManagerFeatures);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main_Menu";
@@ -206,13 +315,16 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Menu_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile mtManagerFeatures;
         private MetroFramework.Controls.MetroTile metroTile2;
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
@@ -221,5 +333,14 @@
         private MetroFramework.Controls.MetroTile metroTile7;
         private MetroFramework.Controls.MetroTile metroTile8;
         private MetroFramework.Controls.MetroTile metroTile9;
+        private System.Windows.Forms.Panel panel1;
+        private MetroFramework.Controls.MetroLabel lblTime;
+        private MetroFramework.Controls.MetroLabel lblDate;
+        private MetroFramework.Controls.MetroLabel lblUser;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
