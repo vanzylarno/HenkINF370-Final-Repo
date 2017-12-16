@@ -114,10 +114,11 @@ namespace HenkINF370
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            Book_Shift myform = new Book_Shift();
-            myform.ShowDialog();
             this.Close();
             this.Dispose(true);
+            Book_Template myform = new Book_Template();
+            myform.ShowDialog();
+
         }
 
         private void metroTile3_Click(object sender, EventArgs e)

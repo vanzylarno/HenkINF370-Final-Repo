@@ -28,27 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCapture = new MetroFramework.Controls.MetroTile();
             this.lblDate = new MetroFramework.Controls.MetroLabel();
             this.btnFind = new MetroFramework.Controls.MetroTile();
             this.btnRemove = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
-            // 
-            // btnCapture
-            // 
-            this.btnCapture.ActiveControl = null;
-            this.btnCapture.Location = new System.Drawing.Point(13, 282);
-            this.btnCapture.Name = "btnCapture";
-            this.btnCapture.Size = new System.Drawing.Size(422, 203);
-            this.btnCapture.Style = MetroFramework.MetroColorStyle.Lime;
-            this.btnCapture.TabIndex = 6;
-            this.btnCapture.Text = "Capture Float Amount in Till";
-            this.btnCapture.TileImage = global::HenkINF370.Properties.Resources.if_aiga_cashier_134157_1_1;
-            this.btnCapture.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCapture.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.btnCapture.UseSelectable = true;
-            this.btnCapture.UseTileImage = true;
-            this.btnCapture.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // lblDate
             // 
@@ -97,15 +80,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 496);
+            this.ClientSize = new System.Drawing.Size(463, 292);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.btnRemove);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(463, 496);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(463, 496);
             this.Name = "Edit_Booking2";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Lime;
@@ -121,7 +102,6 @@
 
         private MetroFramework.Controls.MetroTile btnFind;
         private MetroFramework.Controls.MetroTile btnRemove;
-        private MetroFramework.Controls.MetroTile btnCapture;
         private MetroFramework.Controls.MetroLabel lblDate;
     }
 }

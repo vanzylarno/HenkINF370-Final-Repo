@@ -334,6 +334,36 @@ namespace HenkINF370
                                 cbxPrivilegeType.Items.Clear();
                                 cbxTitle.Items.Clear();
                                 cbxUserType.Items.Clear();
+
+
+                                int UssserID;
+                                //Get UserID
+                                SqlConnection sqlcon7 = new SqlConnection(Globals.ConnectionString);
+                                sqlcon7.Open();
+                                string cmd7 = "SELECT UserID FROM Users WHERE Name ='" + name + "', Surname ='" + Surname + "', PhoneNumber ='" + phoneNumber + "', EmailAddress ='" + email + "', UserName ='" + username + "', UserPassword ='" + password + "', PrivilegeID ='" + Privilege.ToString() + "', GenderID ='" + Gender.ToString() + "', TitleID ='" + Title.ToString() + "', UserTypeID ='" + UserType.ToString() + "'";
+                                SqlCommand sqlcom7 = new SqlCommand(cmd7, sqlcon7);
+                                SqlDataReader dr7 = sqlcom7.ExecuteReader();
+                                if(dr7.HasRows)
+                                {
+                                    while(dr7.Read())
+                                    {
+                                        UssserID = Convert.ToInt32((dr7["UserID"]));
+                                        string date = System.DateTime.Now.ToLongDateString();
+                                        int NewUser = 1;
+                                        //Insert into Login
+                                        SqlConnection sqlcon8 = new SqlConnection(Globals.ConnectionString);
+                                        sqlcon8.Open();
+                                        string cmd8 = "INSERT INTO DailyLogin(Date, HasLoggedIn, UserID) VALUES(@Date, @HasLoggedIn, @UserID)";
+                                        SqlCommand sqlcom8 = new SqlCommand(cmd8, sqlcon8);
+                                        sqlcom8.Parameters.Add(new SqlParameter("@Date", date));
+                                        sqlcom8.Parameters.Add(new SqlParameter("@HasLoggedIn", NewUser));
+                                        sqlcom8.Parameters.Add(new SqlParameter("@UserID", UssserID));
+                                        sqlcom8.ExecuteNonQuery();
+                                        sqlcon8.Close();
+                                    }
+                                }
+                                dr7.Close();
+                                sqlcon7.Close();
                             }
                             catch
                             {

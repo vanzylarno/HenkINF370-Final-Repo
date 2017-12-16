@@ -70,7 +70,32 @@ namespace HenkINF370
             }
             dr.Close();
             sqlcon.Close();
-          //  MetroFramework.MetroMessageBox.Show(this, "If this is your first login, please Remember to Capture the Float Amount in the Till!",  "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            //Check if Daily First Login
+            SqlConnection sqlcon3 = new SqlConnection(Globals.ConnectionString);
+            sqlcon3.Open();
+            string cmd3 = "SELECT HasLoggedIn From DailyLogin WHERE Date ='" + lblDate.Text + "' AND UserID ='" + Globals.UserID.ToString() + "'";
+            SqlCommand sqlcom3 = new SqlCommand(cmd3, sqlcon3);
+            SqlDataReader dr3 = sqlcom3.ExecuteReader();
+            if(dr3.HasRows)
+            {
+                while(dr3.Read())
+                {
+                    int HasLoggedIn = Convert.ToInt32((dr3["HasLoggedIn"]));
+
+                    if(HasLoggedIn == 2)
+                    {
+
+                    }
+                    else
+                    {
+                        Capture_Float_Amount myform = new Capture_Float_Amount();
+                        myform.ShowDialog();
+                    }
+                }
+            }
+            dr3.Close();
+            sqlcon3.Close();
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
