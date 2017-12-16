@@ -43,13 +43,13 @@ namespace HenkINF370
                     {
                         btnFind.Enabled = false;
                         btnRemove.Enabled = false;
-                        btnCapture.Enabled = true;
+                        
                     }
                     else
                     {
                         btnFind.Enabled = true;
                         btnRemove.Enabled = true;
-                        btnCapture.Enabled = false;
+                       
                     }
                 }
             }
